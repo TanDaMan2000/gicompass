@@ -1618,7 +1618,7 @@ p {
 
 @media (max-width: 720px) {
   .page-shell {
-    width: min(calc(100% - 20px), var(--container));
+    width: min(calc(100% - 28px), var(--container));
   }
 
   .site-header {
@@ -1663,8 +1663,15 @@ p {
   .section-surface,
   .section-band,
   .cta-panel {
-    padding: 26px;
+    padding: 28px;
     border-radius: 24px;
+  }
+
+  .hero-copy,
+  .hero-visual,
+  .about-hero .hero-copy,
+  .founder-hero .hero-copy {
+    padding-inline: 2px;
   }
 
   h1 {
@@ -1711,6 +1718,19 @@ p {
     grid-template-columns: 1fr;
   }
 
+  .feature-grid,
+  .spotlight-grid,
+  .steps-grid,
+  .team-grid,
+  .comparison-grid,
+  .analysis-grid,
+  .workflow-visual,
+  .contact-panel,
+  .cta-panel,
+  .screen-card {
+    gap: 18px;
+  }
+
   .analysis-grid {
     grid-template-columns: 1fr;
   }
@@ -1735,6 +1755,11 @@ p {
 
   .site-footer {
     gap: 18px;
+  }
+
+  .section-surface > * + *,
+  .section-band > * + * {
+    margin-top: 18px;
   }
 
   .footer-links {
