@@ -1454,11 +1454,17 @@ p {
 }
 
 .sidebar-label {
+  appearance: none;
+  border: 0;
+  background: transparent;
   padding: 10px 12px;
   border-radius: 12px;
   color: var(--primary-dark);
   font-size: 0.84rem;
   font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+  transition: background 180ms ease, color 180ms ease, transform 180ms ease;
 }
 
 .sidebar-label.active {
@@ -1466,10 +1472,22 @@ p {
   color: #ffffff;
 }
 
+.sidebar-label:hover {
+  transform: translateX(2px);
+}
+
 .laptop-main {
   flex: 1 1 auto;
-  display: grid;
+  min-width: 0;
+}
+
+.dashboard-view {
+  display: none;
   gap: 14px;
+}
+
+.dashboard-view.active {
+  display: grid;
 }
 
 .laptop-row {
@@ -1493,6 +1511,20 @@ p {
 .workspace-card p {
   margin-top: 10px;
   color: var(--muted);
+}
+
+.dashboard-stat-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.dashboard-stat-list span {
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: linear-gradient(180deg, #f4fbfd, #ffffff);
+  color: var(--primary-dark);
+  font-weight: 700;
 }
 
 .dashboard-chart {
@@ -1556,6 +1588,19 @@ p {
   flex-wrap: wrap;
   gap: 10px;
   margin-top: 12px;
+}
+
+.dashboard-priority {
+  margin-top: 14px;
+  padding: 13px 14px;
+  border-radius: 14px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.dashboard-priority.priority-high {
+  background: linear-gradient(135deg, rgba(15, 109, 136, 0.12), rgba(105, 213, 210, 0.28));
+  color: var(--primary-dark);
 }
 
 .ai-pill-row span {
