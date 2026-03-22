@@ -26,6 +26,14 @@ html {
   scroll-behavior: smooth;
 }
 
+#top {
+  scroll-margin-top: 108px;
+}
+
+main#top {
+  padding-top: 20px;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -134,9 +142,25 @@ select {
   font-weight: 600;
 }
 
+.mobile-nav-panel .mobile-nav-cta {
+  margin-top: 8px;
+  padding: 14px 18px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+  color: #ffffff;
+  font-weight: 800;
+  text-align: center;
+  box-shadow: 0 18px 34px rgba(15, 109, 136, 0.22);
+}
+
 .mobile-nav-panel a:hover {
   background: rgba(15, 155, 179, 0.08);
   color: var(--primary-dark);
+}
+
+.mobile-nav-panel .mobile-nav-cta:hover {
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+  color: #ffffff;
 }
 
 .mobile-nav-panel.is-open {
@@ -1678,6 +1702,10 @@ p {
 
   .section {
     padding: 64px 0;
+  }
+
+  main#top {
+    padding-top: 16px;
   }
 
   .section-surface,
