@@ -151,6 +151,7 @@ select {
   font-family: "Manrope", sans-serif;
   font-size: 1rem;
   font-weight: 800;
+  min-width: 0;
 }
 
 .brand-mark {
@@ -1621,9 +1622,34 @@ p {
   }
 
   .site-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
     padding: 12px 14px;
     top: 10px;
     gap: 12px;
+  }
+
+  .brand {
+    width: 100%;
+    min-width: 0;
+    gap: 10px;
+  }
+
+  .brand-text {
+    min-width: 0;
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+
+  .brand-mark {
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 0 0 5px rgba(105, 213, 210, 0.14);
+  }
+
+  .mobile-nav-toggle {
+    justify-self: end;
   }
 
   .site-header .button-small {
@@ -1669,7 +1695,14 @@ p {
   }
 
   .mobile-nav-panel {
+    width: 100%;
+    left: 0;
+    right: 0;
     border-radius: 20px;
+  }
+
+  .mobile-nav-panel a {
+    font-size: 1.05rem;
   }
 
   .screen-card,
