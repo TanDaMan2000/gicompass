@@ -929,6 +929,42 @@ p {
   align-items: stretch;
 }
 
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.team-card {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 22px;
+  padding: 26px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-xl);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 18px 45px rgba(21, 53, 74, 0.08);
+  align-items: start;
+}
+
+.team-photo-frame {
+  padding: 10px;
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(231, 247, 250, 0.92));
+  border: 1px solid rgba(255, 255, 255, 0.82);
+}
+
+.team-photo {
+  width: 100%;
+  display: block;
+  border-radius: 18px;
+  object-fit: cover;
+}
+
+.team-copy p + p {
+  margin-top: 14px;
+}
+
 .founder-story {
   align-items: stretch;
 }
@@ -1386,6 +1422,7 @@ p {
   .feature-grid,
   .spotlight-grid,
   .steps-grid,
+  .team-grid,
   .about-hero,
   .founder-hero,
   .workflow-visual,
@@ -1423,6 +1460,14 @@ p {
   .hero-laptop .laptop-screen,
   .laptop-screen {
     max-width: 100%;
+  }
+
+  .team-card {
+    grid-template-columns: 1fr;
+  }
+
+  .team-photo-frame {
+    max-width: 220px;
   }
 }
 
