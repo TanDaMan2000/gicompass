@@ -35,10 +35,10 @@ const supabaseKey = cleanConfigValue(supabaseConfig?.publishableKey);
 
 const supabaseClient =
   supabaseConfig &&
-    supabaseUrl &&
-    supabaseKey &&
-    !supabaseUrl.includes("https://nrqzevoydkgxazqcptay.supabase.co") &&
-    !supabaseKey.includes("sb_publishable_7kxWTmi197lj_CRggknK_g_RCIQ7HyY")
+  supabaseUrl &&
+  supabaseKey &&
+  !supabaseUrl.includes("YOUR_SUPABASE_PROJECT_URL") &&
+  !supabaseKey.includes("YOUR_SUPABASE_PUBLISHABLE_KEY")
     ? window.supabase.createClient(supabaseUrl, supabaseKey)
     : null;
 
@@ -80,7 +80,7 @@ waitlistForm?.addEventListener("submit", async (event) => {
 
     if (error.code === "23505") {
       formMessage.textContent =
-        "That email is already on the waitlist. You are all set.";
+        "Oops, this email is already registered for the waitlist.";
       return;
     }
 
