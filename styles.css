@@ -78,7 +78,7 @@ select {
   border: 1px solid rgba(34, 96, 126, 0.12);
   border-radius: 14px;
   background: rgba(255, 255, 255, 0.9);
-  color: var(--text);
+  color: var(--primary-dark);
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -116,6 +116,10 @@ select {
   background: rgba(255, 255, 255, 0.94);
   box-shadow: 0 22px 50px rgba(21, 53, 74, 0.1);
   backdrop-filter: blur(18px);
+}
+
+.mobile-nav-panel[hidden] {
+  display: none !important;
 }
 
 .mobile-nav-panel a {
@@ -1558,7 +1562,7 @@ p {
   }
 
   .site-nav {
-    display: none;
+    display: none !important;
   }
 
   .mobile-nav-toggle {

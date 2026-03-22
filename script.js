@@ -29,6 +29,7 @@ const setMobileNavState = (isOpen) => {
 
   mobileNavToggle.classList.toggle("is-open", isOpen);
   mobileNavToggle.setAttribute("aria-expanded", String(isOpen));
+  mobileNavPanel.hidden = !isOpen;
   mobileNavPanel.classList.toggle("is-open", isOpen);
 };
 
