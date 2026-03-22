@@ -1073,14 +1073,6 @@ p {
   background: linear-gradient(180deg, #f7fafc, #edf3f7);
 }
 
-.team-photo-frame-aarsh {
-  width: 164px;
-  min-width: 164px;
-  max-width: 164px;
-  height: 206px;
-  max-height: 206px;
-}
-
 .team-photo-aarsh {
   object-position: center 16%;
   filter: contrast(1.02) saturate(1.03);
@@ -1092,11 +1084,12 @@ p {
 
 .team-role-kicker {
   display: block;
-  margin-bottom: 6px;
-  color: var(--muted);
-  font-size: 0.88rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
+  margin-bottom: 10px;
+  color: var(--primary-dark);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .team-copy h3 {
