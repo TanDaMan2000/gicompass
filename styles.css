@@ -31,7 +31,7 @@ html {
 }
 
 main#top {
-  padding-top: 20px;
+  padding-top: 12px;
 }
 
 body {
@@ -1479,15 +1479,23 @@ p {
 .laptop-main {
   flex: 1 1 auto;
   min-width: 0;
+  display: grid;
 }
 
 .dashboard-view {
-  display: none;
+  display: grid;
+  grid-area: 1 / 1;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
   gap: 14px;
+  transition: opacity 180ms ease;
 }
 
 .dashboard-view.active {
-  display: grid;
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .laptop-row {
@@ -1750,7 +1758,7 @@ p {
   }
 
   main#top {
-    padding-top: 16px;
+    padding-top: 10px;
   }
 
   .section-surface,
