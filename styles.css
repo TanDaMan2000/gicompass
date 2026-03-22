@@ -933,33 +933,32 @@ p {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
+  align-items: start;
 }
 
 .team-card {
-  display: grid;
-  grid-template-columns: 180px 1fr;
-  gap: 22px;
+  display: block;
   padding: 26px;
   border: 1px solid var(--line);
   border-radius: var(--radius-xl);
   background: rgba(255, 255, 255, 0.92);
   box-shadow: 0 18px 45px rgba(21, 53, 74, 0.08);
-  align-items: start;
+  overflow: auto;
 }
 
 .team-photo-frame {
+  float: left;
   width: 180px;
   min-width: 180px;
   max-width: 180px;
   height: 236px;
   max-height: 236px;
+  margin: 4px 22px 12px 0;
   padding: 10px;
   border-radius: 24px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(231, 247, 250, 0.92));
   border: 1px solid rgba(255, 255, 255, 0.82);
   overflow: hidden;
-  justify-self: start;
-  align-self: start;
 }
 
 .team-photo {
@@ -972,8 +971,27 @@ p {
 }
 
 .team-photo-placeholder {
-  object-fit: contain;
+  object-fit: cover;
+  object-position: center;
   background: linear-gradient(180deg, #f7fafc, #edf3f7);
+}
+
+.team-copy {
+  display: block;
+}
+
+.team-copy::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.team-copy h3 {
+  margin-bottom: 10px;
+}
+
+.team-copy p {
+  color: var(--muted);
 }
 
 .team-copy p + p {
@@ -1478,15 +1496,17 @@ p {
   }
 
   .team-card {
-    grid-template-columns: 1fr;
+    overflow: visible;
   }
 
   .team-photo-frame {
+    float: none;
     width: min(220px, 100%);
     min-width: 0;
     max-width: min(220px, 100%);
     height: auto;
     aspect-ratio: 0.76;
+    margin: 0 0 18px 0;
   }
 }
 
