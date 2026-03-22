@@ -1617,6 +1617,11 @@ p {
 }
 
 @media (max-width: 720px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
   .page-shell {
     width: min(calc(100% - 28px), var(--container));
   }
@@ -1760,6 +1765,21 @@ p {
   .section-surface > * + *,
   .section-band > * + * {
     margin-top: 18px;
+  }
+
+  .contact-card .button {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .contact-tags span {
+    flex: 1 1 calc(50% - 10px);
+    min-width: 0;
+    text-align: center;
   }
 
   .footer-links {
