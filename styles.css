@@ -811,6 +811,14 @@ p {
   font-weight: 600;
 }
 
+.form-message.is-error {
+  color: #b4475c;
+}
+
+.form-message.is-success {
+  color: var(--primary-dark);
+}
+
 .contact-panel {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

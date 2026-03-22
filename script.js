@@ -45,7 +45,10 @@ const supabaseClient =
 waitlistForm?.addEventListener("submit", async (event) => {
   event.preventDefault();
 
+  formMessage.classList.remove("is-error", "is-success");
+
   if (!supabaseClient) {
+    formMessage.classList.add("is-error");
     formMessage.textContent =
       "Waitlist backend is not configured yet. Add your Supabase URL and publishable key in supabase-config.js.";
     return;
@@ -79,15 +82,18 @@ waitlistForm?.addEventListener("submit", async (event) => {
     console.error("Supabase waitlist insert failed:", error);
 
     if (error.code === "23505") {
+      formMessage.classList.add("is-error");
       formMessage.textContent =
         "Oops, this email is already registered for the waitlist.";
       return;
     }
 
+    formMessage.classList.add("is-error");
     formMessage.textContent = `Submission failed: ${error.message || "Unknown error"}`;
     return;
   }
 
+  formMessage.classList.add("is-success");
   formMessage.textContent = `Thanks${firstName ? `, ${firstName}` : ""}. You are on the early access list.`;
   waitlistForm.reset();
 });
