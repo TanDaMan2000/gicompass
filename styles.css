@@ -946,14 +946,19 @@ p {
   overflow: auto;
 }
 
+.team-card-top {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 22px;
+  align-items: start;
+}
+
 .team-photo-frame {
-  float: left;
   width: 180px;
   min-width: 180px;
   max-width: 180px;
   height: 236px;
   max-height: 236px;
-  margin: 4px 22px 12px 0;
   padding: 10px;
   border-radius: 24px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(231, 247, 250, 0.92));
@@ -980,12 +985,6 @@ p {
   display: block;
 }
 
-.team-copy::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
 .team-copy h3 {
   margin-bottom: 10px;
 }
@@ -996,6 +995,14 @@ p {
 
 .team-copy p + p {
   margin-top: 14px;
+}
+
+.team-copy-secondary {
+  margin-top: 18px;
+}
+
+.founder-story-section {
+  margin-top: 24px;
 }
 
 .founder-story {
@@ -1499,8 +1506,11 @@ p {
     overflow: visible;
   }
 
+  .team-card-top {
+    grid-template-columns: 1fr;
+  }
+
   .team-photo-frame {
-    float: none;
     width: min(220px, 100%);
     min-width: 0;
     max-width: min(220px, 100%);
