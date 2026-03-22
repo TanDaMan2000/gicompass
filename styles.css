@@ -1073,6 +1073,19 @@ p {
   background: linear-gradient(180deg, #f7fafc, #edf3f7);
 }
 
+.team-photo-frame-aarsh {
+  width: 164px;
+  min-width: 164px;
+  max-width: 164px;
+  height: 206px;
+  max-height: 206px;
+}
+
+.team-photo-aarsh {
+  object-position: center 16%;
+  filter: contrast(1.02) saturate(1.03);
+}
+
 .team-copy {
   display: block;
 }
