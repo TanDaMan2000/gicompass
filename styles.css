@@ -70,6 +70,72 @@ select {
   box-shadow: 0 20px 50px rgba(21, 53, 74, 0.08);
 }
 
+.mobile-nav-toggle {
+  display: none;
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  border: 1px solid rgba(34, 96, 126, 0.12);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--text);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  flex: 0 0 auto;
+}
+
+.mobile-nav-toggle span {
+  width: 18px;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+  transition: transform 180ms ease, opacity 180ms ease;
+}
+
+.mobile-nav-toggle.is-open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.mobile-nav-toggle.is-open span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-nav-toggle.is-open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.mobile-nav-panel {
+  display: none;
+  margin-top: 12px;
+  padding: 14px;
+  border: 1px solid rgba(34, 96, 126, 0.12);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 22px 50px rgba(21, 53, 74, 0.1);
+  backdrop-filter: blur(18px);
+}
+
+.mobile-nav-panel a {
+  display: block;
+  padding: 12px 10px;
+  border-radius: 12px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.mobile-nav-panel a:hover {
+  background: rgba(15, 155, 179, 0.08);
+  color: var(--primary-dark);
+}
+
+.mobile-nav-panel.is-open {
+  display: grid;
+  gap: 6px;
+}
+
 .brand {
   display: inline-flex;
   align-items: center;
@@ -1495,6 +1561,10 @@ p {
     display: none;
   }
 
+  .mobile-nav-toggle {
+    display: inline-flex;
+  }
+
   .hero-visual {
     justify-content: center;
   }
@@ -1545,6 +1615,7 @@ p {
   .site-header {
     padding: 12px 14px;
     top: 10px;
+    gap: 12px;
   }
 
   .site-header .button-small {
@@ -1564,10 +1635,33 @@ p {
 
   h1 {
     font-size: 2.7rem;
+    line-height: 1.04;
   }
 
   h2 {
     font-size: 2rem;
+  }
+
+  .hero {
+    padding-top: 56px;
+    gap: 28px;
+  }
+
+  .hero-text,
+  .section-lead {
+    font-size: 1rem;
+  }
+
+  .hero-points {
+    gap: 10px;
+  }
+
+  .brand-text {
+    font-size: 0.95rem;
+  }
+
+  .mobile-nav-panel {
+    border-radius: 20px;
   }
 
   .screen-card,
