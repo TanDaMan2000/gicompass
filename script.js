@@ -143,6 +143,6 @@ waitlistForm?.addEventListener("submit", async (event) => {
   }
 
   formMessage.classList.add("is-success");
-  formMessage.textContent = `Thanks${firstName ? `, ${firstName}` : ""}. You are on the early access list.`;
+  formMessage.textContent = `Thanks${firstName ? `, ${firstName}` : ""}. You are on the GastroLens updates list.`;
   waitlistForm.reset();
 });

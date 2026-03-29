@@ -294,6 +294,34 @@ select {
   padding-top: 80px;
 }
 
+.status-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.status-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 14px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.status-chip-live {
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(34, 96, 126, 0.12);
+  color: var(--primary-dark);
+}
+
+.status-chip-soon {
+  background: linear-gradient(135deg, rgba(15, 109, 136, 0.92), rgba(15, 155, 179, 0.88));
+  color: #ffffff;
+  box-shadow: 0 16px 28px rgba(15, 109, 136, 0.16);
+}
+
 .eyebrow {
   display: inline-block;
   padding: 10px 14px;
@@ -598,10 +626,18 @@ p {
   margin-bottom: 16px;
 }
 
+.section-heading .section-lead {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
 .section-cta {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   margin-top: 28px;
+  gap: 14px;
 }
 
 .section-surface,
@@ -1345,6 +1381,58 @@ p {
   align-content: start;
 }
 
+.preview-split {
+  align-items: stretch;
+}
+
+.coming-soon-card {
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-xl);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(230, 246, 249, 0.92));
+  box-shadow: 0 22px 54px rgba(21, 53, 74, 0.1);
+}
+
+.coming-soon-card h3 {
+  margin-top: 10px;
+}
+
+.coming-soon-card p {
+  margin-top: 14px;
+  color: var(--muted);
+}
+
+.prototype-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.prototype-points span {
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(15, 155, 179, 0.08);
+  color: var(--primary-dark);
+  font-weight: 700;
+}
+
+.preview-caption {
+  margin: 18px auto 0;
+  max-width: 56ch;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.spotlight-grid-four {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.steps-grid-four {
+  grid-template-columns: repeat(4, 1fr);
+}
+
 .comparison-card p {
   margin-top: 12px;
   color: var(--muted);
@@ -1433,6 +1521,18 @@ p {
 
 .laptop-title {
   margin-left: 8px;
+}
+
+.laptop-status {
+  margin-left: auto;
+  padding: 7px 11px;
+  border-radius: 999px;
+  background: rgba(105, 213, 210, 0.18);
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 .laptop-layout {
