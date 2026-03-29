@@ -1507,7 +1507,7 @@ p {
 }
 
 .hero-laptop .laptop-screen {
-  max-width: 720px;
+  max-width: 760px;
 }
 
 .laptop-topbar,
@@ -1549,19 +1549,19 @@ p {
 }
 
 .laptop-layout {
-  gap: 14px;
+  gap: 12px;
   min-height: 400px;
-  padding: 10px;
+  padding: 9px;
   border-radius: 18px;
   background: linear-gradient(180deg, #f7fdff 0%, #ebf7fa 100%);
 }
 
 .laptop-sidebar {
-  width: 120px;
+  width: 112px;
   display: grid;
   align-content: start;
-  gap: 10px;
-  padding: 12px;
+  gap: 8px;
+  padding: 10px;
   border-radius: 16px;
   background: rgba(15, 109, 136, 0.08);
 }
@@ -1570,11 +1570,12 @@ p {
   appearance: none;
   border: 0;
   background: transparent;
-  padding: 10px 12px;
+  padding: 10px 10px;
   border-radius: 12px;
   color: var(--primary-dark);
-  font-size: 0.84rem;
+  font-size: 0.8rem;
   font-weight: 700;
+  line-height: 1.15;
   text-align: left;
   cursor: pointer;
   transition: background 180ms ease, color 180ms ease, transform 180ms ease;
@@ -1613,6 +1614,7 @@ p {
 
 .laptop-row {
   gap: 14px;
+  align-items: start;
 }
 
 .laptop-row.full {
@@ -1622,16 +1624,23 @@ p {
 .workspace-card {
   flex: 1 1 0;
   min-width: 0;
-  padding: 18px;
+  padding: 14px;
   border-radius: 18px;
   background: #ffffff;
   border: 1px solid var(--line);
   box-shadow: 0 16px 32px rgba(21, 53, 74, 0.08);
 }
 
+.workspace-card h3 {
+  font-size: 1rem;
+  line-height: 1.18;
+}
+
 .workspace-card p {
-  margin-top: 10px;
+  margin-top: 8px;
   color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.55;
 }
 
 .dashboard-stat-list {
@@ -1641,11 +1650,13 @@ p {
 }
 
 .dashboard-stat-list span {
-  padding: 12px 14px;
+  padding: 10px 12px;
   border-radius: 14px;
   background: linear-gradient(180deg, #f4fbfd, #ffffff);
   color: var(--primary-dark);
   font-weight: 700;
+  font-size: 0.82rem;
+  line-height: 1.25;
 }
 
 .app-chip-grid,
@@ -1663,12 +1674,14 @@ p {
 .app-chip-grid span,
 .app-summary-grid span,
 .app-action-row span {
-  padding: 12px 14px;
+  padding: 10px 12px;
   border-radius: 14px;
   background: linear-gradient(180deg, #f4fbfd, #ffffff);
   border: 1px solid var(--line);
   color: var(--primary-dark);
   font-weight: 700;
+  font-size: 0.82rem;
+  line-height: 1.25;
 }
 
 .app-question-list,
@@ -1681,7 +1694,7 @@ p {
 .app-question-card,
 .app-note-item,
 .app-step-card {
-  padding: 14px;
+  padding: 12px;
   border-radius: 16px;
   border: 1px solid var(--line);
   background: linear-gradient(180deg, #f7fdff, #ffffff);
@@ -1692,13 +1705,16 @@ p {
 .app-step-card strong {
   display: block;
   color: var(--text);
-  font-size: 0.95rem;
+  font-size: 0.86rem;
+  line-height: 1.2;
 }
 
 .app-question-card p,
 .app-note-item p {
   margin-top: 6px;
   color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.45;
 }
 
 .app-choice-row,
@@ -1710,13 +1726,14 @@ p {
 }
 
 .app-choice-row span {
-  padding: 8px 10px;
+  padding: 7px 10px;
   border-radius: 999px;
   border: 1px solid var(--line);
   background: #eef8fb;
   color: var(--muted);
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   font-weight: 700;
+  line-height: 1.2;
 }
 
 .app-choice-row span.is-active {
@@ -1743,6 +1760,7 @@ p {
 
 .app-step-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
 }
 
 .app-step-card {
@@ -1760,8 +1778,9 @@ p {
 
 .app-step-card span {
   color: var(--muted);
-  font-size: 0.82rem;
+  font-size: 0.74rem;
   font-weight: 600;
+  line-height: 1.25;
 }
 
 .app-step-card.active {
@@ -1789,6 +1808,7 @@ p {
 
 .app-summary-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
 }
 
 .dashboard-chart {
@@ -1868,11 +1888,12 @@ p {
 }
 
 .ai-pill-row span {
-  padding: 9px 12px;
+  padding: 8px 10px;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.16);
-  font-size: 0.84rem;
+  font-size: 0.76rem;
   font-weight: 700;
+  line-height: 1.2;
 }
 
 .laptop-base {
