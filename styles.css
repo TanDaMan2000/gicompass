@@ -1661,7 +1661,8 @@ p {
 
 .app-chip-grid,
 .app-step-grid,
-.app-summary-grid {
+.app-summary-grid,
+.app-summary-breakdown {
   display: grid;
   gap: 10px;
   margin-top: 12px;
@@ -1682,6 +1683,35 @@ p {
   font-weight: 700;
   font-size: 0.82rem;
   line-height: 1.25;
+}
+
+.app-summary-breakdown {
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+.app-summary-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: linear-gradient(180deg, #f4fbfd, #ffffff);
+  border: 1px solid var(--line);
+}
+
+.app-summary-item strong {
+  color: var(--primary-dark);
+  font-size: 0.82rem;
+  line-height: 1.2;
+}
+
+.app-summary-item span {
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 700;
+  white-space: nowrap;
 }
 
 .app-question-list,
