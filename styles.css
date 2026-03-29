@@ -288,10 +288,15 @@ select {
 
 .hero {
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  align-items: center;
-  gap: 40px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: start;
+  gap: 44px;
   padding-top: 80px;
+}
+
+.hero-copy {
+  max-width: 39rem;
+  padding-top: 18px;
 }
 
 .status-chip-row {
@@ -342,9 +347,14 @@ h3 {
 
 h1 {
   margin-top: 18px;
-  font-size: clamp(2.9rem, 6vw, 5.2rem);
+  font-size: clamp(2.9rem, 5.4vw, 4.8rem);
   line-height: 1.02;
   letter-spacing: -0.05em;
+}
+
+.hero h1,
+.about-hero h1 {
+  max-width: 13ch;
 }
 
 h2 {
@@ -389,7 +399,7 @@ p {
   font-weight: 700;
   letter-spacing: -0.02em;
   font-size: 1.02rem;
-  max-width: 18ch;
+  max-width: 20ch;
 }
 
 .hero-actions {
@@ -1635,6 +1645,149 @@ p {
   font-weight: 700;
 }
 
+.app-chip-grid,
+.app-step-grid,
+.app-summary-grid {
+  display: grid;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.app-chip-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.app-chip-grid span,
+.app-summary-grid span,
+.app-action-row span {
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: linear-gradient(180deg, #f4fbfd, #ffffff);
+  border: 1px solid var(--line);
+  color: var(--primary-dark);
+  font-weight: 700;
+}
+
+.app-question-list,
+.app-note-stack {
+  display: grid;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.app-question-card,
+.app-note-item,
+.app-step-card {
+  padding: 14px;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, #f7fdff, #ffffff);
+}
+
+.app-question-card strong,
+.app-note-item strong,
+.app-step-card strong {
+  display: block;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.app-question-card p,
+.app-note-item p {
+  margin-top: 6px;
+  color: var(--muted);
+}
+
+.app-choice-row,
+.app-action-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.app-choice-row span {
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: #eef8fb;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.app-choice-row span.is-active {
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+  border-color: transparent;
+  color: #ffffff;
+}
+
+.app-progress-bar {
+  height: 12px;
+  margin-top: 12px;
+  border-radius: 999px;
+  background: rgba(21, 53, 74, 0.08);
+  overflow: hidden;
+}
+
+.app-progress-bar span {
+  display: block;
+  width: 25%;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+}
+
+.app-step-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.app-step-card {
+  display: grid;
+  gap: 4px;
+}
+
+.app-step-card small {
+  color: var(--primary-dark);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.app-step-card span {
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.app-step-card.active {
+  border-color: rgba(15, 109, 136, 0.22);
+  background: rgba(15, 155, 179, 0.1);
+}
+
+.app-result-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.app-risk-badge {
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(209, 161, 40, 0.22);
+  background: rgba(209, 161, 40, 0.16);
+  color: #9c6f17;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.app-summary-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .dashboard-chart {
   height: 108px;
   margin-top: 12px;
@@ -1770,6 +1923,11 @@ p {
     justify-content: center;
   }
 
+  .hero-copy {
+    max-width: none;
+    padding-top: 0;
+  }
+
   .partner-panel {
     flex-direction: column;
     align-items: flex-start;
@@ -1880,6 +2038,11 @@ p {
     line-height: 1.04;
   }
 
+  .hero h1,
+  .about-hero h1 {
+    max-width: none;
+  }
+
   h2 {
     font-size: 2rem;
   }
@@ -1933,6 +2096,12 @@ p {
   }
 
   .analysis-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .app-chip-grid,
+  .app-step-grid,
+  .app-summary-grid {
     grid-template-columns: 1fr;
   }
 

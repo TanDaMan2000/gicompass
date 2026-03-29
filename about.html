@@ -79,6 +79,14 @@
             <div class="hero-actions">
               <a class="button button-primary" href="index.html#waitlist">Get Early Access Updates</a>
               <a class="button button-secondary" href="#workflow">Preview the Workflow</a>
+              <a
+                class="button button-secondary"
+                href="research/gastrolens-nhanes-analysis.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Read the Research Paper
+              </a>
             </div>
           </div>
 
@@ -88,154 +96,206 @@
                 <span class="window-dots"></span>
                 <span class="window-dots"></span>
                 <span class="window-dots"></span>
-                <span class="laptop-title">GastroLens Prototype Preview</span>
-                <span class="laptop-status">Coming Soon</span>
+                <span class="laptop-title">GastroLens App Preview</span>
+                <span class="laptop-status">Prototype UI</span>
               </div>
               <div class="laptop-layout">
                 <aside class="laptop-sidebar">
-                  <button class="sidebar-label active" type="button" data-dashboard-tab="patient">Patient View</button>
-                  <button class="sidebar-label" type="button" data-dashboard-tab="professional">Professional View</button>
-                  <button class="sidebar-label" type="button" data-dashboard-tab="review">AI Review</button>
-                  <button class="sidebar-label" type="button" data-dashboard-tab="exports">Exports</button>
+                  <button class="sidebar-label active" type="button" data-dashboard-tab="demo">Demo</button>
+                  <button class="sidebar-label" type="button" data-dashboard-tab="intake">Intake</button>
+                  <button class="sidebar-label" type="button" data-dashboard-tab="summary">Summary</button>
+                  <button class="sidebar-label" type="button" data-dashboard-tab="judge">Judge Mode</button>
                 </aside>
                 <div class="laptop-main">
-                  <div class="dashboard-view active" data-dashboard-panel="patient">
+                  <div class="dashboard-view active" data-dashboard-panel="demo">
                     <div class="laptop-row">
                       <section class="workspace-card">
-                        <span class="comparison-label">Prototype view</span>
-                        <h3>Symptom timeline</h3>
-                        <div class="dashboard-chart"></div>
-                        <p>Bleeding, bowel change, pain, fatigue</p>
-                      </section>
-                      <section class="workspace-card">
-                        <span class="comparison-label">In development</span>
-                        <h3>Context intake</h3>
-                        <div class="dashboard-stat-list">
-                          <span>Age under 50</span>
-                          <span>Family history noted</span>
-                          <span>No prior colonoscopy</span>
-                        </div>
-                        <p>Planned intake designed to make symptom persistence easier to document before care visits.</p>
-                      </section>
-                    </div>
-                    <div class="laptop-row full">
-                      <section class="workspace-card ai-card">
-                        <span class="comparison-label">Preview output</span>
-                        <h3>Symptom persistence summary</h3>
-                        <div class="ai-pill-row">
-                          <span>Bleeding pattern</span>
-                          <span>Duration tracking</span>
-                          <span>Escalation support</span>
-                        </div>
-                        <p>Planned output: a patient-friendly summary that makes persistent warning signs harder to dismiss.</p>
-                      </section>
-                    </div>
-                  </div>
-
-                  <div class="dashboard-view" data-dashboard-panel="professional">
-                    <div class="laptop-row">
-                      <section class="workspace-card">
-                        <span class="comparison-label">Roadmap preview</span>
-                        <h3>Image review queue</h3>
-                        <div class="scan-grid">
-                          <span></span>
-                          <span></span>
-                          <span class="highlight"></span>
-                          <span></span>
-                        </div>
-                        <p>Roadmap feature for future imaging review once clinically valid data is available.</p>
-                      </section>
-                      <section class="workspace-card">
-                        <span class="comparison-label">Prototype view</span>
-                        <h3>Case snapshot</h3>
-                        <div class="dashboard-stat-list">
-                          <span>Rectal bleeding</span>
-                          <span>6-week duration</span>
-                          <span>Referral pending</span>
-                        </div>
-                        <p>Designed to keep symptom context and imaging review in one workflow.</p>
-                      </section>
-                    </div>
-                    <div class="laptop-row full">
-                      <section class="workspace-card ai-card">
-                        <span class="comparison-label">Preview output</span>
-                        <h3>Clinician-facing support summary</h3>
-                        <div class="ai-pill-row">
-                          <span>Pattern context</span>
-                          <span>Image review queue</span>
-                          <span>Follow-up prompt</span>
-                        </div>
-                        <p>Planned output: a structured summary that supports follow-up discussions rather than replacing clinical judgment.</p>
-                      </section>
-                    </div>
-                  </div>
-
-                  <div class="dashboard-view" data-dashboard-panel="review">
-                    <div class="laptop-row">
-                      <section class="workspace-card">
-                        <span class="comparison-label">Concept demo</span>
-                        <h3>Escalation signals</h3>
-                        <div class="dashboard-stat-list">
+                        <span class="comparison-label">Actual app preview</span>
+                        <h3>Run a sample scenario or start blank</h3>
+                        <div class="app-chip-grid">
+                          <span>Minimal demo</span>
                           <span>Persistent bleeding</span>
-                          <span>Bowel change cluster</span>
-                          <span>Risk context match</span>
+                          <span>High-cluster demo</span>
                         </div>
-                        <p>The mockup shows how a review layer could summarize which patterns matter most.</p>
+                        <p>These are the same demo scenario entry points used in the actual GastroLens app for judging, testing, and walkthroughs.</p>
                       </section>
                       <section class="workspace-card">
-                        <span class="comparison-label">Planned handoff</span>
-                        <h3>Suggested next step</h3>
-                        <div class="dashboard-priority priority-high">Follow-up warranted</div>
-                        <p>Framed as escalation support, not a diagnosis.</p>
+                        <span class="comparison-label">What lives here</span>
+                        <h3>Interactive assessment tool</h3>
+                        <div class="dashboard-stat-list">
+                          <span>Structured intake</span>
+                          <span>Explainable scoring</span>
+                          <span>Research-mode results</span>
+                        </div>
+                        <p>The real app is designed as the interactive GastroLens surface inside the broader Gastro Compass project.</p>
                       </section>
                     </div>
                     <div class="laptop-row full">
                       <section class="workspace-card ai-card">
-                        <span class="comparison-label">Preview output</span>
-                        <h3>Review rationale</h3>
+                        <span class="comparison-label">Safety framing</span>
+                        <h3>Research mode, not diagnosis</h3>
                         <div class="ai-pill-row">
-                          <span>Symptom duration</span>
-                          <span>Dismissal risk</span>
+                          <span>Informational only</span>
+                          <span>Non-diagnostic</span>
+                          <span>Clinician follow-up encouraged</span>
+                        </div>
+                        <p>The actual app keeps the same safety-first language used throughout the project and research materials.</p>
+                      </section>
+                    </div>
+                  </div>
+
+                  <div class="dashboard-view" data-dashboard-panel="intake">
+                    <div class="laptop-row">
+                      <section class="workspace-card">
+                        <span class="comparison-label">Step 1 of 4</span>
+                        <h3>Core symptoms</h3>
+                        <div class="app-question-list">
+                          <div class="app-question-card">
+                            <strong>Rectal bleeding</strong>
+                            <div class="app-choice-row">
+                              <span>None</span>
+                              <span>Occasional</span>
+                              <span class="is-active">Persistent</span>
+                            </div>
+                          </div>
+                          <div class="app-question-card">
+                            <strong>Change in bowel habits</strong>
+                            <div class="app-choice-row">
+                              <span>None</span>
+                              <span>Mild</span>
+                              <span class="is-active">Significant</span>
+                            </div>
+                          </div>
+                          <div class="app-question-card">
+                            <strong>Duration of symptoms</strong>
+                            <div class="app-choice-row">
+                              <span>Less than 2 weeks</span>
+                              <span>2–6 weeks</span>
+                              <span class="is-active">More than 6 weeks</span>
+                            </div>
+                          </div>
+                        </div>
+                        <p>This mirrors the actual 4-step GastroLens intake flow now being built.</p>
+                      </section>
+                      <section class="workspace-card">
+                        <span class="comparison-label">Progress</span>
+                        <h3>14 intake fields across 4 steps</h3>
+                        <div class="app-progress-bar"><span></span></div>
+                        <div class="app-step-grid">
+                          <div class="app-step-card active">
+                            <small>Step 1</small>
+                            <strong>Core symptoms</strong>
+                            <span>Ready</span>
+                          </div>
+                          <div class="app-step-card">
+                            <small>Step 2</small>
+                            <strong>Additional pattern</strong>
+                            <span>Needs input</span>
+                          </div>
+                          <div class="app-step-card">
+                            <small>Step 3</small>
+                            <strong>Risk context</strong>
+                            <span>Needs input</span>
+                          </div>
+                          <div class="app-step-card">
+                            <small>Step 4</small>
+                            <strong>Review &amp; generate</strong>
+                            <span>Pending</span>
+                          </div>
+                        </div>
+                        <p>The actual product structure is step-based rather than a generic dashboard.</p>
+                      </section>
+                    </div>
+                    <div class="laptop-row full">
+                      <section class="workspace-card ai-card">
+                        <span class="comparison-label">Navigation</span>
+                        <h3>Move through the intake, then generate</h3>
+                        <div class="ai-pill-row">
+                          <span>Start blank</span>
+                          <span>Continue</span>
+                          <span>Generate research summary</span>
+                        </div>
+                        <p>The actual app prototype uses clear navigation actions instead of hiding the workflow behind static cards.</p>
+                      </section>
+                    </div>
+                  </div>
+
+                  <div class="dashboard-view" data-dashboard-panel="summary">
+                    <div class="laptop-row">
+                      <section class="workspace-card">
+                        <span class="comparison-label">Research summary</span>
+                        <div class="app-result-header">
+                          <h3>Moderate flag</h3>
+                          <span class="app-risk-badge">Total score 8</span>
+                        </div>
+                        <div class="dashboard-stat-list">
+                          <span>Pattern lens: persistent bleeding</span>
+                          <span>Driver summary: duration + bowel change</span>
+                          <span>Follow-up-oriented language</span>
+                        </div>
+                        <p>This summary layout is based on the real GastroLens results panel, not a generic AI dashboard.</p>
+                      </section>
+                      <section class="workspace-card">
+                        <span class="comparison-label">Section contributions</span>
+                        <div class="app-summary-grid">
+                          <span>Core symptoms: 4</span>
+                          <span>Additional pattern: 2</span>
+                          <span>Risk context: 2</span>
+                        </div>
+                        <p>The actual app breaks the result into explainable sections instead of a single opaque score.</p>
+                      </section>
+                    </div>
+                    <div class="laptop-row full">
+                      <section class="workspace-card ai-card">
+                        <span class="comparison-label">Safety-first output</span>
+                        <h3>Built for escalation support</h3>
+                        <div class="ai-pill-row">
+                          <span>Pattern explanation</span>
+                          <span>Safety note</span>
                           <span>Care conversation</span>
                         </div>
-                        <p>Planned output: “this symptom pattern has persisted long enough to warrant a conversation with a physician.”</p>
+                        <p>The output is framed as a clearer reason to follow up with a clinician, not a diagnosis inside the app.</p>
                       </section>
                     </div>
                   </div>
 
-                  <div class="dashboard-view" data-dashboard-panel="exports">
+                  <div class="dashboard-view" data-dashboard-panel="judge">
                     <div class="laptop-row">
                       <section class="workspace-card">
-                        <span class="comparison-label">Prototype view</span>
-                        <h3>Shareable summary</h3>
-                        <div class="dashboard-stat-list">
-                          <span>Symptom log PDF</span>
-                          <span>Visit prep summary</span>
-                          <span>Timeline snapshot</span>
+                        <span class="comparison-label">Judge / Research Mode</span>
+                        <h3>What opens up for deeper review</h3>
+                        <div class="app-note-stack">
+                          <div class="app-note-item">
+                            <strong>Interaction bonuses</strong>
+                            <p>Shows weighted rule interactions that pushed the score upward.</p>
+                          </div>
+                          <div class="app-note-item">
+                            <strong>Validation notes</strong>
+                            <p>Flags contradictions or edge-case reasoning inside the deterministic logic.</p>
+                          </div>
                         </div>
-                        <p>Turns scattered symptom history into something patients can actually bring to care.</p>
                       </section>
                       <section class="workspace-card">
-                        <span class="comparison-label">In development</span>
-                        <h3>What gets included</h3>
-                        <div class="dashboard-stat-list">
-                          <span>Symptom duration</span>
-                          <span>Risk intake</span>
-                          <span>Follow-up flags</span>
+                        <span class="comparison-label">Share view</span>
+                        <h3>Presentation actions</h3>
+                        <div class="app-action-row">
+                          <span>Copy summary</span>
+                          <span>Print summary</span>
+                          <span>Start a new assessment</span>
                         </div>
-                        <p>Built to help the right details survive the handoff into a medical conversation.</p>
+                        <p>The real app includes presentation-friendly actions for demos and review sessions.</p>
                       </section>
                     </div>
                     <div class="laptop-row full">
                       <section class="workspace-card ai-card">
-                        <span class="comparison-label">Preview output</span>
-                        <h3>Prepared for follow-up</h3>
+                        <span class="comparison-label">Actual app direction</span>
+                        <h3>Deterministic, explainable, and demo-ready</h3>
                         <div class="ai-pill-row">
-                          <span>Clear summary</span>
-                          <span>Clinician-ready</span>
-                          <span>Exportable</span>
+                          <span>Step-based intake</span>
+                          <span>Transparent scoring</span>
+                          <span>Judge mode extras</span>
                         </div>
-                        <p>Planned output: one concise report a patient can monitor, share, and use to support earlier follow-up.</p>
+                        <p>This preview is now based on the actual GastroLens app architecture rather than a generic health-tech mockup.</p>
                       </section>
                     </div>
                   </div>
@@ -396,6 +456,16 @@
                 the concept is credible enough to build. That is why the prototype is being kept
                 clearly non-diagnostic and clearly in development.
               </p>
+              <div class="hero-actions">
+                <a
+                  class="button button-secondary"
+                  href="research/gastrolens-nhanes-analysis.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Open the NHANES Analysis Paper
+                </a>
+              </div>
             </div>
             <div class="quote-card reveal">
               <p>
@@ -422,6 +492,7 @@
           <a href="index.html#features">Features</a>
           <a href="mailto:tanush.nimmalapudi@gastrocompass.org">Contact</a>
           <a href="index.html#waitlist">Waitlist</a>
+          <a href="research/gastrolens-nhanes-analysis.pdf" target="_blank" rel="noopener noreferrer">Research Paper</a>
         </div>
         <p class="footer-disclaimer">
           Gastro Compass does not provide medical diagnosis or emergency care. Always consult a licensed healthcare professional for medical concerns.
