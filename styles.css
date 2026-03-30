@@ -359,6 +359,31 @@ body.openme-page .brand-text {
   color: #e6f1ff;
 }
 
+.openme-brand {
+  align-items: center;
+}
+
+.openme-brand-text {
+  display: grid;
+  gap: 2px;
+}
+
+.openme-brand-title {
+  font-family: "Manrope", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #f3f8ff;
+}
+
+.openme-brand-subtitle {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: rgba(207, 226, 255, 0.7);
+}
+
 body.openme-page .site-nav,
 body.openme-page .site-nav a,
 body.openme-page .nav-trigger {
@@ -419,7 +444,12 @@ body.openme-page .button-secondary {
 }
 
 .openme-section .section-heading h2 {
-  color: var(--openme-ink);
+  color: #f3f7ff;
+}
+
+.openme-section .section-heading .section-lead,
+.openme-section .section-lead {
+  color: rgba(219, 234, 255, 0.82);
 }
 
 .openme-hero-visual {
@@ -532,6 +562,13 @@ body.openme-page .button-secondary {
 .openme-section.section-surface .section-heading h2,
 .openme-section.section-band .section-heading h2 {
   color: #f4f8ff;
+}
+
+.openme-section.section-surface .section-heading .section-lead,
+.openme-section.section-band .section-heading .section-lead,
+.openme-section.section-surface .section-lead,
+.openme-section.section-band .section-lead {
+  color: rgba(224, 237, 255, 0.8);
 }
 
 .openme-section.section-surface .section-lead,
