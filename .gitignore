@@ -1,2 +1,7 @@
 .DS_Store
 
+
+.gastrolens-app-recovered/
+.next/
+public/
+node_modules/
