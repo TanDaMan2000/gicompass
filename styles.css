@@ -369,11 +369,10 @@ body.openme-page .brand-text {
 }
 
 .openme-brand-title {
-  font-family: "Playfair Display", "Manrope", serif;
-  font-size: 1.1rem;
-  font-weight: 700;
-  font-style: italic;
-  letter-spacing: 0.02em;
+  font-family: "Great Vibes", "Manrope", cursive;
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 0;
   text-transform: none;
   color: #f3f8ff;
 }
