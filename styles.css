@@ -369,11 +369,12 @@ body.openme-page .brand-text {
 }
 
 .openme-brand-title {
-  font-family: "Manrope", sans-serif;
-  font-size: 1.05rem;
+  font-family: "Playfair Display", "Manrope", serif;
+  font-size: 1.1rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  font-style: italic;
+  letter-spacing: 0.02em;
+  text-transform: none;
   color: #f3f8ff;
 }
 
@@ -561,7 +562,7 @@ body.openme-page .button-secondary {
 
 .openme-section.section-surface .section-heading h2,
 .openme-section.section-band .section-heading h2 {
-  color: #f4f8ff;
+  color: #f7fbff;
 }
 
 .openme-section.section-surface .section-heading .section-lead,
@@ -569,6 +570,38 @@ body.openme-page .button-secondary {
 .openme-section.section-surface .section-lead,
 .openme-section.section-band .section-lead {
   color: rgba(224, 237, 255, 0.8);
+}
+
+.openme-section.section-surface .eyebrow,
+.openme-section.section-band .eyebrow {
+  color: #d6e6ff;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.openme-section .trust-note {
+  color: rgba(230, 240, 255, 0.88);
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.openme-card-front,
+.openme-card-inside {
+  color: var(--openme-ink);
+}
+
+.openme-card-front p,
+.openme-card-inside p {
+  color: var(--openme-muted);
+}
+
+.openme-card-front .openme-card-title,
+.openme-card-inside .openme-card-title {
+  color: var(--openme-primary-dark);
+}
+
+.openme-card-front .openme-card-subtitle,
+.openme-card-inside span {
+  color: var(--openme-muted);
 }
 
 .openme-section.section-surface .section-lead,
