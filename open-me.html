@@ -76,15 +76,15 @@
         <section class="hero section openme-hero">
           <div class="hero-copy reveal">
             <div class="status-chip-row">
-              <span class="status-chip status-chip-openme">Open Me by GastroCompass</span>
+              <span class="status-chip status-chip-openme">A GastroCompass Screening Initiative</span>
             </div>
-            <h1>Open the bag. Open the conversation.</h1>
+            <h1>Open the bag.<br />Open the conversation.</h1>
             <p class="hero-text">
               Open Me is a GastroCompass campaign that places folded reminder cards inside takeout
-              orders to encourage colorectal cancer screening conversations for adults 45+.
-              Simple, respectful, and built to spark action.
+              orders to encourage colorectal cancer screening conversations for adults 45+. Simple,
+              respectful, and built to spark action.
             </p>
-            <p class="openme-proof">Starting with local restaurant partners to spark screening conversations one order at a time.</p>
+            <p class="openme-proof">Starting with local restaurant partners, Open Me helps spark screening conversations one order at a time.</p>
             <div class="hero-actions">
               <a class="button button-primary openme-primary" href="#screening">Learn About Screening</a>
               <a class="button button-secondary openme-secondary" href="#partners">Partner With Us</a>
@@ -98,7 +98,9 @@
                   <p class="openme-card-subtitle">A reminder from GastroCompass</p>
                   <div class="openme-card-line"></div>
                   <p class="openme-card-body">If you’re 45 or older, ask your doctor about colorectal cancer screening.</p>
-                  <div class="openme-qr"></div>
+                  <a class="openme-qr-link" href="open-me.html#screening" aria-label="Go to screening information">
+                    <div class="openme-qr"></div>
+                  </a>
                   <span class="openme-card-foot">Scan to learn more</span>
                 </div>
               </div>
@@ -174,12 +176,14 @@
               <p class="openme-card-title">Open Me</p>
               <p class="openme-card-subtitle">A reminder from GastroCompass</p>
             </div>
-            <div class="openme-card-inside">
-              <p>If you’re 45 or older, ask your doctor about colorectal cancer screening.</p>
-              <p>Early screening can save lives.</p>
-              <div class="openme-qr"></div>
-              <span>Scan to learn more</span>
-            </div>
+              <div class="openme-card-inside">
+                <p>If you’re 45 or older, ask your doctor about colorectal cancer screening.</p>
+                <p>Early screening can save lives.</p>
+              <a class="openme-qr-link" href="open-me.html#screening" aria-label="Go to screening information">
+                <div class="openme-qr"></div>
+              </a>
+                <span>Scan to learn more</span>
+              </div>
           </div>
         </section>
 
@@ -233,24 +237,54 @@
             <span class="eyebrow openme-eyebrow">Screening info</span>
             <h2>Get the basics in one place</h2>
           </div>
-          <div class="screening-grid">
-            <article class="screening-card reveal">
-              <h3>Who should ask about screening?</h3>
-              <p>Adults 45+ at average risk should talk with a doctor about screening options.</p>
-            </article>
-            <article class="screening-card reveal">
-              <h3>Why does screening matter?</h3>
-              <p>Screening finds cancer early and can prevent cancer by finding polyps.</p>
-            </article>
-            <article class="screening-card reveal">
-              <h3>What should I do next?</h3>
-              <p>Talk with your doctor, understand your options, and ask about timing.</p>
-            </article>
-          </div>
-          <div class="section-cta reveal openme-links">
-            <a class="button button-secondary openme-secondary" href="#" aria-disabled="true">CDC Screening Info</a>
-            <a class="button button-secondary openme-secondary" href="#" aria-disabled="true">Official Screening Guidance</a>
-            <a class="button button-secondary openme-secondary" href="#" aria-disabled="true">Questions to Ask Your Doctor</a>
+          <div class="openme-screening-card reveal">
+            <p class="openme-scan-note">You scanned this from an Open Me card</p>
+            <div class="screening-grid">
+              <article class="screening-card">
+                <h3><strong>Who should ask about screening?</strong></h3>
+                <p>Adults 45+ at average risk should talk with a doctor about screening options.</p>
+              </article>
+              <article class="screening-card">
+                <h3><strong>Why does screening matter?</strong></h3>
+                <p>Screening finds cancer early and can prevent cancer by finding polyps.</p>
+              </article>
+              <article class="screening-card">
+                <h3><strong>What should I do next?</strong></h3>
+                <p>Talk with your doctor, understand your options, and ask about timing.</p>
+              </article>
+            </div>
+            <div class="section-cta openme-links">
+              <a
+                class="button button-secondary openme-secondary"
+                href="https://www.cdc.gov/colorectal-cancer/screening/index.html"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                CDC Screening Info
+              </a>
+              <a
+                class="button button-secondary openme-secondary"
+                href="https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/colorectal-cancer-screening"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Official Screening Guidance
+              </a>
+              <a
+                class="button button-secondary openme-secondary"
+                href="https://www.cdc.gov/colorectal-cancer/talking/index.html"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Questions to Ask Your Doctor
+              </a>
+            </div>
+            <div class="openme-cta-block">
+              <a class="button button-primary openme-primary" href="https://www.cdc.gov/colorectal-cancer/screening/index.html" target="_blank" rel="noopener noreferrer">
+                Talk to Your Doctor About Screening
+              </a>
+              <p class="openme-disclaimer">This page is for education only. Always consult a healthcare professional.</p>
+            </div>
           </div>
         </section>
 

@@ -349,6 +349,10 @@ body.openme-page {
   color: #f4f8ff;
 }
 
+body.openme-page #screening {
+  scroll-margin-top: 120px;
+}
+
 .openme-page .site-header {
   background: rgba(10, 26, 44, 0.6);
   border-color: rgba(255, 255, 255, 0.12);
@@ -556,6 +560,57 @@ body.openme-page .button-secondary {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
+}
+
+.openme-qr-link {
+  display: inline-flex;
+  border-radius: 10px;
+  transition: transform 160ms ease;
+}
+
+.openme-qr-link:hover {
+  transform: translateY(-2px);
+}
+
+.openme-screening-card {
+  padding: 28px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 24px 60px rgba(5, 16, 28, 0.35);
+  display: grid;
+  gap: 20px;
+}
+
+.openme-scan-note {
+  margin: 0;
+  font-weight: 700;
+  color: rgba(219, 234, 255, 0.9);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.78rem;
+}
+
+.openme-cta-block {
+  display: grid;
+  gap: 8px;
+  justify-items: start;
+}
+
+.openme-disclaimer {
+  margin: 0;
+  font-size: 0.85rem;
+  color: rgba(219, 234, 255, 0.78);
+}
+
+@media (max-width: 720px) {
+  body.openme-page #screening {
+    scroll-margin-top: 110px;
+  }
+
+  .openme-screening-card {
+    padding: 22px;
+  }
 }
 
 .openme-section.section-surface,
