@@ -3,9 +3,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "GastroCompass | Research Prototype",
+  title: "GastroLens | GastroCompass",
   description:
-    "A clean prototype for symptom-based gastrointestinal risk classification built for research exploration.",
+    "A research-mode interactive assessment tool from GastroCompass for structured GI symptom intake and explainable scoring.",
 };
 
 export default function RootLayout({

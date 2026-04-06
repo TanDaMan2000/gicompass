@@ -2,179 +2,66 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="refresh" content="0; url=https://gastrocompass.org/gastrolens/" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Launch GastroLens | Gastro Compass</title>
+    <title>Redirecting to GastroLens</title>
     <meta
       name="description"
-      content="Launch the GastroLens interactive assessment tool from the GastroCompass ecosystem."
+      content="Redirecting to the live GastroLens assessment tool."
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <link rel="shortcut icon" href="favicon.svg" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="canonical" href="https://gastrocompass.org/gastrolens/" />
+    <style>
+      body {
+        margin: 0;
+        font-family: Manrope, system-ui, sans-serif;
+        background: linear-gradient(180deg, #f4fbfd 0%, #edf6f8 100%);
+        color: #16354a;
+      }
+
+      main {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 24px;
+      }
+
+      .card {
+        max-width: 640px;
+        border: 1px solid rgba(22, 53, 74, 0.12);
+        background: rgba(255, 255, 255, 0.92);
+        border-radius: 28px;
+        box-shadow: 0 24px 60px rgba(21, 53, 74, 0.08);
+        padding: 32px;
+      }
+
+      h1 {
+        margin: 0 0 12px;
+        font-size: clamp(2rem, 4vw, 3rem);
+        line-height: 1.05;
+      }
+
+      p {
+        margin: 0;
+        font-size: 1.05rem;
+        line-height: 1.75;
+        color: rgba(22, 53, 74, 0.76);
+      }
+
+      a {
+        color: #0f7994;
+        font-weight: 700;
+      }
+    </style>
   </head>
   <body>
-    <div class="page-shell">
-      <header class="site-header">
-        <a class="brand" href="index.html" aria-label="Gastro Compass home">
-          <span class="brand-mark" aria-hidden="true"><img src="logo.svg" alt="" /></span>
-          <span class="brand-text">Gastro Compass</span>
-        </a>
-        <button
-          class="mobile-nav-toggle"
-          type="button"
-          aria-expanded="false"
-          aria-controls="mobile-nav"
-          aria-label="Open navigation menu"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        <nav class="site-nav">
-          <a href="index.html#problem">Why it matters</a>
-          <a href="about.html#workflow">Workflow</a>
-          <a href="https://gastrocompass.org/gastrolens">Launch GastroLens</a>
-          <a href="founder.html">Team</a>
-        </nav>
-        <a class="button button-small button-primary" href="https://gastrocompass.org/gastrolens" target="_blank" rel="noopener noreferrer">Open App</a>
-        <div class="mobile-nav-panel" id="mobile-nav" hidden>
-          <a href="index.html#problem">Why it matters</a>
-          <a href="about.html#workflow">Workflow</a>
-          <a href="https://gastrocompass.org/gastrolens">Launch GastroLens</a>
-          <a href="founder.html">Team</a>
-          <a class="mobile-nav-cta" href="https://gastrocompass.org/gastrolens" target="_blank" rel="noopener noreferrer">Open App</a>
-        </div>
-      </header>
-
-      <main id="top">
-        <section class="hero section">
-          <div class="hero-copy reveal">
-            <div class="status-chip-row">
-              <span class="status-chip status-chip-live">Connected to GastroCompass</span>
-              <span class="status-chip status-chip-soon">Interactive tool</span>
-            </div>
-            <div class="hero-brand-lockup" aria-hidden="true">
-              <span class="brand-mark brand-mark-hero"><img src="logo.svg" alt="" /></span>
-              <span class="hero-brand-text">Interactive intake, scoring, and research-mode output</span>
-            </div>
-            <h1>Launch the GastroLens app from the main site.</h1>
-            <p class="hero-text">
-              GastroCompass remains the public-facing hub for the project story, research basis,
-              FAQ, and team. GastroLens is the connected interactive tool for the 4-step intake,
-              deterministic scoring, and demo-ready results.
-            </p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="https://gastrocompass.org/gastrolens" target="_blank" rel="noopener noreferrer">Open GastroLens</a>
-              <a class="button button-secondary" href="about.html#workflow">Preview the Workflow</a>
-              <a class="button button-secondary" href="research/gastrolens-nhanes-analysis.pdf" target="_blank" rel="noopener noreferrer">Read the Research Paper</a>
-            </div>
-            <ul class="hero-points">
-              <li>Main site = project hub</li>
-              <li>GastroLens = interactive assessment tool</li>
-              <li>Research-mode only, non-diagnostic, not clinically validated</li>
-            </ul>
-          </div>
-
-          <div class="hero-visual reveal">
-            <div class="launch-card section-surface">
-              <span class="comparison-label">Open the app now</span>
-              <h3>Local demo launch</h3>
-              <p>
-                If you are running GastroLens locally, use the button below. When you deploy the
-                app later, this same launch flow can point to <strong>app.gastrocompass.org</strong> or
-                <strong> /gastrolens</strong>.
-              </p>
-              <div class="hero-actions">
-                <a class="button button-primary" href="https://gastrocompass.org/gastrolens" target="_blank" rel="noopener noreferrer">Launch GastroLens</a>
-              </div>
-              <div class="trust-note launch-note">
-                If the app is not already running, start it from the recovered app folder first.
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="section section-band">
-          <div class="section-heading reveal">
-            <span class="eyebrow">Connected flow</span>
-            <h2>How the site and app work together now</h2>
-          </div>
-          <div class="spotlight-grid spotlight-grid-four">
-            <article class="spotlight-card reveal">
-              <h3>Website hub</h3>
-              <p>GastroCompass keeps the brand story, research explanation, founder story, FAQ, and public-facing context.</p>
-            </article>
-            <article class="spotlight-card reveal">
-              <h3>App launch point</h3>
-              <p>This page acts as the handoff between the public site and the live interactive GastroLens assessment flow.</p>
-            </article>
-            <article class="spotlight-card reveal">
-              <h3>Interactive experience</h3>
-              <p>The app handles structured intake, deterministic rule-based scoring, and research-style summary output.</p>
-            </article>
-            <article class="spotlight-card reveal">
-              <h3>Future-ready deployment</h3>
-              <p>The launch target can later switch from localhost to an app subdomain or linked path when you deploy it.</p>
-            </article>
-          </div>
-        </section>
-
-        <section class="section">
-          <div class="split-layout">
-            <div class="reveal">
-              <div class="section-heading left">
-                <span class="eyebrow">Start locally</span>
-                <h2>Run the connected app on your computer</h2>
-              </div>
-              <p class="section-lead left">
-                If the app does not open yet, start the local GastroLens server and then come back
-                to this launch page.
-              </p>
-              <div class="launch-code-block">
-                <code>cd "/Users/tanushnimmalapudi/Desktop/GI App/gastrolens-app-recovered"</code>
-                <code>npm run dev</code>
-              </div>
-            </div>
-            <div class="insight-panel reveal">
-              <div class="metric-card">
-                <p class="card-label">Current launch target</p>
-                <h3><a href="https://gastrocompass.org/gastrolens" target="_blank" rel="noopener noreferrer">https://gastrocompass.org/gastrolens</a></h3>
-              </div>
-              <div class="metric-card soft">
-                <p class="card-label">Later deployment target</p>
-                <p>app.gastrocompass.org or /gastrolens once you are ready to publish the app.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <footer class="site-footer">
-        <div>
-          <div class="footer-brand">
-            <span class="brand-mark brand-mark-footer" aria-hidden="true"><img src="logo.svg" alt="" /></span>
-            <h3>Gastro Compass</h3>
-          </div>
-          <p>The hub for GastroLens research, context, and launch flow.</p>
-        </div>
-        <div class="footer-links">
-          <a href="https://gastrocompass.org/gastrolens">GastroLens App</a>
-          <a href="about.html">About</a>
-          <a href="founder.html">Team</a>
-          <a href="research/gastrolens-nhanes-analysis.pdf" target="_blank" rel="noopener noreferrer">Research Paper</a>
-        </div>
-        <p class="footer-disclaimer">
-          GastroLens is non-diagnostic and for informational, research-mode use only. Always consult a licensed healthcare professional for medical concerns.
+    <main>
+      <section class="card">
+        <h1>Redirecting to GastroLens</h1>
+        <p>
+          If you are not redirected automatically, open
+          <a href="https://gastrocompass.org/gastrolens/">the live GastroLens app</a>.
         </p>
-      </footer>
-    </div>
-
-    <script src="script.js"></script>
+      </section>
+    </main>
   </body>
 </html>

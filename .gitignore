@@ -1,7 +1,9 @@
 .DS_Store
 
 
-.gastrolens-app-recovered/
 .next/
 public/
 node_modules/
+gastrolens-app-recovered/.next/
+gastrolens-app-recovered/node_modules/
+gastrolens-app-recovered/out/

@@ -11,6 +11,7 @@ import {
 } from "@/lib/assessment-config";
 import { RadioGroupField } from "@/components/radio-group-field";
 import { ResultPanel } from "@/components/result-panel";
+import { assessRisk, validateAssessmentInput } from "@/lib/scoring";
 import { RiskAssessment, SymptomFormState, SymptomFormValues } from "@/lib/types";
 
 const totalSteps = assessmentSteps.length;
@@ -80,28 +81,13 @@ export function SymptomForm() {
   }
 
   async function runAssessment(nextValues: SymptomFormValues) {
-    const response = await fetch("/api/risk", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(nextValues),
-    });
+    const validation = validateAssessmentInput(nextValues);
 
-    if (!response.ok) {
-      const payload = (await response.json().catch(() => null)) as
-        | { message?: string; missingFields?: string[] }
-        | null;
-
-      const fallbackMessage = "Unable to calculate the research summary right now.";
-      throw new Error(
-        payload?.missingFields?.length
-          ? `Please answer: ${payload.missingFields.join(", ")}.`
-          : payload?.message || fallbackMessage,
-      );
+    if (!validation.ok) {
+      throw new Error(`Please answer: ${validation.missingFields.join(", ")}.`);
     }
 
-    return (await response.json()) as RiskAssessment;
+    return assessRisk(validation.values);
   }
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
