@@ -1106,6 +1106,43 @@ p {
   border-radius: var(--radius-xl);
 }
 
+.launch-card {
+  height: 100%;
+  padding: 28px;
+}
+
+.launch-card p {
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.launch-note {
+  margin-top: 18px;
+}
+
+.launch-code-block {
+  display: grid;
+  gap: 12px;
+  margin-top: 22px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 18px 45px rgba(21, 53, 74, 0.08);
+}
+
+.launch-code-block code {
+  display: block;
+  overflow-x: auto;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(15, 109, 136, 0.08);
+  color: var(--primary-dark);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
 .feature-grid,
 .steps-grid,
 .spotlight-grid {

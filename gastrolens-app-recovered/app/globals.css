@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  color: #15354a;
+  background:
+    radial-gradient(circle at top left, rgba(105, 213, 210, 0.18), transparent 28%),
+    radial-gradient(circle at top right, rgba(15, 155, 179, 0.12), transparent 30%),
+    linear-gradient(180deg, #f8fdff 0%, #f4fbfd 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: rgba(15, 155, 179, 0.18);
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.76);
+  backdrop-filter: blur(18px);
+}
+
+.soft-grid {
+  background-image:
+    linear-gradient(rgba(15, 109, 136, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 109, 136, 0.05) 1px, transparent 1px);
+  background-size: 26px 26px;
+  background-position: center;
+}
