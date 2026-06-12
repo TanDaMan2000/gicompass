@@ -400,6 +400,20 @@ export function ResultPanel({ result, values, onEdit, onReset }: ResultPanelProp
         </div>
       ) : null}
 
+      <PanelCard title="What's Next">
+        <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+          <p className="max-w-3xl text-sm leading-6 text-muted">
+            Bring your results to your next doctor's appointment and ask about colorectal cancer screening.
+          </p>
+          <a
+            href={gastroCompassLinks.openMePledge}
+            className="rounded-full bg-[linear-gradient(135deg,#0f6d88,#0f9bb3)] px-5 py-3 text-center text-sm font-bold text-white shadow-glow transition hover:translate-y-[-1px]"
+          >
+            Pledge to Talk to My Doctor
+          </a>
+        </div>
+      </PanelCard>
+
       <div className="flex flex-wrap gap-3">
         <button
           type="button"

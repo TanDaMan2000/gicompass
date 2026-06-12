@@ -10,6 +10,7 @@ export const gastroCompassLinks = {
   home: "https://gastrocompass.org",
   research: "https://gastrocompass.org/research/gastrolens-nhanes-analysis.pdf",
   overview: "https://gastrocompass.org/about",
+  openMePledge: "/open-me.html#pledge",
 } as const;
 
 export const fieldLabels: Record<keyof SymptomFormValues, string> = {

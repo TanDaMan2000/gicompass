@@ -290,6 +290,74 @@
           </div>
         </section>
 
+        <section id="pledge" class="section section-band openme-section">
+          <div class="section-heading reveal">
+            <span class="eyebrow openme-eyebrow">Take the Next Step</span>
+            <h2>Turn awareness into action</h2>
+            <p class="section-lead">
+              Learn your symptom risk with GastroLens or make a simple pledge to bring up colorectal
+              cancer screening with your doctor.
+            </p>
+          </div>
+          <div class="openme-pledge-card reveal">
+            <div class="openme-pledge-intro">
+              <div class="openme-pledge-actions">
+                <a class="button button-primary openme-primary" href="/gastrolens/">
+                  Check My Risk with GastroLens
+                </a>
+                <a class="button button-secondary openme-secondary" href="#pledge-form">
+                  Pledge to Talk to My Doctor
+                </a>
+              </div>
+              <p class="openme-pledge-count" id="pledge-count" aria-live="polite">
+                Join 1 others who have pledged.
+              </p>
+            </div>
+
+            <div class="openme-pledge-flow">
+              <form class="openme-pledge-form" id="pledge-form">
+                <label>
+                  <span>First name</span>
+                  <input type="text" name="firstName" placeholder="Alex" required />
+                </label>
+                <label>
+                  <span>Zip code</span>
+                  <input
+                    type="text"
+                    name="zipCode"
+                    inputmode="numeric"
+                    maxlength="10"
+                    placeholder="30309"
+                    required
+                  />
+                </label>
+                <label class="openme-checkbox">
+                  <input type="checkbox" name="pledgeCommitment" required />
+                  <span>I commit to asking my doctor about colorectal cancer screening.</span>
+                </label>
+                <button class="button button-primary openme-primary" type="submit">
+                  Add My Pledge
+                </button>
+              </form>
+
+              <div class="openme-pledge-confirmation" id="pledge-confirmation" hidden>
+                <p class="openme-pledge-thanks">
+                  Thank you. You've taken an important step. Share this page with someone who should
+                  know about screening.
+                </p>
+                <button
+                  class="button button-secondary openme-secondary"
+                  id="pledge-share-button"
+                  type="button"
+                >
+                  Share This Page
+                </button>
+                <p class="openme-share-message" id="pledge-share-message" aria-live="polite"></p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section class="section openme-section">
           <div class="section-heading reveal">
             <span class="eyebrow openme-eyebrow">About GastroCompass</span>
