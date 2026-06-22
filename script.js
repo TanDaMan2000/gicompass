@@ -66,9 +66,6 @@ document.querySelectorAll("[data-card-experience]").forEach((experience) => {
 
     toggles.forEach((toggle) => {
       toggle.setAttribute("aria-expanded", String(isOpen));
-      if (toggle.textContent.trim()) {
-        toggle.textContent = isOpen ? "Close the Card" : "Open the Card";
-      }
       toggle.setAttribute(
         "aria-label",
         isOpen ? "Close the virtual Open Me card" : "Open the virtual Open Me card"
