@@ -475,37 +475,8 @@ body.openme-page .button-secondary {
   gap: 14px;
   align-items: center;
   justify-items: center;
-  width: min(300px, 100%);
+  width: min(280px, 100%);
   margin-left: auto;
-}
-
-.openme-card-teaser {
-  display: block;
-  width: min(250px, 100%);
-  text-decoration: none;
-  color: inherit;
-}
-
-.openme-card-teaser-frame {
-  display: block;
-  padding: 10px;
-  border-radius: 22px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(225, 235, 248, 0.82));
-  border: 1px solid rgba(255, 255, 255, 0.42);
-  box-shadow: 0 22px 44px rgba(6, 18, 32, 0.28);
-  transition: transform 220ms ease, box-shadow 220ms ease;
-}
-
-.openme-card-teaser:hover .openme-card-teaser-frame {
-  transform: translateY(-4px) scale(1.015);
-  box-shadow: 0 28px 56px rgba(6, 18, 32, 0.34);
-}
-
-.openme-card-teaser img {
-  display: block;
-  width: 100%;
-  border-radius: 14px;
-  box-shadow: 0 14px 28px rgba(4, 14, 24, 0.2);
 }
 
 .openme-bag {
@@ -591,6 +562,8 @@ body.openme-page .button-secondary {
 .openme-hero-caption {
   font-size: 0.85rem;
   color: rgba(219, 234, 255, 0.66);
+  text-align: center;
+  max-width: 24rem;
 }
 
 .openme-card-preview {
@@ -616,6 +589,7 @@ body.openme-page .button-secondary {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+  justify-content: center;
 }
 
 .openme-virtual-card {
@@ -627,11 +601,11 @@ body.openme-page .button-secondary {
 
 .openme-virtual-card-stage {
   position: relative;
-  width: min(100%, 600px);
-  aspect-ratio: 4 / 3;
+  width: min(100%, 260px);
+  aspect-ratio: 4 / 3.02;
   min-height: 0;
   perspective: 2600px;
-  perspective-origin: 44% center;
+  perspective-origin: center 18%;
 }
 
 .openme-virtual-card-panel {
@@ -639,10 +613,10 @@ body.openme-page .button-secondary {
   top: 0;
   left: 0;
   width: 100%;
-  border-radius: 18px;
+  border-radius: 14px;
   overflow: hidden;
   background: #ffffff;
-  box-shadow: 0 24px 52px rgba(6, 18, 32, 0.26);
+  box-shadow: 0 16px 34px rgba(6, 18, 32, 0.26);
   transition:
     transform 760ms cubic-bezier(0.2, 0.8, 0.2, 1),
     opacity 420ms ease,
@@ -659,23 +633,23 @@ body.openme-page .button-secondary {
 
 .openme-virtual-card-base {
   z-index: 1;
-  transform: scale(0.98);
-  box-shadow: 0 18px 38px rgba(6, 18, 32, 0.16);
+  transform: scale(0.985);
+  box-shadow: 0 12px 26px rgba(6, 18, 32, 0.16);
 }
 
 .openme-virtual-card-front {
   z-index: 2;
-  transform-origin: left center;
-  transform: rotateY(0deg);
+  transform-origin: center top;
+  transform: rotateX(0deg);
 }
 
 .openme-virtual-card-base::after {
   content: "";
   position: absolute;
-  top: 0;
-  bottom: 0;
   left: 0;
-  width: 1px;
+  right: 0;
+  top: 0;
+  height: 1px;
   background: rgba(18, 48, 82, 0.08);
 }
 
@@ -684,14 +658,14 @@ body.openme-page .button-secondary {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(255, 255, 255, 0.06), rgba(0, 0, 0, 0.18)),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent 24%);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(0, 0, 0, 0.2)),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03), transparent 30%);
   transition: opacity 420ms ease;
 }
 
 .openme-virtual-card[data-open="true"] .openme-virtual-card-front {
-  transform: rotateY(-132deg);
-  box-shadow: -16px 18px 34px rgba(6, 18, 32, 0.18);
+  transform: rotateX(138deg);
+  box-shadow: 0 8px 18px rgba(6, 18, 32, 0.08);
 }
 
 .openme-virtual-card[data-open="true"] .openme-virtual-card-front::after {
@@ -713,6 +687,11 @@ body.openme-page .button-secondary {
   font-weight: 600;
   text-align: center;
   font-size: 0.92rem;
+}
+
+.openme-summary-stack {
+  display: grid;
+  gap: 26px;
 }
 
 .openme-qr-link {
@@ -873,6 +852,11 @@ body.openme-page .button-secondary {
   border-color: rgba(22, 62, 112, 0.18);
 }
 
+.openme-partner-note {
+  margin: 20px 0 0;
+  text-align: center;
+}
+
 .screening-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1018,10 +1002,6 @@ body.openme-page .button-secondary {
     grid-template-columns: 1fr;
   }
 
-  .openme-card-experience {
-    grid-template-columns: 1fr;
-  }
-
   .screening-grid {
     grid-template-columns: 1fr;
   }
@@ -1045,11 +1025,6 @@ body.openme-page .button-secondary {
     width: 100%;
   }
 
-  .openme-card-teaser-frame {
-    padding: 8px;
-    border-radius: 18px;
-  }
-
   .openme-bag {
     width: 100%;
   }
@@ -1060,18 +1035,18 @@ body.openme-page .button-secondary {
   }
 
   .openme-virtual-card-stage {
-    width: min(100%, 440px);
+    width: min(100%, 240px);
     aspect-ratio: 4 / 3;
   }
 
   .openme-virtual-card-panel {
     width: 100%;
     max-width: 100%;
-    border-radius: 16px;
+    border-radius: 12px;
   }
 
   .openme-virtual-card[data-open="true"] .openme-virtual-card-front {
-    transform: rotateY(-122deg);
+    transform: rotateX(132deg);
   }
 
   .openme-links .button,

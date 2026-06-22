@@ -45,7 +45,7 @@
         </button>
         <nav class="site-nav">
           <a href="#how-it-works">How It Works</a>
-          <a href="#campaign">Campaign</a>
+          <a href="#campaign">Why It Matters</a>
           <a href="#partners">Partners</a>
           <div class="nav-dropdown">
             <button class="nav-trigger" type="button">About</button>
@@ -93,91 +93,34 @@
             </div>
           </div>
           <div class="hero-visual reveal">
-            <div class="openme-hero-visual">
-              <a class="openme-card-teaser" href="#card-preview" aria-label="Jump to the interactive Open Me card preview">
-                <span class="openme-card-teaser-frame">
-                  <img src="open-me-card-front.png" alt="Front cover of the Open Me card" />
-                </span>
-              </a>
-              <div class="openme-hero-caption">The real Open Me card artwork, recreated as a virtual folded card below.</div>
-              <div class="openme-preview-actions">
-                <a class="button button-secondary openme-secondary" href="Open%20Me%20Card.pdf" target="_blank" rel="noopener noreferrer">
-                  Download Print File
-                </a>
+            <div class="openme-hero-visual" data-card-experience>
+              <div
+                class="openme-virtual-card openme-virtual-card-hero"
+                id="virtual-openme-card"
+                data-card-shell
+                data-open="false"
+              >
+                <button
+                  class="openme-virtual-card-hitbox"
+                  type="button"
+                  data-card-toggle
+                  aria-expanded="false"
+                  aria-controls="virtual-openme-card"
+                  aria-label="Open the virtual Open Me card"
+                ></button>
+                <div class="openme-virtual-card-stage" aria-hidden="true">
+                  <div class="openme-virtual-card-panel openme-virtual-card-base">
+                    <img src="open-me-card-inside.png" alt="" />
+                  </div>
+                  <div class="openme-virtual-card-panel openme-virtual-card-front">
+                    <img src="open-me-card-front.png" alt="Front cover of the Open Me card" />
+                  </div>
+                </div>
+                <p class="openme-virtual-card-instruction" data-card-instruction>
+                  Click the card to open it.
+                </p>
               </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="how-it-works" class="section openme-section">
-          <div class="section-heading reveal">
-            <span class="eyebrow openme-eyebrow">What is Open Me?</span>
-            <h2>Simple steps, real-world impact</h2>
-          </div>
-          <div class="steps-grid steps-grid-four openme-steps">
-            <article class="step-card reveal">
-              <span class="step-number">1</span>
-              <h3>Place</h3>
-              <p>A local restaurant places a small Open Me card inside a takeout order.</p>
-            </article>
-            <article class="step-card reveal">
-              <span class="step-number">2</span>
-              <h3>Open</h3>
-              <p>The customer opens the folded card at home or with family.</p>
-            </article>
-            <article class="step-card reveal">
-              <span class="step-number">3</span>
-              <h3>Remind</h3>
-              <p>The card shares a simple reminder about screening for adults 45+.</p>
-            </article>
-            <article class="step-card reveal">
-              <span class="step-number">4</span>
-              <h3>Connect</h3>
-              <p>A QR code connects people to trusted screening info and next steps.</p>
-            </article>
-          </div>
-        </section>
-
-        <section id="campaign" class="section section-surface openme-section">
-          <div class="section-heading reveal">
-            <span class="eyebrow openme-eyebrow">Why it matters</span>
-            <h2>Screening saves lives — and can prevent cancer</h2>
-          </div>
-          <div class="spotlight-grid openme-why">
-            <article class="spotlight-card reveal">
-              <h3>Start at 45</h3>
-              <p>Most adults at average risk should begin colorectal cancer screening at age 45.</p>
-            </article>
-            <article class="spotlight-card reveal">
-              <h3>Find it early</h3>
-              <p>Screening helps find cancer earlier, when treatment is more effective.</p>
-            </article>
-            <article class="spotlight-card reveal">
-              <h3>Prevent cancer</h3>
-              <p>Screening can also prevent cancer by finding precancerous polyps.</p>
-            </article>
-            <article class="spotlight-card reveal">
-              <h3>Often no symptoms</h3>
-              <p>Colorectal cancer may not cause symptoms at first. Screening matters.</p>
-            </article>
-          </div>
-          <div class="trust-note openme-note">
-            Always talk to a doctor for medical advice and screening guidance.
-          </div>
-        </section>
-
-        <section id="card-preview" class="section openme-section">
-          <div class="section-heading reveal">
-            <span class="eyebrow openme-eyebrow">Card preview</span>
-            <h2>The final Open Me card</h2>
-          </div>
-          <div class="openme-card-experience reveal" data-card-experience>
-            <div class="openme-card-preview-copy">
-              <p class="section-lead left">
-                Click the folded card to open it virtually. This interactive preview is built from
-                the real front and inside artwork that will be printed and placed inside restaurant
-                takeout orders.
-              </p>
+              <div class="openme-hero-caption">A virtual version of the real folded card. Click it to open the inside message.</div>
               <div class="openme-preview-actions">
                 <a class="button button-secondary openme-secondary" href="#pledge-form">
                   Go to the QR Destination
@@ -187,31 +130,57 @@
                 </a>
               </div>
             </div>
-            <div
-              class="openme-virtual-card"
-              id="virtual-openme-card"
-              data-card-shell
-              data-open="false"
-            >
-              <button
-                class="openme-virtual-card-hitbox"
-                type="button"
-                data-card-toggle
-                aria-expanded="false"
-                aria-controls="virtual-openme-card"
-                aria-label="Open the virtual Open Me card"
-              ></button>
-              <div class="openme-virtual-card-stage" aria-hidden="true">
-                <div class="openme-virtual-card-panel openme-virtual-card-base">
-                  <img src="open-me-card-inside.png" alt="" />
-                </div>
-                <div class="openme-virtual-card-panel openme-virtual-card-front">
-                  <img src="open-me-card-front.png" alt="" />
-                </div>
-              </div>
-              <p class="openme-virtual-card-instruction" data-card-instruction>
-                Click to open the folded card.
-              </p>
+          </div>
+        </section>
+
+        <section id="how-it-works" class="section section-surface openme-section">
+          <div class="section-heading reveal">
+            <span class="eyebrow openme-eyebrow">What is Open Me?</span>
+            <h2>Small card. Simple reminder. Real screening impact.</h2>
+          </div>
+          <div class="openme-summary-stack">
+            <div class="steps-grid steps-grid-four openme-steps">
+              <article class="step-card reveal">
+                <span class="step-number">1</span>
+                <h3>Place</h3>
+                <p>A local restaurant slips a folded card into a takeout order.</p>
+              </article>
+              <article class="step-card reveal">
+                <span class="step-number">2</span>
+                <h3>Open</h3>
+                <p>The customer opens the card at home and sees a clear screening prompt.</p>
+              </article>
+              <article class="step-card reveal">
+                <span class="step-number">3</span>
+                <h3>Scan</h3>
+                <p>The QR brings them straight to screening basics and the doctor-talk pledge.</p>
+              </article>
+              <article class="step-card reveal">
+                <span class="step-number">4</span>
+                <h3>Act</h3>
+                <p>The goal is one next step: ask about colorectal cancer screening.</p>
+              </article>
+            </div>
+            <div id="campaign" class="spotlight-grid openme-why">
+              <article class="spotlight-card reveal">
+                <h3>Start at 45</h3>
+                <p>Most adults at average risk should begin colorectal cancer screening at age 45.</p>
+              </article>
+              <article class="spotlight-card reveal">
+                <h3>Find it early</h3>
+                <p>Screening helps find cancer earlier, when treatment is more effective.</p>
+              </article>
+              <article class="spotlight-card reveal">
+                <h3>Prevent cancer</h3>
+                <p>Screening can also prevent cancer by finding precancerous polyps.</p>
+              </article>
+              <article class="spotlight-card reveal">
+                <h3>Often no symptoms</h3>
+                <p>Colorectal cancer may not cause symptoms at first, which is why screening matters.</p>
+              </article>
+            </div>
+            <div class="trust-note openme-note">
+              Always talk to a doctor for medical advice and screening guidance.
             </div>
           </div>
         </section>
@@ -238,27 +207,9 @@
           <div class="section-cta reveal">
             <a class="button button-primary openme-primary" href="mailto:tanush.nimmalapudi@gastrocompass.org">Become a Partner</a>
           </div>
-        </section>
-
-        <section class="section openme-section">
-          <div class="section-heading reveal">
-            <span class="eyebrow openme-eyebrow">Future movement</span>
-            <h2>Bring Open Me to your community</h2>
-          </div>
-          <div class="split-layout openme-split">
-            <div class="reveal">
-              <p class="section-lead left">
-                We plan to share Open Me with student groups, clubs, and local chapters so this
-                model can be replicated as a community-led screening awareness effort.
-                Campaign materials and a toolkit are coming soon.
-              </p>
-            </div>
-            <div class="coming-soon-card reveal openme-toolkit">
-              <span class="comparison-label">Toolkit coming soon</span>
-              <h3>Resources for chapters and partners</h3>
-              <p>Printable card files, partner onboarding notes, and QR landing materials.</p>
-            </div>
-          </div>
+          <p class="section-lead reveal openme-partner-note">
+            Toolkit materials, printable files, and rollout guidance are being organized through GastroCompass.
+          </p>
         </section>
 
         <section id="screening" class="section section-surface openme-section">
@@ -385,16 +336,6 @@
           </div>
         </section>
 
-        <section class="section openme-section">
-          <div class="section-heading reveal">
-            <span class="eyebrow openme-eyebrow">About GastroCompass</span>
-            <h2>Why this work exists</h2>
-          </div>
-          <p class="section-lead reveal">
-            GastroCompass is a youth-led digestive health initiative focused on early symptom awareness,
-            colorectal cancer screening education, and better public understanding of GI health.
-          </p>
-        </section>
       </main>
 
       <footer class="site-footer">
