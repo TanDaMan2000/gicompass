@@ -479,51 +479,33 @@ body.openme-page .button-secondary {
   margin-left: auto;
 }
 
-.openme-card-document {
-  width: min(460px, 100%);
-  padding: 18px;
-  border-radius: 30px;
+.openme-card-teaser {
+  display: block;
+  width: min(440px, 100%);
+  text-decoration: none;
+  color: inherit;
+}
+
+.openme-card-teaser-frame {
+  display: block;
+  padding: 16px;
+  border-radius: 28px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(225, 235, 248, 0.82));
   border: 1px solid rgba(255, 255, 255, 0.42);
   box-shadow: 0 34px 72px rgba(6, 18, 32, 0.38);
+  transition: transform 220ms ease, box-shadow 220ms ease;
 }
 
-.openme-card-document-frame {
+.openme-card-teaser:hover .openme-card-teaser-frame {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 42px 84px rgba(6, 18, 32, 0.42);
+}
+
+.openme-card-teaser img {
   display: block;
   width: 100%;
-  border: 0;
-  border-radius: 22px;
-  background: #ffffff;
-  box-shadow: inset 0 0 0 1px rgba(16, 52, 92, 0.08);
-}
-
-.openme-card-document-frame-hero {
-  height: 520px;
-}
-
-.openme-card-document-frame-full {
-  min-height: 760px;
-}
-
-.openme-card-document-fallback {
-  min-height: 240px;
-  padding: 24px;
-  border-radius: 22px;
-  background: #ffffff;
-  display: grid;
-  gap: 14px;
-  align-content: center;
-  justify-items: start;
-  color: var(--openme-ink);
-}
-
-.openme-card-document-fallback p {
-  margin: 0;
-  color: var(--openme-muted);
-}
-
-.openme-card-download {
-  min-width: 220px;
+  border-radius: 20px;
+  box-shadow: 0 24px 48px rgba(4, 14, 24, 0.28);
 }
 
 .openme-bag {
@@ -617,7 +599,7 @@ body.openme-page .button-secondary {
   gap: 18px;
 }
 
-.openme-card-preview-document {
+.openme-card-experience {
   display: grid;
   grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.2fr);
   gap: 24px;
@@ -634,6 +616,85 @@ body.openme-page .button-secondary {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+}
+
+.openme-virtual-card {
+  position: relative;
+  display: grid;
+  gap: 14px;
+  justify-items: center;
+}
+
+.openme-virtual-card-stage {
+  position: relative;
+  width: min(100%, 860px);
+  min-height: 430px;
+  perspective: 2200px;
+  perspective-origin: center center;
+}
+
+.openme-virtual-card-panel {
+  position: absolute;
+  top: 0;
+  width: min(46%, 400px);
+  border-radius: 24px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 30px 64px rgba(6, 18, 32, 0.32);
+  transition:
+    transform 620ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    opacity 420ms ease,
+    left 620ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    right 620ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 420ms ease;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+.openme-virtual-card-panel img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.openme-virtual-card-front {
+  left: 50%;
+  z-index: 2;
+  transform: translateX(-50%) rotateY(0deg) rotateZ(-1deg);
+}
+
+.openme-virtual-card-inside {
+  right: 6%;
+  opacity: 0;
+  transform-origin: left center;
+  transform: rotateY(-92deg) translateX(-24px);
+}
+
+.openme-virtual-card[data-open="true"] .openme-virtual-card-front {
+  left: 4%;
+  transform: translateX(0) rotateY(-18deg) rotateZ(-1.5deg);
+  box-shadow: 0 34px 72px rgba(6, 18, 32, 0.34);
+}
+
+.openme-virtual-card[data-open="true"] .openme-virtual-card-inside {
+  opacity: 1;
+  transform: rotateY(0deg) translateX(0);
+}
+
+.openme-virtual-card-hitbox {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.openme-virtual-card-instruction {
+  margin: 0;
+  color: rgba(224, 237, 255, 0.84);
+  font-weight: 600;
+  text-align: center;
 }
 
 .openme-qr-link {
@@ -939,7 +1000,7 @@ body.openme-page .button-secondary {
     grid-template-columns: 1fr;
   }
 
-  .openme-card-preview-document {
+  .openme-card-experience {
     grid-template-columns: 1fr;
   }
 
@@ -962,18 +1023,13 @@ body.openme-page .button-secondary {
     padding-top: 60px;
   }
 
-  .openme-card-document {
+  .openme-card-teaser {
     width: 100%;
+  }
+
+  .openme-card-teaser-frame {
     padding: 12px;
     border-radius: 24px;
-  }
-
-  .openme-card-document-frame-hero {
-    height: 420px;
-  }
-
-  .openme-card-document-frame-full {
-    min-height: 520px;
   }
 
   .openme-bag {
@@ -983,6 +1039,36 @@ body.openme-page .button-secondary {
   .openme-screening-card,
   .openme-pledge-card {
     padding: 24px;
+  }
+
+  .openme-virtual-card-stage {
+    min-height: 520px;
+  }
+
+  .openme-virtual-card-panel {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .openme-virtual-card-front {
+    left: 0;
+    transform: translateX(0) rotateY(0deg) rotateZ(0deg);
+  }
+
+  .openme-virtual-card-inside {
+    top: 188px;
+    right: 0;
+    transform: translateY(26px);
+  }
+
+  .openme-virtual-card[data-open="true"] .openme-virtual-card-front {
+    left: 0;
+    transform: translateY(0) rotateY(0deg);
+  }
+
+  .openme-virtual-card[data-open="true"] .openme-virtual-card-inside {
+    opacity: 1;
+    transform: translateY(0);
   }
 
   .openme-links .button,
