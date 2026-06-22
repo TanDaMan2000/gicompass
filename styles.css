@@ -472,10 +472,10 @@ body.openme-page .button-secondary {
 
 .openme-hero-visual {
   display: grid;
-  gap: 14px;
+  gap: 16px;
   align-items: center;
   justify-items: center;
-  width: min(280px, 100%);
+  width: min(390px, 100%);
   margin-left: auto;
 }
 
@@ -601,11 +601,11 @@ body.openme-page .button-secondary {
 
 .openme-virtual-card-stage {
   position: relative;
-  width: min(100%, 260px);
+  width: min(100%, 360px);
   aspect-ratio: 4 / 3.02;
   min-height: 0;
-  perspective: 2600px;
-  perspective-origin: center 18%;
+  perspective: 3200px;
+  perspective-origin: center 16%;
 }
 
 .openme-virtual-card-panel {
@@ -616,13 +616,14 @@ body.openme-page .button-secondary {
   border-radius: 14px;
   overflow: hidden;
   background: #ffffff;
-  box-shadow: 0 16px 34px rgba(6, 18, 32, 0.26);
+  box-shadow: 0 22px 46px rgba(6, 18, 32, 0.28);
   transition:
-    transform 760ms cubic-bezier(0.2, 0.8, 0.2, 1),
-    opacity 420ms ease,
-    box-shadow 420ms ease;
+    transform 1260ms cubic-bezier(0.16, 0.82, 0.2, 1),
+    opacity 620ms ease,
+    box-shadow 620ms ease;
   backface-visibility: hidden;
   transform-style: preserve-3d;
+  will-change: transform;
 }
 
 .openme-virtual-card-panel img {
@@ -633,14 +634,14 @@ body.openme-page .button-secondary {
 
 .openme-virtual-card-base {
   z-index: 1;
-  transform: scale(0.985);
-  box-shadow: 0 12px 26px rgba(6, 18, 32, 0.16);
+  transform: scale(0.992);
+  box-shadow: 0 18px 34px rgba(6, 18, 32, 0.18);
 }
 
 .openme-virtual-card-front {
   z-index: 2;
   transform-origin: center top;
-  transform: rotateX(0deg);
+  transform: rotateX(0deg) translateY(0);
 }
 
 .openme-virtual-card-base::after {
@@ -660,12 +661,12 @@ body.openme-page .button-secondary {
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(0, 0, 0, 0.2)),
     linear-gradient(90deg, rgba(255, 255, 255, 0.03), transparent 30%);
-  transition: opacity 420ms ease;
+  transition: opacity 620ms ease;
 }
 
 .openme-virtual-card[data-open="true"] .openme-virtual-card-front {
-  transform: rotateX(138deg);
-  box-shadow: 0 8px 18px rgba(6, 18, 32, 0.08);
+  transform: rotateX(148deg) translateY(-8px);
+  box-shadow: 0 10px 20px rgba(6, 18, 32, 0.08);
 }
 
 .openme-virtual-card[data-open="true"] .openme-virtual-card-front::after {
@@ -691,7 +692,30 @@ body.openme-page .button-secondary {
 
 .openme-summary-stack {
   display: grid;
-  gap: 26px;
+  gap: 32px;
+}
+
+.openme-summary-group {
+  display: grid;
+  gap: 18px;
+}
+
+.openme-summary-label {
+  margin: 0;
+  color: #d9ebff;
+}
+
+.openme-steps,
+.openme-why {
+  align-items: stretch;
+}
+
+.openme-why {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.openme-note {
+  margin-top: 2px;
 }
 
 .openme-qr-link {
@@ -755,6 +779,12 @@ body.openme-page .button-secondary {
 .openme-section.section-surface .section-heading h2,
 .openme-section.section-band .section-heading h2 {
   color: #f7fbff;
+}
+
+.openme-section.section-surface .section-heading {
+  max-width: 56rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .openme-section.section-surface .section-heading .section-lead,
@@ -998,11 +1028,21 @@ body.openme-page .button-secondary {
     grid-template-columns: 1fr;
   }
 
+  .openme-hero-visual {
+    width: min(460px, 100%);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .openme-card-preview {
     grid-template-columns: 1fr;
   }
 
   .screening-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .openme-why {
     grid-template-columns: 1fr;
   }
 
@@ -1035,7 +1075,7 @@ body.openme-page .button-secondary {
   }
 
   .openme-virtual-card-stage {
-    width: min(100%, 240px);
+    width: min(100%, 300px);
     aspect-ratio: 4 / 3;
   }
 
@@ -1046,7 +1086,7 @@ body.openme-page .button-secondary {
   }
 
   .openme-virtual-card[data-open="true"] .openme-virtual-card-front {
-    transform: rotateX(132deg);
+    transform: rotateX(142deg) translateY(-5px);
   }
 
   .openme-links .button,
