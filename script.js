@@ -18,6 +18,10 @@ const revealObserver = new IntersectionObserver(
 );
 
 revealItems.forEach((item, index) => {
+  if (item.getBoundingClientRect().top < window.innerHeight * 0.92) {
+    item.classList.add("visible");
+  }
+
   item.style.transitionDelay = `${Math.min(index * 45, 240)}ms`;
   revealObserver.observe(item);
 });
@@ -96,6 +100,14 @@ const updatePledgeCountLabel = (count) => {
 
 if (pledgeCount) {
   updatePledgeCountLabel(getPledgeCount());
+}
+
+if (pledgeConfirmation) {
+  pledgeConfirmation.hidden = true;
+}
+
+if (pledgeForm) {
+  pledgeForm.hidden = false;
 }
 
 pledgeShareButton?.addEventListener("click", async () => {
