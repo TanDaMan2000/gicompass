@@ -1,9 +1,8 @@
 .DS_Store
-
-
 .next/
 public/
 node_modules/
-gastrolens-app-recovered/.next/
-gastrolens-app-recovered/node_modules/
-gastrolens-app-recovered/out/
+apps/gastrolens/.next/
+apps/gastrolens/node_modules/
+apps/gastrolens/out/
+apps/gastrolens/tsconfig.tsbuildinfo

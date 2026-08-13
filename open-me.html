@@ -18,15 +18,15 @@
       href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <link rel="shortcut icon" href="favicon.svg" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/svg+xml" href="assets/brand/favicon.svg" />
+    <link rel="shortcut icon" href="assets/brand/favicon.svg" />
+    <link rel="stylesheet" href="assets/css/site.css" />
   </head>
   <body class="openme-page">
     <div class="page-shell">
       <header class="site-header">
         <a class="brand openme-brand" href="index.html" aria-label="GastroCompass home">
-          <span class="brand-mark" aria-hidden="true"><img src="logo.svg" alt="" /></span>
+          <span class="brand-mark" aria-hidden="true"><img src="assets/brand/logo.svg" alt="" /></span>
           <span class="brand-text openme-brand-text">
             <span class="openme-brand-title">Open Me</span>
             <span class="openme-brand-subtitle">By GastroCompass</span>
@@ -110,10 +110,10 @@
                 ></button>
                 <div class="openme-virtual-card-stage" aria-hidden="true">
                   <div class="openme-virtual-card-panel openme-virtual-card-base">
-                    <img src="open-me-card-inside.png" alt="" />
+                    <img src="assets/images/open-me/card-inside.png" alt="" />
                   </div>
                   <div class="openme-virtual-card-panel openme-virtual-card-front">
-                    <img src="open-me-card-front.png" alt="Front cover of the Open Me card" />
+                    <img src="assets/images/open-me/card-front.png" alt="Front cover of the Open Me card" />
                   </div>
                 </div>
                 <p class="openme-virtual-card-instruction" data-card-instruction>
@@ -125,7 +125,7 @@
                 <a class="button button-secondary openme-secondary" href="#pledge-form">
                   Go to the QR Destination
                 </a>
-                <a class="button button-secondary openme-secondary" href="Open%20Me%20Card.pdf" target="_blank" rel="noopener noreferrer">
+                <a class="button button-secondary openme-secondary" href="assets/downloads/open-me-card.pdf" target="_blank" rel="noopener noreferrer">
                   Download Print File
                 </a>
               </div>
@@ -347,7 +347,7 @@
       <footer class="site-footer">
         <div>
           <div class="footer-brand">
-            <span class="brand-mark brand-mark-footer" aria-hidden="true"><img src="logo.svg" alt="" /></span>
+            <span class="brand-mark brand-mark-footer" aria-hidden="true"><img src="assets/brand/logo.svg" alt="" /></span>
             <h3>GastroCompass</h3>
           </div>
           <p>Open Me by GastroCompass</p>
@@ -365,7 +365,11 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="supabase-config.js"></script>
-    <script src="script.js"></script>
+    <script src="assets/js/reveal.js"></script>
+    <script src="assets/js/site-navigation.js"></script>
+    <script src="assets/js/open-me/card.js"></script>
+    <script src="assets/js/supabase-config.js"></script>
+    <script src="assets/js/supabase-client.js"></script>
+    <script src="assets/js/open-me/pledge.js"></script>
   </body>
 </html>

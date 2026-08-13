@@ -1,32 +1,27 @@
-# GI Compass Site
+# GI Compass
 
-Static website for GI Compass.
+Static GitHub Pages website for GI Compass, including the GastroLens interactive
+assessment and the Open Me campaign.
 
-## Files
-- `index.html`
-- `about.html`
-- `founder.html`
-- `styles.css`
-- `script.js`
-- `logo.svg`
-- `favicon.svg`
-- `founder-photo.jpg`
+## Repository map
 
-## Deploy To GitHub Pages
-1. Create a GitHub repository named `gi-compass-site`.
-2. Upload all files in this folder.
-3. In GitHub, open `Settings` -> `Pages`.
-4. Set `Source` to `Deploy from a branch`.
-5. Set branch to `main` and folder to `/ (root)`.
-6. Save and wait for the temporary GitHub Pages URL.
-7. After you buy your domain, create a file named `CNAME` in the repo root.
-8. Put your live domain on one line in that file.
-   Example: `www.gicompass.ai`
-9. In `Settings` -> `Pages`, add the same domain under `Custom domain`.
-10. Point your GoDaddy DNS records to GitHub Pages.
+- Root `*.html` files are the public website routes.
+- `assets/` contains shared styles, browser scripts, images, and downloads.
+- `apps/gastrolens/` is the editable Next.js source for GastroLens.
+- `gastrolens/` is generated static output committed for GitHub Pages.
+- `research/` contains files served from the public `/research/` URL.
+- `supabase/` contains checked-in database migrations and notes.
+- `docs/` contains architecture, deployment, and non-production references.
 
-## Notes
-- `.nojekyll` is included so GitHub Pages serves the static files directly.
-- Do not use a GoDaddy site builder for this project.
-- The domain should be managed in your GoDaddy account.
-- Future edits should be made in code and pushed to GitHub.
+See [docs/architecture.md](docs/architecture.md) for source/deployment boundaries
+and [docs/deployment.md](docs/deployment.md) for the build and verification flow.
+
+## GitHub Pages
+
+The site deploys from the repository root. `CNAME` preserves the custom domain,
+and `.nojekyll` allows the generated Next.js `_next` directory to be served
+without Jekyll processing.
+
+Do not move the root HTML routes, `research/`, or generated `gastrolens/`
+directory without changing the deployment strategy and preserving their public
+URLs.
