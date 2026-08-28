@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gastro Compass | GastroLens Is Live</title>
+    <title>GastroCompass | Building Better Ways to Understand GI Health</title>
     <meta
       name="description"
-      content="Gastro Compass is the research-driven umbrella project behind GastroLens, a live first-version interactive symptom-pattern assessment tool focused on early-onset colorectal cancer warning signs."
+      content="GastroCompass is a research-driven initiative built around two things: GastroLens, a non-diagnostic symptom-pattern research tool, and Open Me, a community screening-awareness campaign for early-onset colorectal cancer."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,13 +17,15 @@
     <link rel="icon" type="image/svg+xml" href="assets/brand/favicon.svg" />
     <link rel="shortcut icon" href="assets/brand/favicon.svg" />
     <link rel="stylesheet" href="assets/css/site.css" />
+    <noscript><style>.reveal{opacity:1!important;transform:none!important;}</style></noscript>
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <div class="page-shell">
       <header class="site-header">
-        <a class="brand" href="index.html" aria-label="Gastro Compass home">
+        <a class="brand" href="index.html#top" aria-label="GastroCompass home">
           <span class="brand-mark" aria-hidden="true"><img src="assets/brand/logo.svg" alt="" /></span>
-          <span class="brand-text">Gastro Compass</span>
+          <span class="brand-text">GastroCompass</span>
         </a>
         <button
           class="mobile-nav-toggle"
@@ -36,690 +38,447 @@
           <span></span>
           <span></span>
         </button>
-        <nav class="site-nav">
-          <a href="#problem">Why it matters</a>
-          <a href="#features">Features</a>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="#story">Story</a>
           <div class="nav-dropdown">
-            <button class="nav-trigger" type="button">About</button>
+            <button class="nav-trigger" type="button">GastroLens</button>
             <div class="nav-menu">
-              <a href="https://gastrocompass.org/gastrolens/">Launch GastroLens</a>
-              <a href="about.html">About GastroLens</a>
+              <a href="#gastrolens">Explore GastroLens</a>
+              <a href="/gastrolens/">Launch the App</a>
               <a href="about.html#workflow">How It Works</a>
-              <a href="open-me.html">Open Me Campaign</a>
-              <a href="founder.html">Team</a>
             </div>
           </div>
-          <a href="#faq">FAQ</a>
+          <a href="open-me.html">OpenMe</a>
+          <a href="/research/gastrolens-nhanes-analysis.pdf" target="_blank" rel="noopener noreferrer">Research</a>
+          <a href="founder.html">About</a>
         </nav>
-        <a class="button button-small button-primary" href="https://gastrocompass.org/gastrolens/">Launch App</a>
+        <a class="button button-small button-primary nav-cta" href="open-me.html#pledge">Take the Pledge</a>
         <div class="mobile-nav-panel" id="mobile-nav" hidden>
-          <a href="#problem">Why it matters</a>
-          <a href="#features">Features</a>
-          <a href="https://gastrocompass.org/gastrolens/">Launch GastroLens</a>
-          <a href="about.html">About GastroLens</a>
+          <a href="#story">Story</a>
+          <a href="#gastrolens">Explore GastroLens</a>
+          <a href="/gastrolens/">Launch the App</a>
           <a href="about.html#workflow">How It Works</a>
-          <a href="open-me.html">Open Me Campaign</a>
-          <a href="founder.html">Team</a>
-          <a href="#faq">FAQ</a>
-          <a class="mobile-nav-cta" href="https://gastrocompass.org/gastrolens/">Launch App</a>
+          <a href="open-me.html">OpenMe</a>
+          <a href="/research/gastrolens-nhanes-analysis.pdf" target="_blank" rel="noopener noreferrer">Research</a>
+          <a href="founder.html">About</a>
+          <a class="mobile-nav-cta" href="open-me.html#pledge">Take the Pledge</a>
         </div>
       </header>
 
-      <main id="top">
-        <section class="hero section">
-          <div class="hero-copy reveal">
+      <main id="main" class="story-main">
+        <!-- HERO -->
+        <section class="story-hero" id="top">
+          <div class="story-hero-inner">
             <div class="status-chip-row">
-              <span class="status-chip status-chip-live">A Gastro Compass project</span>
-              <span class="status-chip status-chip-live">GastroLens first version live</span>
+              <span class="status-chip status-chip-live">GastroLens: live first version</span>
+              <span class="status-chip status-chip-live">Open Me: community screening campaign</span>
             </div>
-            <div class="hero-brand-lockup" aria-hidden="true">
-              <span class="brand-mark brand-mark-hero"><img src="assets/brand/logo.svg" alt="" /></span>
-              <span class="hero-brand-text">Research platform for symptom-first GI product development</span>
-            </div>
-            <h1>Meet GastroLens, the live first-version assessment tool from GastroCompass.</h1>
-            <p class="hero-text">
-              Gastro Compass is the umbrella project behind GastroLens.
-              GastroLens is now live in its first version as the interactive research-mode tool built to help
-              document persistent symptom patterns related to early-onset colorectal cancer concern.
-              It remains non-diagnostic, safety-first, and not clinically validated, but it is now
-              available to launch directly from the GastroCompass site as the connected product experience.
+            <h1 class="reveal">Building better ways to understand and act on GI health.</h1>
+            <p class="hero-text reveal">
+              GastroCompass is a research-driven initiative made of two connected parts: GastroLens,
+              a non-diagnostic tool for organizing colorectal cancer symptom patterns, and Open Me,
+              a community campaign that turns screening awareness into real conversations.
             </p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="https://gastrocompass.org/gastrolens/">Launch GastroLens</a>
-              <a class="button button-secondary" href="#waitlist">Get GastroLens Updates</a>
-              <a class="button button-secondary" href="about.html#workflow">See the Workflow</a>
-              <a
-                class="button button-secondary"
-                href="https://gastrocompass.org/research/gastrolens-nhanes-analysis.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Read the Research Paper
-              </a>
+            <div class="story-hero-actions reveal">
+              <a class="quiet-link quiet-link-primary" href="#story">Explore the story ↓</a>
+              <a class="quiet-link" href="#gastrolens">GastroLens →</a>
+              <a class="quiet-link" href="open-me.html">OpenMe →</a>
             </div>
-            <ul class="hero-points">
-              <li>Built on completed research, design work, and a public project platform</li>
-              <li>Launch from the site into the live GastroLens app flow: demos, intake, results, and Judge Mode</li>
-              <li>Safety-first: non-diagnostic, not clinically validated, and intentionally framed as a first-version research tool</li>
-            </ul>
           </div>
+          <div class="story-hero-scroll" aria-hidden="true">
+            <span class="scroll-cue">
+              <span class="scroll-cue-line"></span>
+              Scroll
+            </span>
+          </div>
+        </section>
 
-          <div class="hero-visual reveal">
-            <div class="hero-glow"></div>
-            <div class="laptop-mockup hero-laptop" data-interactive-dashboard>
-              <div class="laptop-screen">
-                <div class="laptop-topbar">
-                  <span class="window-dots"></span>
-                  <span class="window-dots"></span>
-                  <span class="window-dots"></span>
-                <span class="laptop-title">GastroLens App</span>
-                <span class="laptop-status">Version 1 live</span>
+        <!-- 01 ORIGIN -->
+        <section class="chapter origin-chapter" id="story" data-chapter="Origin">
+          <div class="chapter-inner">
+            <span class="origin-mark" aria-hidden="true"><img src="assets/brand/logo.svg" alt="" /></span>
+            <span class="chapter-index">01 — Origin</span>
+            <h2 class="chapter-title-lg reveal">It started with a question.</h2>
+            <div class="origin-body reveal">
+              <p>
+                GastroCompass began with a simple, unresolved observation: colorectal cancer was
+                showing up in people who did not fit the picture most of us have of who gets it.
+                Seeing that up close, in a rural Texas community, was the moment the project's
+                founder started asking why.
+              </p>
+              <p>
+                Not with a plan to build a product. With curiosity. Why do symptoms get dismissed?
+                Why does screening awareness lag behind the actual risk? What would it take to help
+                people take a warning sign seriously before it becomes a late diagnosis?
+              </p>
+              <p>
+                Those questions are what turned into a research project, and eventually, into two
+                different kinds of answers.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 02 RESEARCH -->
+        <section class="chapter research-chapter" id="research" data-chapter="Research">
+          <div class="chapter-inner">
+            <span class="chapter-index">02 — Ideation &amp; Research</span>
+            <h2 class="chapter-title-lg reveal">The questions led to research, not a rush to build.</h2>
+            <p class="chapter-lead reveal">
+              Before any code was written, the work was reading, questioning, and testing whether the
+              idea held up. That included a completed research paper, a feasibility analysis grounded
+              in NHANES public-health data, and three empirical analyses used to stress-test the
+              concept before committing to a build.
+            </p>
+            <div class="research-motif reveal">
+              <div class="research-motif-step">
+                <strong>Observe</strong>
+                A pattern of dismissed or delayed symptoms in younger patients.
               </div>
-              <div class="laptop-layout">
-                  <aside class="laptop-sidebar">
-                    <button class="sidebar-label active" type="button" data-dashboard-tab="demo">Demo</button>
-                    <button class="sidebar-label" type="button" data-dashboard-tab="intake">Intake</button>
-                    <button class="sidebar-label" type="button" data-dashboard-tab="summary">Summary</button>
-                    <button class="sidebar-label" type="button" data-dashboard-tab="judge">Judge Mode</button>
-                  </aside>
-                  <div class="laptop-main">
-                    <div class="dashboard-view active" data-dashboard-panel="demo">
-                      <div class="laptop-row">
-                        <section class="workspace-card">
-                          <span class="comparison-label">Live app surface</span>
-                          <h3>Start with a sample scenario</h3>
-                          <div class="app-chip-grid">
-                            <span>Minimal demo</span>
-                            <span>Persistent bleeding</span>
-                            <span>High-cluster demo</span>
-                          </div>
-                          <p>These presets mirror the live GastroLens demo and judging flow.</p>
-                        </section>
-                        <section class="workspace-card">
-                          <span class="comparison-label">What lives here</span>
-                          <h3>What GastroLens is built around</h3>
-                          <div class="dashboard-stat-list">
-                            <span>Structured intake</span>
-                            <span>Explainable scoring</span>
-                            <span>Research-mode results</span>
-                          </div>
-                          <p>A step-based intake leads to an explainable research summary.</p>
-                        </section>
-                      </div>
-                      <div class="laptop-row full">
-                        <section class="workspace-card ai-card">
-                          <span class="comparison-label">Safety framing</span>
-                          <h3>Research mode, not diagnosis</h3>
-                          <div class="ai-pill-row">
-                            <span>Informational only</span>
-                            <span>Non-diagnostic</span>
-                            <span>Clinician follow-up encouraged</span>
-                          </div>
-                          <p>Safety language stays non-diagnostic and follow-up oriented.</p>
-                        </section>
-                      </div>
-                    </div>
+              <div class="research-motif-step">
+                <strong>Question</strong>
+                Why symptom-first warning signs are so easy to explain away.
+              </div>
+              <div class="research-motif-step">
+                <strong>Study</strong>
+                NHANES-grounded feasibility work and empirical analysis.
+              </div>
+              <div class="research-motif-step">
+                <strong>Prototype</strong>
+                A symptom-first tool: GastroLens.
+              </div>
+            </div>
+            <div class="chapter-links reveal">
+              <a class="quiet-link" href="/research/gastrolens-nhanes-analysis.pdf" target="_blank" rel="noopener noreferrer">Research →</a>
+              <a class="quiet-link" href="about.html">Methodology →</a>
+            </div>
+          </div>
+        </section>
 
-                    <div class="dashboard-view" data-dashboard-panel="intake">
-                      <div class="laptop-row">
-                        <section class="workspace-card">
-                          <span class="comparison-label">Step 1 of 4</span>
-                          <h3>Core symptoms</h3>
-                          <div class="app-question-list app-question-list-compact">
-                            <div class="app-question-row">
-                              <strong>Rectal bleeding</strong>
-                              <span class="app-question-state is-active">Persistent</span>
-                            </div>
-                            <div class="app-question-row">
-                              <strong>Bowel change</strong>
-                              <span class="app-question-state is-active">Significant</span>
-                            </div>
-                            <div class="app-question-row">
-                              <strong>Duration</strong>
-                              <span class="app-question-state is-active">6+ weeks</span>
-                            </div>
-                          </div>
-                          <p>Built as a short guided intake rather than a long medical questionnaire.</p>
-                        </section>
-                        <section class="workspace-card">
-                          <span class="comparison-label">4-step flow</span>
-                          <h3>Move from symptoms to summary</h3>
-                          <div class="app-progress-bar"><span></span></div>
-                          <div class="app-step-stack">
-                            <div class="app-step-line active">
-                              <small>1</small>
-                              <div>
-                                <strong>Core symptoms</strong>
-                                <span>Current step</span>
-                              </div>
-                            </div>
-                            <div class="app-step-line">
-                              <small>2</small>
-                              <div>
-                                <strong>Additional signals</strong>
-                                <span>Next up</span>
-                              </div>
-                            </div>
-                            <div class="app-step-line">
-                              <small>3</small>
-                              <div>
-                                <strong>Risk context</strong>
-                                <span>Family history and screening</span>
-                              </div>
-                            </div>
-                            <div class="app-step-line">
-                              <small>4</small>
-                              <div>
-                                <strong>Review and generate</strong>
-                                <span>Prepare summary</span>
-                              </div>
-                            </div>
-                          </div>
-                          <p>The structure is visual, quick to complete, and easy to explain in a demo.</p>
-                        </section>
-                      </div>
-                      <div class="laptop-row full">
-                        <section class="workspace-card ai-card">
-                          <span class="comparison-label">Navigation</span>
-                          <h3>Guided from start to result</h3>
-                          <div class="ai-pill-row">
-                            <span>Sample scenarios</span>
-                            <span>Guided prompts</span>
-                            <span>Generate summary</span>
-                          </div>
-                          <p>The live app keeps the research framing while making the workflow directly launchable from the site.</p>
-                        </section>
-                      </div>
-                    </div>
+        <!-- 03 GASTROLENS -->
+        <section class="chapter pillar-chapter gastrolens-chapter" id="gastrolens" data-chapter="GastroLens">
+          <div class="chapter-inner">
+            <div class="pillar-head">
+              <div class="reveal">
+                <span class="pillar-tag">03 — GastroLens</span>
+                <h2 class="reveal">A research-mode tool for symptom patterns, not a diagnosis.</h2>
+                <p class="chapter-lead">
+                  GastroLens is a live first-version tool that helps people organize persistent
+                  colorectal cancer warning signs, such as rectal bleeding, bowel changes, and their
+                  duration, alongside risk context like age and family history. It turns scattered
+                  symptom history into one clear, structured summary.
+                </p>
+              </div>
+              <p class="pillar-note reveal">
+                GastroLens is informational and non-diagnostic. It is not clinically validated and is
+                built to support an earlier conversation with a physician, not replace one.
+              </p>
+            </div>
 
-                    <div class="dashboard-view" data-dashboard-panel="summary">
-                      <div class="laptop-row">
-                        <section class="workspace-card">
-                          <span class="comparison-label">Research summary</span>
-                          <div class="app-result-header">
-                            <h3>Moderate flag</h3>
-                            <span class="app-risk-badge">Total score 8</span>
-                          </div>
-                        <div class="dashboard-stat-list">
-                          <span>Pattern lens: persistent bleeding</span>
-                          <span>Driver summary: duration + bowel change</span>
-                          <span>Follow-up-oriented language</span>
+            <div class="pillar-visual reveal">
+              <div class="laptop-mockup" data-interactive-dashboard>
+                <div class="laptop-screen">
+                  <div class="laptop-topbar">
+                    <span class="window-dots"></span>
+                    <span class="window-dots"></span>
+                    <span class="window-dots"></span>
+                    <span class="laptop-title">GastroLens App</span>
+                    <span class="laptop-status">Version 1 live</span>
+                  </div>
+                  <div class="laptop-layout">
+                    <aside class="laptop-sidebar">
+                      <button class="sidebar-label active" type="button" data-dashboard-tab="demo">Demo</button>
+                      <button class="sidebar-label" type="button" data-dashboard-tab="intake">Intake</button>
+                      <button class="sidebar-label" type="button" data-dashboard-tab="summary">Summary</button>
+                    </aside>
+                    <div class="laptop-main">
+                      <div class="dashboard-view active" data-dashboard-panel="demo">
+                        <div class="laptop-row">
+                          <section class="workspace-card">
+                            <span class="comparison-label">Live app surface</span>
+                            <h3>Start with a sample scenario</h3>
+                            <div class="app-chip-grid">
+                              <span>Minimal demo</span>
+                              <span>Persistent bleeding</span>
+                              <span>High-cluster demo</span>
+                            </div>
+                          </section>
+                          <section class="workspace-card ai-card">
+                            <span class="comparison-label">Safety framing</span>
+                            <h3>Research mode, not diagnosis</h3>
+                            <div class="ai-pill-row">
+                              <span>Informational only</span>
+                              <span>Non-diagnostic</span>
+                              <span>Clinician follow-up encouraged</span>
+                            </div>
+                          </section>
                         </div>
-                        <p>Based on the real GastroLens results panel.</p>
-                      </section>
-                      <section class="workspace-card">
-                        <span class="comparison-label">Section contributions</span>
-                        <div class="app-summary-breakdown">
-                          <div class="app-summary-item">
-                            <strong>Core symptoms</strong>
-                            <span>4 points</span>
-                          </div>
-                          <div class="app-summary-item">
-                            <strong>Additional pattern</strong>
-                            <span>2 points</span>
-                          </div>
-                          <div class="app-summary-item">
-                            <strong>Risk context</strong>
-                            <span>2 points</span>
-                          </div>
-                        </div>
-                        <p>Scores are broken into explainable sections.</p>
-                      </section>
                       </div>
-                      <div class="laptop-row full">
-                        <section class="workspace-card ai-card">
-                          <span class="comparison-label">Safety-first output</span>
-                          <h3>Built for escalation support</h3>
-                          <div class="ai-pill-row">
-                            <span>Pattern explanation</span>
-                            <span>Safety note</span>
-                            <span>Care conversation</span>
-                          </div>
-                          <p>The result is framed as a reason to follow up, not a diagnosis.</p>
-                        </section>
-                      </div>
-                    </div>
 
-                    <div class="dashboard-view" data-dashboard-panel="judge">
-                      <div class="laptop-row">
-                        <section class="workspace-card">
-                          <span class="comparison-label">Judge / Research Mode</span>
-                          <h3>What Judge Mode reveals</h3>
-                          <div class="app-note-stack">
-                            <div class="app-note-item">
-                              <strong>Interaction bonuses</strong>
-                              <p>Shows weighted rule interactions behind the score.</p>
+                      <div class="dashboard-view" data-dashboard-panel="intake">
+                        <div class="laptop-row">
+                          <section class="workspace-card">
+                            <span class="comparison-label">Step 1 of 4</span>
+                            <h3>Core symptoms</h3>
+                            <div class="app-question-list app-question-list-compact">
+                              <div class="app-question-row">
+                                <strong>Rectal bleeding</strong>
+                                <span class="app-question-state is-active">Persistent</span>
+                              </div>
+                              <div class="app-question-row">
+                                <strong>Bowel change</strong>
+                                <span class="app-question-state is-active">Significant</span>
+                              </div>
+                              <div class="app-question-row">
+                                <strong>Duration</strong>
+                                <span class="app-question-state is-active">6+ weeks</span>
+                              </div>
                             </div>
-                            <div class="app-note-item">
-                              <strong>Validation notes</strong>
-                              <p>Flags contradictions and edge cases in the logic.</p>
-                            </div>
-                          </div>
-                        </section>
-                        <section class="workspace-card">
-                          <span class="comparison-label">Share view</span>
-                          <h3>Presentation actions</h3>
-                          <div class="app-action-row">
-                            <span>Copy summary</span>
-                            <span>Print summary</span>
-                            <span>Start a new assessment</span>
-                          </div>
-                          <p>Designed for demos, judging, and review sessions.</p>
-                        </section>
+                          </section>
+                          <section class="workspace-card">
+                            <span class="comparison-label">4-step flow</span>
+                            <h3>Move from symptoms to summary</h3>
+                            <div class="app-progress-bar"><span></span></div>
+                          </section>
+                        </div>
                       </div>
-                      <div class="laptop-row full">
-                        <section class="workspace-card ai-card">
-                          <span class="comparison-label">Actual app direction</span>
-                          <h3>Deterministic, explainable, and demo-ready</h3>
-                          <div class="ai-pill-row">
-                            <span>Step-based intake</span>
-                            <span>Transparent scoring</span>
-                            <span>Judge mode extras</span>
-                          </div>
-                          <p>This panel reflects the actual GastroLens app structure now available from the site.</p>
-                        </section>
+
+                      <div class="dashboard-view" data-dashboard-panel="summary">
+                        <div class="laptop-row">
+                          <section class="workspace-card">
+                            <span class="comparison-label">Research summary</span>
+                            <div class="app-result-header">
+                              <h3>Moderate flag</h3>
+                              <span class="app-risk-badge">Total score 8</span>
+                            </div>
+                            <div class="dashboard-stat-list">
+                              <span>Pattern lens: persistent bleeding</span>
+                              <span>Driver: duration + bowel change</span>
+                            </div>
+                          </section>
+                          <section class="workspace-card ai-card">
+                            <span class="comparison-label">Safety-first output</span>
+                            <h3>Built for escalation support</h3>
+                            <div class="ai-pill-row">
+                              <span>Pattern explanation</span>
+                              <span>Safety note</span>
+                              <span>Care conversation</span>
+                            </div>
+                          </section>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
+                <div class="laptop-base"></div>
               </div>
-              <div class="laptop-base"></div>
             </div>
-          </div>
-        </section>
 
-        <section id="gastrolens" class="section section-band">
-          <div class="split-layout preview-split">
-            <div class="reveal">
-              <div class="section-heading left compact">
-                <span class="eyebrow">GastroLens app</span>
-                <h2>Launch the interactive research-mode app</h2>
-              </div>
-              <p class="section-lead left">
-                GastroLens is the live first-version interactive tool from Gastro Compass.
-                It is designed to help organize persistent symptom patterns,
-                apply symptom-first risk flagging logic, and prepare clearer non-diagnostic follow-up
-                summaries for under-50 colorectal cancer concern.
-              </p>
-              <div class="prototype-points">
-                <span>Live on the site</span>
-                <span>Not clinically validated</span>
+            <div class="pillar-foot reveal">
+              <div class="pillar-safety">
+                <span>Non-diagnostic</span>
                 <span>Research-mode only</span>
+                <span>Not clinically validated</span>
               </div>
-            </div>
-            <div class="coming-soon-card reveal">
-              <span class="comparison-label">Interactive tool</span>
-              <h3>Open GastroLens from GastroCompass</h3>
-              <p>
-                Use the main site for the research story and product context. Use GastroLens for the
-                actual intake, scoring, and research-style results experience.
-              </p>
-              <div class="hero-actions">
-                <a class="button button-primary" href="https://gastrocompass.org/gastrolens/">Launch GastroLens</a>
-                <a class="button button-secondary" href="about.html">Learn About GastroLens</a>
-              </div>
+              <a class="quiet-link quiet-link-primary" href="/gastrolens/">Explore GastroLens →</a>
             </div>
           </div>
         </section>
 
-        <section id="problem" class="section section-surface reveal">
-          <div class="section-heading">
-            <span class="eyebrow">The problem</span>
-            <h2>Digestive symptoms are easy to ignore. That is the problem.</h2>
-          </div>
-          <p class="section-lead">
-            Early-onset colorectal cancer can be missed because initial symptoms may look vague,
-            intermittent, or easy to explain away. Changes in bowel habits, rectal bleeding,
-            abdominal pain, fatigue, and other symptoms do not always trigger the right level of
-            concern early enough. Gastro Compass is focused on that
-            failure mode, and GastroLens now turns that work into a clearer,
-            symptom-first first-version workflow for earlier escalation support.
-          </p>
-        </section>
-
-        <section id="features" class="section">
-          <div class="section-heading reveal">
-            <span class="eyebrow">What GastroLens now does</span>
-            <h2>A live first-version workflow for symptom patterns that should not be ignored</h2>
-          </div>
-          <div class="feature-grid">
-            <article class="feature-card reveal">
-              <div class="icon-wrap">
-                <span class="icon symptom"></span>
-              </div>
-              <h3>Symptom Tracking</h3>
-              <p>GastroLens lets users log rectal bleeding, bowel changes, abdominal pain, fatigue, weight loss, and symptom duration in a short structured intake.</p>
-            </article>
-            <article class="feature-card reveal">
-              <div class="icon-wrap">
-                <span class="icon pattern"></span>
-              </div>
-              <h3>Risk Context Intake</h3>
-              <p>Family history, age group, and prior evaluation status help frame the symptom pattern more realistically.</p>
-            </article>
-            <article class="feature-card reveal">
-              <div class="icon-wrap">
-                <span class="icon reports"></span>
-              </div>
-              <h3>Dual-View Summaries</h3>
-              <p>Turn messy symptom history into one organized research-style summary that patients and clinicians can review more clearly.</p>
-            </article>
-            <article class="feature-card reveal">
-              <div class="icon-wrap">
-                <span class="icon insight"></span>
-              </div>
-              <h3>Early Insight</h3>
-              <p>Highlight symptom patterns that may warrant earlier physician follow-up instead of continued dismissal or delay.</p>
-            </article>
-          </div>
-        </section>
-
-        <section class="section section-band">
-          <div class="section-heading reveal">
-            <span class="eyebrow">Why the approach is different</span>
-            <h2>Designed around a documented failure mode, with research first</h2>
-          </div>
-          <div class="spotlight-grid spotlight-grid-four">
-            <article class="spotlight-card reveal">
-              <h3>Symptoms that are present, but ignored</h3>
-              <p>Early-onset colorectal cancer is one of the few GI problems where warning symptoms often exist but are written off as IBS, hemorrhoids, stress, or anxiety.</p>
-            </article>
-            <article class="spotlight-card reveal">
-              <h3>Built from completed research</h3>
-              <p>Gastro Compass brings together the completed paper, prototype design process, NHANES-grounded feasibility work, and three empirical analyses behind the concept.</p>
-            </article>
-            <article class="spotlight-card reveal">
-              <h3>Imaging is a roadmap feature</h3>
-              <p>The imaging layer remains future work until it can be trained and validated on clinically meaningful data. The symptom-side is the tractable first build.</p>
-            </article>
-            <article class="spotlight-card reveal">
-              <h3>Safety-first framing</h3>
-              <p>GastroLens is positioned as an escalation support tool, not a diagnosis tool. The product stays non-clinical until it is properly validated.</p>
-            </article>
-          </div>
-        </section>
-
-        <section id="how-it-works" class="section section-band">
-          <div class="section-heading reveal">
-            <span class="eyebrow">GastroLens workflow</span>
-            <h2>Explore the 4-step flow, then launch the app</h2>
-            <p class="section-lead">
-              GastroLens is the live first-version interactive tool built from the Gastro Compass
-              research hub. This section shows the current workflow, why it matters, and how the
-              app is intended to support follow-up inside a research-mode interactive tool.
+        <!-- 04 REALIZATION -->
+        <section class="chapter pivot-chapter" id="realization" data-chapter="Realization">
+          <div class="pivot-inner">
+            <span class="chapter-index">04 — The Realization</span>
+            <p class="pivot-statement">
+              GastroLens could organize a symptom pattern. <em>It could not make someone open it in
+              the first place.</em>
+            </p>
+            <p class="pivot-sub">
+              A tool only helps the people who already know to look for it. Building GastroLens made
+              that limitation obvious: the harder problem wasn't the technology, it was awareness. That
+              realization is what led to Open Me.
             </p>
           </div>
-          <div class="steps-grid steps-grid-four">
-            <article class="step-card reveal">
-              <span class="step-number">1</span>
-              <h3>Capture</h3>
-              <p>Users log symptoms such as rectal bleeding, bowel changes, abdominal pain, fatigue, and weight loss in a structured first-pass intake.</p>
-            </article>
-            <article class="step-card reveal">
-              <span class="step-number">2</span>
-              <h3>Organize</h3>
-              <p>The app turns symptom entries into a clearer organized view instead of leaving important details scattered across memory and notes.</p>
-            </article>
-            <article class="step-card reveal">
-              <span class="step-number">3</span>
-              <h3>Analyze</h3>
-              <p>The rule-based system weighs persistence, recurrence, and risk context like age group, family history, and prior evaluation status.</p>
-            </article>
-            <article class="step-card reveal">
-              <span class="step-number">4</span>
-              <h3>Escalate</h3>
-              <p>The output is a summary that says the pattern warrants a conversation with a physician, not a diagnosis inside the app.</p>
-            </article>
-          </div>
-          <div class="section-cta reveal">
-            <a class="button button-primary" href="https://gastrocompass.org/gastrolens/">Launch GastroLens</a>
-            <a class="button button-secondary" href="about.html#workflow">Preview the Full Workflow</a>
-          </div>
         </section>
 
-        <section class="section reveal">
-          <div class="split-layout">
-            <div>
-              <div class="section-heading left">
-                <span class="eyebrow">Research foundation</span>
-                <h2>Research first, product second</h2>
-              </div>
-              <p class="section-lead left">
-              Gastro Compass holds the research story together: the completed paper,
-              prototype design work, NHANES-grounded feasibility analysis, and three empirical
-              analyses that make the GastroLens concept more credible. The prototype comes after
-              that foundation, not before it.
-              </p>
-              <div class="trust-note">
-                The goal is earlier recognition and better escalation, not diagnosis inside the product.
-              </div>
-              <div class="hero-actions">
-                <a
-                  class="button button-secondary"
-                  href="https://gastrocompass.org/research/gastrolens-nhanes-analysis.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Open the NHANES Analysis Paper
-                </a>
+        <!-- 05 OPENME -->
+        <section class="chapter pillar-chapter openme-chapter" id="openme" data-chapter="OpenMe">
+          <div class="chapter-inner">
+            <div class="pillar-head">
+              <div class="reveal">
+                <span class="pillar-tag">05 — Open Me</span>
+                <h2>Awareness, off the screen and into everyday moments.</h2>
+                <p class="chapter-lead">
+                  Open Me is a community screening-awareness campaign. Folded cards go into local
+                  takeout orders, each one built around a single message: most adults at average risk
+                  should start colorectal cancer screening at 45, and it often causes no early
+                  symptoms at all.
+                </p>
               </div>
             </div>
-            <div class="insight-panel">
-              <div class="metric-card">
-                <p class="card-label">Evidence base</p>
-                <h3>Completed research and feasibility work are what make GastroLens worth launching in a first version now.</h3>
+
+            <div class="pillar-media reveal">
+              <div class="openme-card-frame">
+                <img class="card-back" src="assets/images/open-me/card-inside.png" alt="" aria-hidden="true" />
+                <img class="card-front" src="assets/images/open-me/card-front.png" alt="The folded Open Me card, printed with the GastroCompass mark" />
               </div>
-              <div class="metric-card soft">
-                <p class="card-label">Current product status</p>
-                <p>GastroLens is now live in a first version: research-driven, safety-first, and clearly framed as a non-diagnostic tool.</p>
+              <div class="pillar-facts">
+                <div class="pillar-fact">
+                  <span class="pillar-fact-index">01</span>
+                  <div>
+                    <h3>Place</h3>
+                    <p>A local restaurant partner slips a folded card into a takeout order.</p>
+                  </div>
+                </div>
+                <div class="pillar-fact">
+                  <span class="pillar-fact-index">02</span>
+                  <div>
+                    <h3>Open</h3>
+                    <p>The customer opens it at home and sees a direct, respectful screening prompt.</p>
+                  </div>
+                </div>
+                <div class="pillar-fact">
+                  <span class="pillar-fact-index">03</span>
+                  <div>
+                    <h3>Scan</h3>
+                    <p>A QR code leads to screening basics and a simple doctor-talk pledge.</p>
+                  </div>
+                </div>
+                <div class="pillar-fact">
+                  <span class="pillar-fact-index">04</span>
+                  <div>
+                    <h3>Act</h3>
+                    <p>The goal is one next step: asking a doctor about screening.</p>
+                  </div>
+                </div>
               </div>
+            </div>
+
+            <div class="pillar-foot reveal">
+              <div class="pillar-safety">
+                <span>Community-facing outreach</span>
+                <span>Restaurant partnerships</span>
+              </div>
+              <a class="quiet-link quiet-link-primary" href="open-me.html">Explore OpenMe →</a>
             </div>
           </div>
         </section>
 
-        <section class="section reveal">
-          <div class="split-layout">
-            <div>
-              <div class="section-heading left">
-                <span class="eyebrow">Why the rollout is staged</span>
-                <h2>Why Gastro Compass leads with research before GastroLens</h2>
-              </div>
-              <p class="section-lead left">
-                Gastro Compass is the umbrella project shaping the research and product direction.
-                GastroLens is now the interactive first-version tool in that ecosystem, while the
-                site continues to carry the deeper research story, safety framing, and broader
-                project context around it.
-              </p>
-              <div class="trust-note">
-                Live first version now, broader rollout later.
-              </div>
-            </div>
-            <div class="insight-panel">
-              <div class="metric-card">
-                <p class="card-label">What Gastro Compass provides</p>
-                <h3>Research foundation, project story, public credibility, and the product hub around GastroLens.</h3>
-              </div>
-              <div class="metric-card soft">
-                <p class="card-label">Now live</p>
-                <p>GastroLens launch access, product updates, and continued research-mode improvements.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="section section-surface">
-          <div class="section-heading reveal">
-            <span class="eyebrow">Current product direction</span>
-            <h2>What the live first version of GastroLens is built around</h2>
-          </div>
-          <div class="spotlight-grid">
-            <article class="spotlight-card reveal"><h3>Fast symptom capture</h3><p>The live workflow uses quick structured logging rather than long medical forms.</p></article>
-            <article class="spotlight-card reveal"><h3>Clear persistence views</h3><p>The app centers on patterns that make ongoing changes easier to see and explain.</p></article>
-            <article class="spotlight-card reveal"><h3>Risk-aware intake</h3><p>Age group, family history, and prior evaluation stay part of the current review logic.</p></article>
-            <article class="spotlight-card reveal"><h3>Export-ready summaries</h3><p>The live tool is aimed at concise outputs users could bring into follow-up conversations.</p></article>
-            <article class="spotlight-card reveal"><h3>Safety-first framing</h3><p>The app stays intentionally non-diagnostic and clearly separate from clinical validation.</p></article>
-            <article class="spotlight-card reveal"><h3>Research-mode design</h3><p>The interface is live as a serious first version, with room to mature rather than pretending to be fully finished.</p></article>
-          </div>
-        </section>
-
-        <section class="section section-band">
-          <div class="section-heading reveal">
-            <span class="eyebrow">Credibility</span>
-            <h2>Why this first-version tool is evidence-based</h2>
-          </div>
-          <div class="partner-panel reveal">
-            <p>
-              Gastro Compass is already carrying the research story: the completed paper, the
-              product design process, NHANES-grounded feasibility work, three empirical analyses,
-              and a safety-first non-clinical framing. That is what gives GastroLens a stronger
-              foundation as a live first-version tool rather than a rushed public app.
+        <!-- 06 PLEDGE -->
+        <section class="chapter pledge-chapter" id="pledge-cta" data-chapter="Pledge">
+          <div class="pledge-chapter-inner">
+            <span class="chapter-index">06 — Take Action</span>
+            <h2 class="reveal">Turn awareness into a conversation with your doctor.</h2>
+            <p class="chapter-lead reveal">
+              Every Open Me card ends in the same place: a short, honest pledge to bring up colorectal
+              cancer screening at your next appointment. It takes under a minute.
             </p>
-            <div class="partner-tags">
-              <span>Completed paper</span>
-              <span>NHANES-grounded feasibility work</span>
-              <span>Three empirical analyses</span>
-              <span>Safety-first framing</span>
+            <div class="pledge-chapter-actions reveal">
+              <a class="button button-primary" href="open-me.html#pledge">Take the Pledge</a>
             </div>
           </div>
         </section>
 
-        <section id="faq" class="section">
-          <div class="section-heading reveal">
-            <span class="eyebrow">FAQ</span>
-            <h2>Common questions</h2>
-          </div>
-          <div class="faq-list reveal">
-            <details>
-              <summary>What is Gastro Compass?</summary>
-              <p>Gastro Compass is the umbrella project behind GastroLens. It brings together the research framing, product context, live app access, and ongoing updates in one place.</p>
-            </details>
-            <details>
-              <summary>Is GastroLens available now?</summary>
-              <p>Yes. GastroLens is now live in a first version through the GastroCompass site as an interactive research-mode assessment tool.</p>
-            </details>
-            <details>
-              <summary>What does GastroLens do?</summary>
-              <p>GastroLens is a symptom-first GI risk flagging tool that helps organize persistent warning signs, risk context, and follow-up-ready summaries for under-50 colorectal cancer concern.</p>
-            </details>
-            <details>
-              <summary>Are the dashboard tabs live product features?</summary>
-              <p>No. The Patient View, Professional View, AI Review, and Exports tabs still represent broader product directions beyond the current live first version.</p>
-            </details>
-            <details>
-              <summary>Is GastroLens a diagnosis tool?</summary>
-              <p>No. GastroLens is framed as a non-diagnostic escalation support tool. It is not clinically validated and is not meant to replace professional medical care.</p>
-            </details>
-            <details>
-              <summary>Why focus on early-onset colorectal cancer first?</summary>
-              <p>The research direction is focused on the documented failure mode where symptoms are present in under-50 patients but repeatedly dismissed, making symptom-first risk flagging more clinically meaningful than a broad GI classifier.</p>
-            </details>
-            <details>
-              <summary>Is the imaging component live today?</summary>
-              <p>No. Imaging remains a roadmap feature and will only make sense once it can be trained and validated on clinically meaningful data. The symptom-side is the first build.</p>
-            </details>
-            <details>
-              <summary>How can I follow GastroLens updates?</summary>
-              <p>Join the waitlist to get updates about new features, research progress, product improvements, and future rollout milestones.</p>
-            </details>
-          </div>
-        </section>
-
-        <section id="waitlist" class="section">
-          <div class="cta-panel reveal">
-            <div class="cta-copy">
-              <span class="eyebrow">GastroLens updates</span>
-              <h2>Get GastroLens Updates</h2>
-              <p>Get notified about product improvements, research milestones, and future rollout updates as GastroLens continues to evolve.</p>
-            </div>
-            <form class="waitlist-form" id="waitlist-form">
-              <label>
-                <span>First name</span>
-                <input type="text" name="firstName" placeholder="Alex" required />
-              </label>
-              <label>
-                <span>Email</span>
-                <input type="email" name="email" placeholder="alex@email.com" required />
-              </label>
-              <label>
-                <span>I am a...</span>
-                <select name="role">
-                  <option value="">Optional</option>
-                  <option value="patient">Patient</option>
-                  <option value="parent">Parent</option>
-                  <option value="student">Student</option>
-                  <option value="clinician">Clinician</option>
-                  <option value="researcher">Researcher</option>
-                </select>
-              </label>
-              <button class="button button-primary" type="submit">Get GastroLens Updates</button>
-              <p class="form-message" id="form-message" aria-live="polite"></p>
-            </form>
-          </div>
-        </section>
-
-        <section id="contact" class="section section-surface">
-          <div class="section-heading reveal">
-            <span class="eyebrow">Contact</span>
-            <h2>Get in touch</h2>
-          </div>
-          <div class="contact-panel reveal">
-            <div class="contact-card">
-              <span class="comparison-label">General contact</span>
-              <h3>Email the team</h3>
-              <p>
-                Questions about the project, early access, research interest, or future clinical
-                partnerships can be sent directly by email.
-              </p>
-              <a class="button button-secondary" href="mailto:tanush.nimmalapudi@gastrocompass.org">
-                tanush.nimmalapudi@gastrocompass.org
-              </a>
-            </div>
-            <div class="contact-card">
-              <span class="comparison-label">Best for</span>
-              <h3>What to reach out about</h3>
-              <div class="contact-tags">
-                <span>Early access</span>
-                <span>Research</span>
-                <span>Clinical partnerships</span>
-                <span>School projects</span>
-                <span>Product feedback</span>
+        <!-- 07 IMPACT & FUTURE -->
+        <section class="chapter impact-chapter" id="impact" data-chapter="Impact">
+          <div class="chapter-inner">
+            <span class="chapter-index">07 — Impact &amp; What's Next</span>
+            <h2 class="reveal">Where things stand, and where they're going.</h2>
+            <div class="impact-columns">
+              <div class="reveal">
+                <p class="impact-column-title">What has happened</p>
+                <ul class="evidence-list">
+                  <li><strong>Research foundation.</strong> A completed paper, an NHANES-grounded feasibility analysis, and three empirical analyses behind the concept.</li>
+                  <li><strong>GastroLens, live.</strong> A first-version, non-diagnostic symptom-pattern tool, launched from this site.</li>
+                  <li><strong>Open Me cards, designed and printed.</strong> Folded takeout cards built for local restaurant distribution and QR-linked outreach.</li>
+                  <li><strong>A working pledge.</strong> A real doctor-talk commitment, collected through Open Me, connected to a live database.</li>
+                </ul>
               </div>
-              <p class="contact-note">
-                For now, the fastest way to connect is by email while the full waitlist and contact workflow is being built.
-              </p>
+              <div class="reveal">
+                <p class="impact-column-title">What's next</p>
+                <ul class="evidence-list">
+                  <li><strong>More restaurant partners.</strong> Expanding where Open Me cards reach people, one neighborhood at a time.</li>
+                  <li><strong>Continued GastroLens development.</strong> Refining the symptom-first logic while keeping it explicitly non-diagnostic.</li>
+                  <li><strong>Imaging, as future work.</strong> An imaging layer stays on the roadmap until it can be trained and validated on clinically meaningful data.</li>
+                  <li><strong>More research.</strong> Ongoing analysis to keep the project's claims grounded in evidence, not marketing.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="impact-updates reveal">
+              <div>
+                <p class="impact-column-title">Get GastroLens updates</p>
+                <form class="waitlist-form" id="waitlist-form">
+                  <label>
+                    <span>First name</span>
+                    <input type="text" name="firstName" placeholder="Alex" required />
+                  </label>
+                  <label>
+                    <span>Email</span>
+                    <input type="email" name="email" placeholder="alex@email.com" required />
+                  </label>
+                  <label>
+                    <span>I am a...</span>
+                    <select name="role">
+                      <option value="">Optional</option>
+                      <option value="patient">Patient</option>
+                      <option value="parent">Parent</option>
+                      <option value="student">Student</option>
+                      <option value="clinician">Clinician</option>
+                      <option value="researcher">Researcher</option>
+                    </select>
+                  </label>
+                  <button class="button button-primary" type="submit">Get Updates</button>
+                  <p class="form-message" id="form-message" aria-live="polite"></p>
+                </form>
+              </div>
             </div>
           </div>
         </section>
+
+        <div class="founder-credit">
+          <img class="founder-credit-photo" src="assets/images/team/tanush-nimmalapudi.jpg" alt="" />
+          <p>Built by <strong>Tanush Nimmalapudi</strong>. <a class="quiet-link" href="founder.html">About the Founder →</a></p>
+        </div>
       </main>
 
       <footer class="site-footer">
         <div>
           <div class="footer-brand">
             <span class="brand-mark brand-mark-footer" aria-hidden="true"><img src="assets/brand/logo.svg" alt="" /></span>
-            <h3>Gastro Compass</h3>
+            <h3>GastroCompass</h3>
           </div>
-          <p>The umbrella project building GastroLens.</p>
+          <p>GastroLens and Open Me, built from one research-driven initiative.</p>
         </div>
         <div class="footer-links">
-          <a href="https://gastrocompass.org/gastrolens/">GastroLens App</a>
-          <a href="about.html">About</a>
+          <a href="/gastrolens/">GastroLens App</a>
           <a href="open-me.html">Open Me</a>
-          <a href="founder.html">Team</a>
-          <a href="#features">Features</a>
-          <a href="#contact">Contact</a>
-          <a href="#waitlist">Waitlist</a>
-          <a href="https://gastrocompass.org/research/gastrolens-nhanes-analysis.pdf" target="_blank" rel="noopener noreferrer">Research Paper</a>
+          <a href="/research/gastrolens-nhanes-analysis.pdf" target="_blank" rel="noopener noreferrer">Research</a>
+          <a href="founder.html">About</a>
+          <a href="mailto:tanush.nimmalapudi@gastrocompass.org">Contact</a>
         </div>
         <p class="footer-disclaimer">
-          Gastro Compass does not provide medical diagnosis or emergency care. Always consult a licensed healthcare professional for medical concerns.
+          GastroCompass does not provide medical diagnosis or emergency care. Always consult a licensed healthcare professional for medical concerns.
         </p>
       </footer>
+    </div>
+
+    <div class="journey-rail" data-journey-rail aria-hidden="true">
+      <div class="journey-rail-track">
+        <span class="journey-rail-fill" data-journey-fill></span>
+        <span class="journey-rail-marker" data-journey-marker></span>
+      </div>
+      <span class="journey-rail-label" data-journey-label></span>
+    </div>
+    <div class="journey-progress" aria-hidden="true">
+      <div class="journey-progress-fill" data-journey-progress-fill></div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="assets/js/reveal.js"></script>
     <script src="assets/js/site-navigation.js"></script>
     <script src="assets/js/product-preview.js"></script>
+    <script src="assets/js/scroll-journey.js"></script>
     <script src="assets/js/supabase-config.js"></script>
     <script src="assets/js/supabase-client.js"></script>
     <script src="assets/js/waitlist.js"></script>

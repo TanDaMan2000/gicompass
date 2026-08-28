@@ -1,253 +1,66 @@
-.openme-page {
-  --openme-primary: #1d4f8f;
-  --openme-primary-dark: #163f72;
-  --openme-soft: #e7f1fb;
-  --openme-ink: #0e2c4f;
-  --openme-muted: #4f6d8b;
-  --openme-panel: rgba(255, 255, 255, 0.09);
-  --openme-panel-border: rgba(255, 255, 255, 0.14);
-  --openme-panel-shadow: 0 24px 60px rgba(5, 16, 28, 0.32);
-}
+/* ==========================================================
+   Open Me — QR-first campaign page.
+   Same ivory + teal identity as the rest of GastroCompass;
+   understandable within ~10 seconds of landing.
+   ========================================================== */
 
 body.openme-page {
-  background:
-    radial-gradient(circle at 20% 10%, rgba(44, 106, 182, 0.35), transparent 42%),
-    radial-gradient(circle at 80% 20%, rgba(21, 63, 114, 0.4), transparent 48%),
-    linear-gradient(180deg, #0c2038 0%, #12314f 45%, #10273f 100%);
-  color: #f4f8ff;
+  background: var(--ivory);
+  color: var(--ink);
 }
 
-body.openme-page #screening {
-  scroll-margin-top: 120px;
-}
-
-.openme-page .site-header {
-  background: rgba(10, 26, 44, 0.6);
-  border-color: rgba(255, 255, 255, 0.12);
-  box-shadow: 0 22px 50px rgba(8, 18, 32, 0.45);
-}
-
-body.openme-page .brand-text {
-  color: #e6f1ff;
-}
-
-.openme-brand {
-  align-items: center;
-}
-
-.openme-brand-text {
-  display: grid;
-  gap: 2px;
-}
-
-.openme-brand-title {
-  font-family: "Great Vibes", "Manrope", cursive;
-  font-size: 1.8rem;
-  font-weight: 400;
-  letter-spacing: 0;
-  text-transform: none;
-  color: #f3f8ff;
+body.openme-page #screening,
+body.openme-page #pledge {
+  scroll-margin-top: 110px;
 }
 
 .openme-page [hidden] {
   display: none !important;
 }
 
-.openme-brand-subtitle {
-  font-size: 0.72rem;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  color: rgba(207, 226, 255, 0.7);
-}
-
-body.openme-page .site-nav,
-body.openme-page .site-nav a,
-body.openme-page .nav-trigger {
-  color: rgba(214, 230, 248, 0.92);
-}
-
-body.openme-page .site-nav a:hover,
-body.openme-page .nav-trigger:hover {
-  color: #ffffff;
-}
+/* ---------- Hero ---------- */
 
 .openme-hero {
-  padding-top: 90px;
+  padding-top: clamp(48px, 7vw, 88px);
   gap: 48px;
+  align-items: center;
 }
 
 .openme-hero .hero-copy {
-  max-width: 36rem;
+  max-width: 34rem;
 }
 
-.openme-hero .hero-visual {
-  align-self: center;
-}
-
-.openme-page .hero-copy h1 {
-  color: #f7fbff;
-}
-
-.openme-page .hero-text {
-  color: rgba(232, 241, 255, 0.92);
+.openme-hero h1 {
+  max-width: 12ch;
 }
 
 .openme-proof {
   margin-top: 14px;
   font-size: 0.98rem;
-  color: rgba(220, 234, 252, 0.88);
+  color: var(--ink-faint);
 }
 
 .openme-eyebrow {
-  background: rgba(150, 196, 255, 0.15);
-  color: #eaf3ff;
-  border: 1px solid rgba(173, 208, 255, 0.18);
+  background: var(--teal-50);
+  color: var(--teal-800);
 }
 
-.openme-primary {
-  background: linear-gradient(135deg, var(--openme-primary-dark), var(--openme-primary));
-  box-shadow: 0 18px 35px rgba(22, 62, 112, 0.25);
-}
-
-.openme-secondary {
-  color: var(--openme-primary-dark);
-  background: rgba(255, 255, 255, 0.7);
-  border: 1px solid rgba(22, 62, 112, 0.18);
-}
-
-body.openme-page .button-primary {
-  background: linear-gradient(135deg, var(--openme-primary-dark), var(--openme-primary));
-  box-shadow: 0 18px 35px rgba(22, 62, 112, 0.25);
-}
-
-body.openme-page .button-secondary {
-  color: #cfe2ff;
-  border-color: rgba(255, 255, 255, 0.3);
-  background: rgba(255, 255, 255, 0.08);
-}
-
-.openme-section .section-heading h2 {
-  color: #f3f7ff;
-}
-
-.openme-section .section-heading .section-lead,
-.openme-section .section-lead {
-  color: rgba(228, 239, 255, 0.9);
-}
+/* ---------- Virtual card ---------- */
 
 .openme-hero-visual {
   display: grid;
   gap: 16px;
   align-items: center;
   justify-items: center;
-  width: min(390px, 100%);
+  width: min(360px, 100%);
   margin-left: auto;
 }
 
-.openme-bag {
-  position: relative;
-  width: min(360px, 100%);
-  aspect-ratio: 4 / 5;
-  border-radius: 26px;
-  background: linear-gradient(180deg, #ffffff 0%, #dfe9f7 100%);
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  box-shadow: 0 36px 70px rgba(5, 16, 28, 0.55);
-  display: grid;
-  place-items: center;
-  overflow: hidden;
-}
-
-.openme-bag::before,
-.openme-bag::after {
-  content: "";
-  position: absolute;
-  width: 60%;
-  height: 60%;
-  border-radius: 18px;
-  background: rgba(22, 62, 112, 0.14);
-  transform: rotate(8deg);
-  top: -20%;
-}
-
-.openme-bag::after {
-  transform: rotate(-6deg);
-  top: -28%;
-  right: 8%;
-}
-
-.openme-card {
-  width: 72%;
-  padding: 18px 16px;
-  background: #ffffff;
-  border-radius: 18px;
-  box-shadow: 0 20px 36px rgba(10, 26, 44, 0.35);
-  border: 1px solid rgba(16, 52, 92, 0.3);
-  display: grid;
-  gap: 10px;
-  text-align: left;
-}
-
-.openme-card-title {
-  font-family: "Manrope", sans-serif;
-  font-size: 1.2rem;
-  font-weight: 800;
-  color: var(--openme-primary-dark);
-}
-
-.openme-card-subtitle {
-  font-size: 0.85rem;
-  color: var(--openme-muted);
-}
-
-.openme-card-line {
-  height: 1px;
-  background: rgba(22, 62, 112, 0.18);
-}
-
-.openme-card-body {
-  color: var(--openme-ink);
-  font-size: 0.88rem;
-  line-height: 1.4;
-}
-
-.openme-qr {
-  width: 54px;
-  height: 54px;
-  border-radius: 8px;
-  background:
-    linear-gradient(90deg, rgba(22, 62, 112, 0.18) 25%, transparent 25% 50%, rgba(22, 62, 112, 0.18) 50% 75%, transparent 75%),
-    linear-gradient(180deg, rgba(22, 62, 112, 0.18) 25%, transparent 25% 50%, rgba(22, 62, 112, 0.18) 50% 75%, transparent 75%);
-}
-
-.openme-card-foot {
-  font-size: 0.74rem;
-  color: var(--openme-muted);
-}
-
 .openme-hero-caption {
-  font-size: 0.85rem;
-  color: rgba(219, 234, 255, 0.66);
+  font-size: 0.88rem;
+  color: var(--ink-faint);
   text-align: center;
   max-width: 24rem;
-}
-
-.openme-card-preview {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
-}
-
-.openme-card-experience {
-  display: grid;
-  grid-template-columns: minmax(240px, 0.75fr) minmax(0, 1fr);
-  gap: 22px;
-  align-items: start;
-}
-
-.openme-card-preview-copy {
-  display: grid;
-  gap: 18px;
-  align-content: start;
 }
 
 .openme-preview-actions {
@@ -260,13 +73,13 @@ body.openme-page .button-secondary {
 .openme-virtual-card {
   position: relative;
   display: grid;
-  gap: 12px;
+  gap: 14px;
   justify-items: center;
 }
 
 .openme-virtual-card-stage {
   position: relative;
-  width: min(100%, 360px);
+  width: min(100%, 320px);
   aspect-ratio: 4 / 3.02;
   min-height: 0;
   perspective: 3200px;
@@ -278,14 +91,11 @@ body.openme-page .button-secondary {
   top: 0;
   left: 0;
   width: 100%;
-  border-radius: 14px;
+  border-radius: 16px;
   overflow: hidden;
   background: #ffffff;
-  box-shadow: 0 22px 46px rgba(6, 18, 32, 0.28);
-  transition:
-    transform 1260ms cubic-bezier(0.16, 0.82, 0.2, 1),
-    opacity 620ms ease,
-    box-shadow 620ms ease;
+  box-shadow: var(--shadow-lg);
+  transition: transform 1100ms var(--ease-premium), opacity 500ms ease, box-shadow 500ms ease;
   backface-visibility: hidden;
   transform-style: preserve-3d;
   will-change: transform;
@@ -299,8 +109,8 @@ body.openme-page .button-secondary {
 
 .openme-virtual-card-base {
   z-index: 1;
-  transform: scale(0.992);
-  box-shadow: 0 18px 34px rgba(6, 18, 32, 0.18);
+  transform: scale(0.99);
+  box-shadow: var(--shadow-md);
 }
 
 .openme-virtual-card-front {
@@ -309,33 +119,21 @@ body.openme-page .button-secondary {
   transform: rotateX(0deg) translateY(0);
 }
 
-.openme-virtual-card-base::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  height: 1px;
-  background: rgba(18, 48, 82, 0.08);
-}
-
 .openme-virtual-card-front::after {
   content: "";
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(0, 0, 0, 0.2)),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03), transparent 30%);
-  transition: opacity 620ms ease;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(0, 0, 0, 0.2));
+  transition: opacity 500ms ease;
 }
 
 .openme-virtual-card[data-open="true"] .openme-virtual-card-front {
   transform: rotateX(148deg) translateY(-8px);
-  box-shadow: 0 10px 20px rgba(6, 18, 32, 0.08);
+  box-shadow: var(--shadow-sm);
 }
 
 .openme-virtual-card[data-open="true"] .openme-virtual-card-front::after {
-  opacity: 0.32;
+  opacity: 0.28;
 }
 
 .openme-virtual-card-hitbox {
@@ -345,211 +143,91 @@ body.openme-page .button-secondary {
   border: 0;
   background: transparent;
   cursor: pointer;
+  border-radius: 16px;
 }
 
 .openme-virtual-card-instruction {
   margin: 0;
-  color: rgba(224, 237, 255, 0.84);
+  color: var(--ink-soft);
   font-weight: 600;
   text-align: center;
   font-size: 0.92rem;
 }
 
-.openme-summary-stack {
-  display: grid;
-  gap: 32px;
-}
-
-.openme-summary-group {
-  display: grid;
-  gap: 18px;
-}
-
-.openme-summary-label {
-  margin: 0;
-  color: #d9ebff;
-}
-
-.openme-steps,
-.openme-why {
-  align-items: stretch;
-}
-
-.openme-why {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.openme-note {
-  margin-top: 2px;
-}
-
-.openme-qr-link {
-  display: inline-flex;
-  border-radius: 10px;
-  transition: transform 160ms ease;
-}
-
-.openme-qr-link:hover {
-  transform: translateY(-2px);
-}
-
-.openme-screening-card {
-  padding: 34px;
-  border-radius: 24px;
-  background: var(--openme-panel);
-  border: 1px solid var(--openme-panel-border);
-  box-shadow: var(--openme-panel-shadow);
-  display: grid;
-  gap: 26px;
-}
-
-.openme-scan-note {
-  margin: 0;
-  font-weight: 700;
-  color: rgba(219, 234, 255, 0.9);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-size: 0.78rem;
-}
-
-.openme-cta-block {
-  display: grid;
-  gap: 8px;
-  justify-items: start;
-}
-
-.openme-disclaimer {
-  margin: 0;
-  font-size: 0.85rem;
-  color: rgba(219, 234, 255, 0.78);
-}
-
-@media (max-width: 720px) {
-  body.openme-page #screening {
-    scroll-margin-top: 110px;
+@media (prefers-reduced-motion: reduce) {
+  .openme-virtual-card-panel {
+    transition: opacity 200ms ease;
   }
 
-  .openme-screening-card {
-    padding: 22px;
+  .openme-virtual-card[data-open="true"] .openme-virtual-card-front {
+    transform: none;
+    opacity: 0;
   }
 }
 
-.openme-section.section-surface,
-.openme-section.section-band {
-  background: var(--openme-panel);
-  border-color: var(--openme-panel-border);
-  box-shadow: var(--openme-panel-shadow);
-}
+/* ---------- Compact explanation / how-it-works row ---------- */
 
-.openme-section.section-surface .section-heading h2,
-.openme-section.section-band .section-heading h2 {
-  color: #f7fbff;
-}
-
-.openme-section.section-surface .section-heading {
-  max-width: 56rem;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.openme-section.section-surface .section-heading .section-lead,
-.openme-section.section-band .section-heading .section-lead,
-.openme-section.section-surface .section-lead,
-.openme-section.section-band .section-lead {
-  color: rgba(224, 237, 255, 0.8);
-}
-
-.openme-section.section-surface .eyebrow,
-.openme-section.section-band .eyebrow {
-  color: #d6e6ff;
-  background: rgba(255, 255, 255, 0.12);
-}
-
-.openme-section .trust-note {
-  color: rgba(230, 240, 255, 0.88);
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.2);
-}
-
-.openme-card-front,
-.openme-card-inside {
-  color: var(--openme-ink);
-}
-
-.openme-card-front p,
-.openme-card-inside p {
-  color: var(--openme-muted);
-}
-
-.openme-card-front .openme-card-title,
-.openme-card-inside .openme-card-title {
-  color: var(--openme-primary-dark);
-}
-
-.openme-card-front .openme-card-subtitle,
-.openme-card-inside span {
-  color: var(--openme-muted);
-}
-
-.openme-section.section-surface .section-lead,
-.openme-section.section-band .section-lead,
-.openme-section.section-surface .trust-note,
-.openme-section.section-band .trust-note {
-  color: rgba(224, 237, 255, 0.8);
-}
-
-.openme-section .feature-card,
-.openme-section .step-card,
-.openme-section .spotlight-card,
-.openme-section .screening-card,
-.openme-section .coming-soon-card {
-  background: rgba(255, 255, 255, 0.95);
-  color: var(--text);
-}
-
-.openme-section .feature-card h3,
-.openme-section .step-card h3,
-.openme-section .spotlight-card h3,
-.openme-section .screening-card h3,
-.openme-section .coming-soon-card h3 {
-  color: var(--openme-ink);
-}
-
-.openme-section .feature-card p,
-.openme-section .step-card p,
-.openme-section .spotlight-card p,
-.openme-section .screening-card p,
-.openme-section .coming-soon-card p {
-  color: var(--openme-muted);
-}
-
-.openme-card-front,
-.openme-card-inside {
-  padding: 24px;
-  border-radius: 20px;
-  background: #ffffff;
-  border: 1px solid rgba(22, 62, 112, 0.12);
-  box-shadow: 0 16px 38px rgba(20, 60, 110, 0.12);
+.openme-quick-facts {
   display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  margin-top: var(--space-6);
+}
+
+.openme-quick-fact {
+  display: grid;
+  grid-template-columns: 30px 1fr;
   gap: 12px;
 }
 
-.openme-card-inside span {
+.openme-quick-fact-index {
+  font-family: var(--font-display);
+  font-weight: 800;
+  color: var(--teal-500);
+}
+
+.openme-quick-fact h3 {
+  font-size: 1rem;
+}
+
+.openme-quick-fact p {
+  margin-top: 4px;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+
+/* ---------- Why screening matters ---------- */
+
+.openme-why {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px 32px;
+  margin-top: var(--space-6);
+}
+
+.openme-why-item {
+  padding: 20px 0;
+  border-top: 1px solid var(--line);
+}
+
+.openme-why-item h3 {
+  font-size: 1.05rem;
+}
+
+.openme-why-item p {
+  margin-top: 6px;
+  color: var(--ink-soft);
+}
+
+/* ---------- Screening info ---------- */
+
+.openme-scan-note {
+  margin: 0 0 var(--space-5);
+  font-weight: 700;
+  color: var(--teal-700);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
   font-size: 0.78rem;
-  color: var(--openme-muted);
-}
-
-.openme-partners .feature-card {
-  border-color: rgba(22, 62, 112, 0.14);
-}
-
-.openme-toolkit {
-  border-color: rgba(22, 62, 112, 0.18);
-}
-
-.openme-partner-note {
-  margin: 20px 0 0;
-  text-align: center;
 }
 
 .screening-grid {
@@ -561,10 +239,10 @@ body.openme-page .button-secondary {
 
 .screening-card {
   padding: 22px;
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid rgba(22, 62, 112, 0.12);
-  box-shadow: 0 14px 32px rgba(20, 60, 110, 0.12);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-sm);
 }
 
 .openme-links {
@@ -573,17 +251,49 @@ body.openme-page .button-secondary {
   gap: 12px;
   align-items: center;
   justify-content: flex-start;
+  margin-top: var(--space-6);
+}
+
+.openme-cta-block {
+  display: grid;
+  gap: 10px;
+  justify-items: start;
+  margin-top: var(--space-6);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--line);
+}
+
+.openme-disclaimer {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--ink-faint);
+}
+
+/* ---------- Pledge ---------- */
+
+.openme-pledge-section {
+  background: var(--teal-800);
+  color: #fff;
+}
+
+.openme-pledge-section .section-heading h2,
+.openme-pledge-section .eyebrow {
+  color: #fff;
+}
+
+.openme-pledge-section .eyebrow {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.openme-pledge-section .section-lead {
+  color: rgba(255, 255, 255, 0.82);
 }
 
 .openme-pledge-card {
-  padding: 34px;
-  border-radius: 24px;
-  background: var(--openme-panel);
-  border: 1px solid var(--openme-panel-border);
-  box-shadow: var(--openme-panel-shadow);
+  padding: 8px;
   display: grid;
-  grid-template-columns: minmax(280px, 0.8fr) minmax(0, 1.2fr);
-  gap: 28px;
+  grid-template-columns: minmax(260px, 0.85fr) minmax(0, 1.15fr);
+  gap: 32px;
   align-items: start;
 }
 
@@ -595,6 +305,7 @@ body.openme-page .button-secondary {
 
 .openme-pledge-intro {
   align-content: start;
+  color: rgba(255, 255, 255, 0.88);
 }
 
 .openme-pledge-actions {
@@ -603,23 +314,41 @@ body.openme-page .button-secondary {
   gap: 12px;
 }
 
+.openme-pledge-section .button-primary {
+  background: #ffffff;
+  color: var(--teal-800);
+}
+
+.openme-pledge-section .button-primary:hover {
+  background: var(--teal-100);
+}
+
+.openme-pledge-section .button-secondary {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.35);
+  background: transparent;
+}
+
+.openme-pledge-section .button-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
 .openme-pledge-count {
   margin: 0;
-  color: rgba(235, 243, 255, 0.94);
+  color: rgba(255, 255, 255, 0.92);
   font-weight: 700;
-  font-size: 1.02rem;
+  font-size: 1rem;
   line-height: 1.5;
 }
 
 .openme-pledge-form,
 .openme-pledge-confirmation {
   display: grid;
-  gap: 16px;
-  padding: 24px;
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.95);
-  border: 1px solid rgba(22, 62, 112, 0.12);
-  box-shadow: 0 16px 38px rgba(20, 60, 110, 0.12);
+  gap: 18px;
+  padding: 30px;
+  border-radius: var(--radius-xl);
+  background: var(--surface);
+  box-shadow: var(--shadow-lg);
 }
 
 .openme-pledge-confirmation {
@@ -629,23 +358,24 @@ body.openme-page .button-secondary {
 .openme-pledge-form label {
   display: grid;
   gap: 8px;
-  color: var(--openme-muted);
+  color: var(--ink-soft);
   font-weight: 600;
 }
 
 .openme-pledge-form input[type="text"] {
   min-height: 54px;
   padding: 0 16px;
-  color: var(--openme-ink);
-  background: rgba(255, 255, 255, 0.96);
-  border: 1px solid rgba(34, 96, 126, 0.15);
-  border-radius: 16px;
+  color: var(--ink);
+  background: var(--surface-strong);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-md);
   outline: none;
+  transition: border-color var(--duration-fast) var(--ease-soft), box-shadow var(--duration-fast) var(--ease-soft);
 }
 
 .openme-pledge-form input[type="text"]:focus {
-  border-color: rgba(29, 79, 143, 0.55);
-  box-shadow: 0 0 0 4px rgba(85, 151, 231, 0.14);
+  border-color: var(--teal-700);
+  box-shadow: 0 0 0 4px var(--teal-100);
 }
 
 .openme-checkbox {
@@ -658,23 +388,32 @@ body.openme-page .button-secondary {
   margin-top: 4px;
   width: 18px;
   height: 18px;
-  accent-color: var(--openme-primary);
+  accent-color: var(--teal-800);
 }
 
 .openme-checkbox span,
 .openme-pledge-thanks,
 .openme-share-message {
-  color: var(--openme-muted);
+  color: var(--ink-soft);
+}
+
+.openme-pledge-form .button-primary {
+  background: var(--teal-800);
+  color: #fff;
+}
+
+.openme-pledge-form .button-primary:hover {
+  background: var(--teal-900);
 }
 
 .openme-pledge-confirmation .button-secondary {
-  color: var(--openme-primary-dark);
-  background: rgba(231, 241, 251, 0.92);
-  border-color: rgba(29, 79, 143, 0.16);
+  color: var(--teal-800);
+  background: var(--teal-50);
+  border-color: var(--line);
 }
 
 .openme-pledge-confirmation .button-secondary:hover {
-  background: #ffffff;
+  background: var(--teal-100);
 }
 
 .openme-pledge-thanks {
@@ -688,26 +427,35 @@ body.openme-page .button-secondary {
   font-weight: 600;
 }
 
+/* ---------- Partners / materials ---------- */
+
+.openme-partner-note {
+  margin: 20px 0 0;
+  text-align: center;
+  color: var(--ink-soft);
+}
+
 @media (max-width: 980px) {
   .openme-hero {
     grid-template-columns: 1fr;
   }
 
   .openme-hero-visual {
-    width: min(460px, 100%);
+    width: min(400px, 100%);
     margin-left: auto;
     margin-right: auto;
+    order: -1;
   }
 
-  .openme-card-preview {
+  .openme-quick-facts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .openme-why {
     grid-template-columns: 1fr;
   }
 
   .screening-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .openme-why {
     grid-template-columns: 1fr;
   }
 
@@ -721,33 +469,25 @@ body.openme-page .button-secondary {
   }
 }
 
+@media (max-width: 480px) {
+  .openme-quick-facts {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 720px) {
   .openme-hero {
-    padding-top: 60px;
+    padding-top: 44px;
   }
 
-  .openme-card-teaser {
-    width: 100%;
-  }
-
-  .openme-bag {
-    width: 100%;
-  }
-
-  .openme-screening-card,
-  .openme-pledge-card {
-    padding: 24px;
+  .openme-pledge-form,
+  .openme-pledge-confirmation {
+    padding: 22px;
   }
 
   .openme-virtual-card-stage {
-    width: min(100%, 300px);
+    width: min(100%, 280px);
     aspect-ratio: 4 / 3;
-  }
-
-  .openme-virtual-card-panel {
-    width: 100%;
-    max-width: 100%;
-    border-radius: 12px;
   }
 
   .openme-virtual-card[data-open="true"] .openme-virtual-card-front {

@@ -96,11 +96,14 @@
 
   .site-header {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-columns: minmax(0, 1fr) auto auto;
     align-items: center;
     padding: 12px 14px;
-    top: 10px;
-    gap: 12px;
+    gap: 10px;
+  }
+
+  .site-header.is-scrolled {
+    padding: 10px 14px;
   }
 
   .brand {
@@ -113,20 +116,24 @@
     min-width: 0;
     font-size: 0.85rem;
     white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .brand-mark {
-    width: 40px;
-    height: 40px;
-    box-shadow: 0 0 0 5px rgba(105, 213, 210, 0.14);
+    width: 38px;
+    height: 38px;
   }
 
   .mobile-nav-toggle {
     justify-self: end;
   }
 
-  .site-header .button-small {
-    display: none;
+  .site-header .nav-cta.button-small {
+    padding: 0 14px;
+    min-height: 40px;
+    font-size: 0.85rem;
+    white-space: nowrap;
   }
 
   .section {

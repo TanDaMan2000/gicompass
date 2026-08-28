@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Gastro Compass | Building GastroLens</title>
+    <title>How GastroLens Works | GastroCompass</title>
     <meta
       name="description"
-      content="Preview GastroLens, the upcoming research-mode prototype being built by Gastro Compass, the umbrella project for symptom-first GI risk flagging research and product development."
+      content="A closer look at GastroLens, the live first-version research-mode tool from GastroCompass for organizing symptom-first colorectal cancer risk patterns."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,13 +17,15 @@
     <link rel="icon" type="image/svg+xml" href="assets/brand/favicon.svg" />
     <link rel="shortcut icon" href="assets/brand/favicon.svg" />
     <link rel="stylesheet" href="assets/css/site.css" />
+    <noscript><style>.reveal{opacity:1!important;transform:none!important;}</style></noscript>
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <div class="page-shell">
       <header class="site-header">
-        <a class="brand" href="index.html" aria-label="Gastro Compass home">
+        <a class="brand" href="index.html" aria-label="GastroCompass home">
           <span class="brand-mark" aria-hidden="true"><img src="assets/brand/logo.svg" alt="" /></span>
-          <span class="brand-text">Gastro Compass</span>
+          <span class="brand-text">GastroCompass</span>
         </a>
         <button
           class="mobile-nav-toggle"
@@ -36,56 +38,54 @@
           <span></span>
           <span></span>
         </button>
-        <nav class="site-nav">
-          <a href="index.html#problem">Why it matters</a>
-          <a href="index.html#features">Features</a>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="index.html#story">Story</a>
           <div class="nav-dropdown">
-            <button class="nav-trigger" type="button">About</button>
+            <button class="nav-trigger" type="button">GastroLens</button>
             <div class="nav-menu">
-              <a href="https://gastrocompass.org/gastrolens/">Launch GastroLens</a>
-              <a href="about.html">GastroLens Preview</a>
+              <a href="index.html#gastrolens">Explore GastroLens</a>
+              <a href="/gastrolens/">Launch the App</a>
               <a href="about.html#workflow">How It Works</a>
-              <a href="open-me.html">Open Me Campaign</a>
-              <a href="founder.html">Team</a>
             </div>
           </div>
-          <a href="index.html#faq">FAQ</a>
+          <a href="open-me.html">OpenMe</a>
+          <a href="/research/gastrolens-nhanes-analysis.pdf" target="_blank" rel="noopener noreferrer">Research</a>
+          <a href="founder.html">About</a>
         </nav>
-        <a class="button button-small button-primary" href="https://gastrocompass.org/gastrolens/">Launch App</a>
+        <a class="button button-small button-primary nav-cta" href="open-me.html#pledge">Take the Pledge</a>
         <div class="mobile-nav-panel" id="mobile-nav" hidden>
-          <a href="index.html#problem">Why it matters</a>
-          <a href="index.html#features">Features</a>
-          <a href="https://gastrocompass.org/gastrolens/">Launch GastroLens</a>
-          <a href="about.html">GastroLens Preview</a>
+          <a href="index.html#story">Story</a>
+          <a href="index.html#gastrolens">Explore GastroLens</a>
+          <a href="/gastrolens/">Launch the App</a>
           <a href="about.html#workflow">How It Works</a>
-          <a href="open-me.html">Open Me Campaign</a>
-          <a href="founder.html">Team</a>
-          <a href="index.html#faq">FAQ</a>
-          <a class="mobile-nav-cta" href="https://gastrocompass.org/gastrolens/">Launch App</a>
+          <a href="open-me.html">OpenMe</a>
+          <a href="/research/gastrolens-nhanes-analysis.pdf" target="_blank" rel="noopener noreferrer">Research</a>
+          <a href="founder.html">About</a>
+          <a class="mobile-nav-cta" href="open-me.html#pledge">Take the Pledge</a>
         </div>
       </header>
 
-      <main>
+      <main id="main">
         <section class="hero section about-hero">
           <div class="hero-copy reveal">
             <div class="status-chip-row">
-              <span class="status-chip status-chip-live">A Gastro Compass project</span>
-              <span class="status-chip status-chip-soon">GastroLens app available</span>
+              <span class="status-chip status-chip-live">A GastroCompass project</span>
+              <span class="status-chip status-chip-live">Live first version</span>
             </div>
-            <h1>Meet GastroLens, the interactive research-mode prototype from GastroCompass.</h1>
+            <h1>How GastroLens works, in more detail.</h1>
             <p class="hero-text">
-              Gastro Compass is the umbrella project building GastroLens. GastroLens is the upcoming
-              research-mode prototype built to organize persistent symptom
-              patterns, risk context, and follow-up-ready summaries for early-onset colorectal
-              cancer concern. It is non-diagnostic, not clinically validated, and now connected to
-              the main site as the interactive demo layer.
+              GastroLens is the live first-version research-mode tool from GastroCompass. It
+              organizes persistent symptom patterns, risk context, and follow-up-ready summaries for
+              early-onset colorectal cancer concern. It is non-diagnostic and not clinically
+              validated: it is built to support an earlier conversation with a physician, not to
+              replace one.
             </p>
             <div class="hero-actions">
-              <a class="button button-primary" href="https://gastrocompass.org/gastrolens/">Launch GastroLens</a>
+              <a class="button button-primary" href="/gastrolens/">Launch GastroLens</a>
               <a class="button button-secondary" href="#workflow">Preview the Workflow</a>
               <a
                 class="button button-secondary"
-                href="https://gastrocompass.org/research/gastrolens-nhanes-analysis.pdf"
+                href="/research/gastrolens-nhanes-analysis.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -468,7 +468,7 @@
               <div class="hero-actions">
                 <a
                   class="button button-secondary"
-                  href="https://gastrocompass.org/research/gastrolens-nhanes-analysis.pdf"
+                  href="/research/gastrolens-nhanes-analysis.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -478,10 +478,10 @@
             </div>
             <div class="quote-card reveal">
               <p>
-                A preview-stage prototype grounded in evidence, shaped by design work, and held to
-                a safety-first standard before public release.
+                A first-version tool grounded in evidence, shaped by real design work, and held to a
+                safety-first, non-diagnostic standard.
               </p>
-              <span>Coming soon</span>
+              <span>Live now</span>
             </div>
           </div>
         </section>
@@ -491,22 +491,19 @@
         <div>
           <div class="footer-brand">
             <span class="brand-mark brand-mark-footer" aria-hidden="true"><img src="assets/brand/logo.svg" alt="" /></span>
-            <h3>Gastro Compass</h3>
+            <h3>GastroCompass</h3>
           </div>
-          <p>The umbrella project building GastroLens.</p>
+          <p>GastroLens: a live first-version research-mode tool.</p>
         </div>
         <div class="footer-links">
-          <a href="https://gastrocompass.org/gastrolens/">GastroLens App</a>
-          <a href="about.html">About</a>
+          <a href="/gastrolens/">GastroLens App</a>
           <a href="open-me.html">Open Me</a>
-          <a href="founder.html">Team</a>
-          <a href="index.html#features">Features</a>
+          <a href="founder.html">About</a>
           <a href="mailto:tanush.nimmalapudi@gastrocompass.org">Contact</a>
-          <a href="index.html#waitlist">Waitlist</a>
-          <a href="https://gastrocompass.org/research/gastrolens-nhanes-analysis.pdf" target="_blank" rel="noopener noreferrer">Research Paper</a>
+          <a href="/research/gastrolens-nhanes-analysis.pdf" target="_blank" rel="noopener noreferrer">Research Paper</a>
         </div>
         <p class="footer-disclaimer">
-          Gastro Compass does not provide medical diagnosis or emergency care. Always consult a licensed healthcare professional for medical concerns.
+          GastroCompass does not provide medical diagnosis or emergency care. Always consult a licensed healthcare professional for medical concerns.
         </p>
       </footer>
     </div>

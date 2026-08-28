@@ -26,3 +26,14 @@ window.addEventListener("resize", () => {
     setMobileNavState(false);
   }
 });
+
+const siteHeader = document.querySelector(".site-header");
+
+if (siteHeader) {
+  const updateHeaderState = () => {
+    siteHeader.classList.toggle("is-scrolled", window.scrollY > 12);
+  };
+
+  window.addEventListener("scroll", updateHeaderState, { passive: true });
+  updateHeaderState();
+}

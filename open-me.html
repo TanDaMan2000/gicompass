@@ -6,7 +6,7 @@
     <title>Open Me by GastroCompass</title>
     <meta
       name="description"
-      content="Open Me is a GastroCompass campaign that places folded reminder cards inside takeout bags to encourage colorectal cancer screening conversations."
+      content="Open Me is a GastroCompass campaign that places folded reminder cards inside takeout bags to encourage colorectal cancer screening conversations. Learn the basics and take the pledge."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,23 +14,18 @@
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
-      rel="stylesheet"
-    />
     <link rel="icon" type="image/svg+xml" href="assets/brand/favicon.svg" />
     <link rel="shortcut icon" href="assets/brand/favicon.svg" />
     <link rel="stylesheet" href="assets/css/site.css" />
+    <noscript><style>.reveal{opacity:1!important;transform:none!important;}</style></noscript>
   </head>
   <body class="openme-page">
+    <a class="skip-link" href="#main">Skip to content</a>
     <div class="page-shell">
       <header class="site-header">
-        <a class="brand openme-brand" href="index.html" aria-label="GastroCompass home">
+        <a class="brand" href="index.html#top" aria-label="GastroCompass home">
           <span class="brand-mark" aria-hidden="true"><img src="assets/brand/logo.svg" alt="" /></span>
-          <span class="brand-text openme-brand-text">
-            <span class="openme-brand-title">Open Me</span>
-            <span class="openme-brand-subtitle">By GastroCompass</span>
-          </span>
+          <span class="brand-text">GastroCompass</span>
         </a>
         <button
           class="mobile-nav-toggle"
@@ -43,59 +38,46 @@
           <span></span>
           <span></span>
         </button>
-        <nav class="site-nav">
-          <a href="#how-it-works">How It Works</a>
-          <a href="#campaign">Why It Matters</a>
-          <a href="#partners">Partners</a>
-          <div class="nav-dropdown">
-            <button class="nav-trigger" type="button">About</button>
-            <div class="nav-menu">
-              <a href="https://gastrocompass.org/gastrolens/">Launch GastroLens</a>
-              <a href="about.html">GastroLens Preview</a>
-              <a href="about.html#workflow">How It Works</a>
-              <a href="open-me.html">Open Me Campaign</a>
-              <a href="founder.html">Team</a>
-            </div>
-          </div>
-          <a href="#screening">Screening</a>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="index.html#story">Story</a>
+          <a href="index.html#gastrolens">GastroLens</a>
+          <a href="open-me.html" aria-current="page">OpenMe</a>
+          <a href="/research/gastrolens-nhanes-analysis.pdf" target="_blank" rel="noopener noreferrer">Research</a>
+          <a href="founder.html">About</a>
         </nav>
-        <a class="button button-small button-primary openme-primary" href="#partners">Partner With Us</a>
+        <a class="button button-small button-primary nav-cta" href="#pledge">Take the Pledge</a>
         <div class="mobile-nav-panel" id="mobile-nav" hidden>
-          <a href="#how-it-works">How It Works</a>
-          <a href="#campaign">Campaign</a>
-          <a href="#partners">Partners</a>
-          <a href="https://gastrocompass.org/gastrolens/">Launch GastroLens</a>
-          <a href="about.html">GastroLens Preview</a>
-          <a href="about.html#workflow">How It Works</a>
-          <a href="open-me.html">Open Me Campaign</a>
-          <a href="founder.html">Team</a>
-          <a href="#screening">Screening</a>
-          <a class="mobile-nav-cta openme-primary" href="#partners">Partner With Us</a>
+          <a href="index.html#story">Story</a>
+          <a href="index.html#gastrolens">GastroLens</a>
+          <a href="open-me.html">OpenMe</a>
+          <a href="/research/gastrolens-nhanes-analysis.pdf" target="_blank" rel="noopener noreferrer">Research</a>
+          <a href="founder.html">About</a>
+          <a class="mobile-nav-cta" href="#pledge">Take the Pledge</a>
         </div>
       </header>
 
-      <main id="open-me">
-        <section class="hero section openme-hero">
+      <main id="main">
+        <!-- HERO: understand this page within 10 seconds -->
+        <section class="hero section openme-hero" id="top">
           <div class="hero-copy reveal">
             <div class="status-chip-row">
-              <span class="status-chip status-chip-openme">A GastroCompass Screening Initiative</span>
+              <span class="status-chip status-chip-openme">A GastroCompass screening campaign</span>
             </div>
             <h1>Open the bag.<br />Open the conversation.</h1>
             <p class="hero-text">
-              Open Me is a GastroCompass campaign that places folded reminder cards inside takeout
-              orders to encourage colorectal cancer screening conversations for adults 45+. Simple,
-              respectful, and built to spark action.
+              Open Me places a short reminder card inside local takeout orders. It exists for one
+              reason: to get more people talking to their doctor about colorectal cancer screening.
             </p>
-            <p class="openme-proof">Starting with local restaurant partners, Open Me helps spark screening conversations one order at a time.</p>
+            <p class="openme-proof">Starting with local restaurant partners, one order at a time.</p>
             <div class="hero-actions">
-              <a class="button button-primary openme-primary" href="#screening">Learn About Screening</a>
-              <a class="button button-secondary openme-secondary" href="#partners">Partner With Us</a>
+              <a class="button button-primary" href="#pledge">Take the Pledge</a>
+              <a class="button button-secondary" href="#screening">Why Screening Matters</a>
             </div>
           </div>
           <div class="hero-visual reveal">
             <div class="openme-hero-visual" data-card-experience>
               <div
-                class="openme-virtual-card openme-virtual-card-hero"
+                class="openme-virtual-card"
                 id="virtual-openme-card"
                 data-card-shell
                 data-open="false"
@@ -120,12 +102,9 @@
                   Click the card to open it.
                 </p>
               </div>
-              <div class="openme-hero-caption">A virtual version of the real folded card. Click it to open the inside message.</div>
+              <div class="openme-hero-caption">A virtual version of the real card. Click it to open the inside message.</div>
               <div class="openme-preview-actions">
-                <a class="button button-secondary openme-secondary" href="#pledge-form">
-                  Go to the QR Destination
-                </a>
-                <a class="button button-secondary openme-secondary" href="assets/downloads/open-me-card.pdf" target="_blank" rel="noopener noreferrer">
+                <a class="button button-secondary" href="assets/downloads/open-me-card.pdf" target="_blank" rel="noopener noreferrer">
                   Download Print File
                 </a>
               </div>
@@ -133,164 +112,88 @@
           </div>
         </section>
 
-        <section id="how-it-works" class="section section-surface openme-section">
-          <div class="section-heading reveal">
+        <!-- WHAT IS OPEN ME -->
+        <section id="how-it-works" class="section openme-section">
+          <div class="section-heading left compact reveal">
             <span class="eyebrow openme-eyebrow">What is Open Me?</span>
-            <h2>Small card. Simple reminder. Real screening impact.</h2>
+            <h2>A small card with one job: start a conversation.</h2>
           </div>
-          <div class="openme-summary-stack">
-            <div class="openme-summary-group">
-              <span class="comparison-label openme-summary-label">How it works</span>
-              <div class="steps-grid steps-grid-four openme-steps">
-                <article class="step-card reveal">
-                  <span class="step-number">1</span>
-                  <h3>Place</h3>
-                  <p>A local restaurant slips a folded card into a takeout order.</p>
-                </article>
-                <article class="step-card reveal">
-                  <span class="step-number">2</span>
-                  <h3>Open</h3>
-                  <p>The customer opens the card at home and sees a clear screening prompt.</p>
-                </article>
-                <article class="step-card reveal">
-                  <span class="step-number">3</span>
-                  <h3>Scan</h3>
-                  <p>The QR brings them straight to screening basics and the doctor-talk pledge.</p>
-                </article>
-                <article class="step-card reveal">
-                  <span class="step-number">4</span>
-                  <h3>Act</h3>
-                  <p>The goal is one next step: ask about colorectal cancer screening.</p>
-                </article>
+          <div class="openme-quick-facts reveal">
+            <div class="openme-quick-fact">
+              <span class="openme-quick-fact-index">01</span>
+              <div>
+                <h3>Place</h3>
+                <p>A local restaurant slips a folded card into a takeout order.</p>
               </div>
             </div>
-            <div id="campaign" class="openme-summary-group">
-              <span class="comparison-label openme-summary-label">Why it matters</span>
-              <div class="spotlight-grid openme-why">
-                <article class="spotlight-card reveal">
-                  <h3>Start at 45</h3>
-                  <p>Most adults at average risk should begin colorectal cancer screening at age 45.</p>
-                </article>
-                <article class="spotlight-card reveal">
-                  <h3>Find it early</h3>
-                  <p>Screening helps find cancer earlier, when treatment is more effective.</p>
-                </article>
-                <article class="spotlight-card reveal">
-                  <h3>Prevent cancer</h3>
-                  <p>Screening can also prevent cancer by finding precancerous polyps.</p>
-                </article>
-                <article class="spotlight-card reveal">
-                  <h3>Often no symptoms</h3>
-                  <p>Colorectal cancer may not cause symptoms at first, which is why screening matters.</p>
-                </article>
+            <div class="openme-quick-fact">
+              <span class="openme-quick-fact-index">02</span>
+              <div>
+                <h3>Open</h3>
+                <p>The customer opens the card at home and sees a clear screening prompt.</p>
               </div>
             </div>
-            <div class="trust-note openme-note">
-              Always talk to a doctor for medical advice and screening guidance.
+            <div class="openme-quick-fact">
+              <span class="openme-quick-fact-index">03</span>
+              <div>
+                <h3>Scan</h3>
+                <p>The QR code leads straight to screening basics and the pledge.</p>
+              </div>
+            </div>
+            <div class="openme-quick-fact">
+              <span class="openme-quick-fact-index">04</span>
+              <div>
+                <h3>Act</h3>
+                <p>The goal is one next step: ask a doctor about screening.</p>
+              </div>
             </div>
           </div>
         </section>
 
-        <section id="partners" class="section section-band openme-section">
-          <div class="section-heading reveal">
-            <span class="eyebrow openme-eyebrow">For restaurant partners</span>
-            <h2>A low-lift way to support community health</h2>
+        <!-- WHY SCREENING MATTERS -->
+        <section id="campaign" class="section section-surface openme-section">
+          <div class="section-heading left compact reveal">
+            <span class="eyebrow openme-eyebrow">Why it matters</span>
+            <h2>Colorectal cancer screening, in four facts.</h2>
           </div>
-          <div class="feature-grid openme-partners">
-            <article class="feature-card reveal">
-              <h3>Support community health</h3>
-              <p>Join a campaign that prioritizes prevention and early screening awareness.</p>
-            </article>
-            <article class="feature-card reveal">
-              <h3>Spark important conversations</h3>
-              <p>Encourage families to talk about screening in a respectful way.</p>
-            </article>
-            <article class="feature-card reveal">
-              <h3>Join a scalable movement</h3>
-              <p>Help build a model that can expand to other neighborhoods and cities.</p>
-            </article>
-          </div>
-          <div class="section-cta reveal">
-            <a class="button button-primary openme-primary" href="mailto:tanush.nimmalapudi@gastrocompass.org">Become a Partner</a>
-          </div>
-          <p class="section-lead reveal openme-partner-note">
-            Toolkit materials, printable files, and rollout guidance are being organized through GastroCompass.
-          </p>
-        </section>
-
-        <section id="screening" class="section section-surface openme-section">
-          <div class="section-heading reveal">
-            <span class="eyebrow openme-eyebrow">Screening info</span>
-            <h2>Get the basics in one place</h2>
-          </div>
-          <div class="openme-screening-card reveal">
-            <p class="openme-scan-note">You scanned this from an Open Me card</p>
-            <div class="screening-grid">
-              <article class="screening-card">
-                <h3><strong>Who should ask about screening?</strong></h3>
-                <p>Adults 45+ at average risk should talk with a doctor about screening options.</p>
-              </article>
-              <article class="screening-card">
-                <h3><strong>Why does screening matter?</strong></h3>
-                <p>Screening finds cancer early and can prevent cancer by finding polyps.</p>
-              </article>
-              <article class="screening-card">
-                <h3><strong>What should I do next?</strong></h3>
-                <p>Talk with your doctor, understand your options, and ask about timing.</p>
-              </article>
+          <div class="openme-why reveal">
+            <div class="openme-why-item">
+              <h3>Start at 45</h3>
+              <p>Most adults at average risk should begin colorectal cancer screening at age 45.</p>
             </div>
-            <div class="section-cta openme-links">
-              <a
-                class="button button-secondary openme-secondary"
-                href="https://www.cdc.gov/colorectal-cancer/screening/index.html"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                CDC Screening Info
-              </a>
-              <a
-                class="button button-secondary openme-secondary"
-                href="https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/colorectal-cancer-screening"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Official Screening Guidance
-              </a>
-              <a
-                class="button button-secondary openme-secondary"
-                href="https://www.cdc.gov/colorectal-cancer/talking/index.html"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Questions to Ask Your Doctor
-              </a>
+            <div class="openme-why-item">
+              <h3>Often no symptoms</h3>
+              <p>Colorectal cancer may not cause symptoms at first, which is why screening matters.</p>
             </div>
-            <div class="openme-cta-block">
-              <a class="button button-primary openme-primary" href="https://www.cdc.gov/colorectal-cancer/screening/index.html" target="_blank" rel="noopener noreferrer">
-                Talk to Your Doctor About Screening
-              </a>
-              <p class="openme-disclaimer">This page is for education only. Always consult a healthcare professional.</p>
+            <div class="openme-why-item">
+              <h3>Find it early</h3>
+              <p>Screening helps find cancer earlier, when treatment is more effective.</p>
             </div>
+            <div class="openme-why-item">
+              <h3>Prevent it entirely</h3>
+              <p>Screening can also prevent cancer outright by finding precancerous polyps.</p>
+            </div>
+          </div>
+          <div class="trust-note openme-note reveal">
+            Always talk to a doctor for medical advice and screening guidance.
           </div>
         </section>
 
-        <section id="pledge" class="section section-band openme-section">
+        <!-- PLEDGE: the action moment, not buried -->
+        <section id="pledge" class="section openme-pledge-section">
           <div class="section-heading reveal">
-            <span class="eyebrow openme-eyebrow">Take the Next Step</span>
-            <h2>Turn awareness into action</h2>
+            <span class="eyebrow">Take the next step</span>
+            <h2>Pledge to bring it up.</h2>
             <p class="section-lead">
-              Learn your symptom risk with GastroLens or make a simple pledge to bring up colorectal
-              cancer screening with your doctor.
+              A short, honest commitment: ask your doctor about colorectal cancer screening. Or, if
+              you want a fuller picture of symptom patterns first, check GastroLens.
             </p>
           </div>
           <div class="openme-pledge-card reveal">
             <div class="openme-pledge-intro">
               <div class="openme-pledge-actions">
-                <a class="button button-primary openme-primary" href="/gastrolens/">
+                <a class="button button-secondary" href="/gastrolens/">
                   Check My Risk with GastroLens
-                </a>
-                <a class="button button-secondary openme-secondary" href="#pledge-form">
-                  Pledge to Talk to My Doctor
                 </a>
               </div>
               <p class="openme-pledge-count" id="pledge-count" aria-live="polite">
@@ -319,7 +222,7 @@
                   <input type="checkbox" name="pledgeCommitment" required />
                   <span>I commit to asking my doctor about colorectal cancer screening.</span>
                 </label>
-                <button class="button button-primary openme-primary" type="submit">
+                <button class="button button-primary" type="submit">
                   Add My Pledge
                 </button>
               </form>
@@ -330,7 +233,7 @@
                   know about screening.
                 </p>
                 <button
-                  class="button button-secondary openme-secondary"
+                  class="button button-secondary"
                   id="pledge-share-button"
                   type="button"
                 >
@@ -342,6 +245,90 @@
           </div>
         </section>
 
+        <!-- WHAT TO DO NEXT / SCREENING INFO -->
+        <section id="screening" class="section openme-section">
+          <div class="section-heading reveal">
+            <span class="eyebrow openme-eyebrow">Screening info</span>
+            <h2>Get the basics in one place</h2>
+          </div>
+          <p class="openme-scan-note">Scanned an Open Me card? Start here.</p>
+          <div class="screening-grid reveal">
+            <article class="screening-card">
+              <h3>Who should ask about screening?</h3>
+              <p>Adults 45+ at average risk should talk with a doctor about screening options.</p>
+            </article>
+            <article class="screening-card">
+              <h3>Why does screening matter?</h3>
+              <p>Screening finds cancer early and can prevent cancer by finding polyps.</p>
+            </article>
+            <article class="screening-card">
+              <h3>What should I do next?</h3>
+              <p>Talk with your doctor, understand your options, and ask about timing.</p>
+            </article>
+          </div>
+          <div class="section-cta openme-links reveal">
+            <a
+              class="button button-secondary"
+              href="https://www.cdc.gov/colorectal-cancer/screening/index.html"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              CDC Screening Info
+            </a>
+            <a
+              class="button button-secondary"
+              href="https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/colorectal-cancer-screening"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Official Screening Guidance
+            </a>
+            <a
+              class="button button-secondary"
+              href="https://www.cdc.gov/colorectal-cancer/talking/index.html"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Questions to Ask Your Doctor
+            </a>
+          </div>
+          <div class="openme-cta-block reveal">
+            <a class="button button-primary" href="https://www.cdc.gov/colorectal-cancer/screening/index.html" target="_blank" rel="noopener noreferrer">
+              Talk to Your Doctor About Screening
+            </a>
+            <p class="openme-disclaimer">This page is for education only. Always consult a healthcare professional.</p>
+          </div>
+        </section>
+
+        <!-- CAMPAIGN / MATERIALS / PARTNERS -->
+        <section id="partners" class="section section-band openme-section">
+          <div class="section-heading reveal">
+            <span class="eyebrow openme-eyebrow">For restaurant partners</span>
+            <h2>A low-lift way to support community health</h2>
+            <p class="section-lead">
+              Toolkit materials, printable card files, and rollout guidance are being organized
+              through GastroCompass.
+            </p>
+          </div>
+          <div class="feature-grid openme-partners reveal">
+            <article class="feature-card">
+              <h3>Support community health</h3>
+              <p>Join a campaign that prioritizes prevention and early screening awareness.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Spark important conversations</h3>
+              <p>Encourage families to talk about screening in a respectful way.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Join a scalable movement</h3>
+              <p>Help build a model that can expand to other neighborhoods and cities.</p>
+            </article>
+          </div>
+          <div class="section-cta reveal">
+            <a class="button button-primary" href="mailto:tanush.nimmalapudi@gastrocompass.org">Become a Partner</a>
+            <a class="button button-secondary" href="assets/downloads/open-me-card.pdf" target="_blank" rel="noopener noreferrer">Download Print File</a>
+          </div>
+        </section>
       </main>
 
       <footer class="site-footer">
@@ -350,12 +337,12 @@
             <span class="brand-mark brand-mark-footer" aria-hidden="true"><img src="assets/brand/logo.svg" alt="" /></span>
             <h3>GastroCompass</h3>
           </div>
-          <p>Open Me by GastroCompass</p>
+          <p>Open Me, a GastroCompass campaign.</p>
         </div>
         <div class="footer-links">
-          <a href="https://gastrocompass.org/gastrolens/">GastroLens App</a>
+          <a href="/gastrolens/">GastroLens App</a>
           <a href="index.html">GastroCompass</a>
-          <a href="open-me.html">Open Me</a>
+          <a href="founder.html">About</a>
           <a href="mailto:tanush.nimmalapudi@gastrocompass.org">Contact</a>
         </div>
         <p class="footer-disclaimer">

@@ -1,21 +1,91 @@
 :root {
   color-scheme: light;
-  --bg: #f4fbfd;
-  --surface: rgba(255, 255, 255, 0.82);
+
+  /* Warm ivory surface family */
+  --ivory: #faf6ee;
+  --ivory-deep: #f2ebdc;
+  --surface: #fffdf9;
   --surface-strong: #ffffff;
-  --surface-soft: #eef8fb;
-  --text: #15354a;
-  --muted: #537187;
-  --line: rgba(34, 96, 126, 0.12);
-  --primary: #0f9bb3;
-  --primary-dark: #0f6d88;
-  --accent: #69d5d2;
-  --shadow: 0 30px 80px rgba(21, 53, 74, 0.12);
-  --radius-xl: 32px;
-  --radius-lg: 24px;
-  --radius-md: 18px;
-  --radius-sm: 12px;
+  --surface-tint: #eef8f7;
+
+  /* Ink / text */
+  --ink: #1d2a2c;
+  --ink-soft: #56655f;
+  --ink-faint: #8b9691;
+
+  /* GastroCompass teal, derived from the brand mark */
+  --teal-900: #0a3d4d;
+  --teal-800: #0f6d88;
+  --teal-700: #0f8ea7;
+  --teal-500: #23a4ab;
+  --teal-300: #69d5d2;
+  --teal-100: #d9f0ee;
+  --teal-50: #eff9f8;
+
+  /* Deep contrast sections */
+  --navy-900: #0b1e30;
+  --navy-800: #142c40;
+
+  /* Lines / borders */
+  --line: rgba(29, 42, 44, 0.1);
+  --line-soft: rgba(29, 42, 44, 0.06);
+  --line-strong: rgba(29, 42, 44, 0.18);
+  --line-on-dark: rgba(255, 255, 255, 0.14);
+
+  /* Shadows */
+  --shadow-sm: 0 8px 24px rgba(15, 61, 77, 0.06);
+  --shadow-md: 0 20px 48px rgba(15, 61, 77, 0.09);
+  --shadow-lg: 0 32px 72px rgba(15, 61, 77, 0.12);
+
+  /* Radii */
+  --radius-xl: 28px;
+  --radius-lg: 22px;
+  --radius-md: 16px;
+  --radius-sm: 10px;
+  --radius-pill: 999px;
+
+  /* Spacing scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --space-10: 128px;
+
+  /* Containers */
   --container: 1180px;
+  --container-narrow: 720px;
+  --container-wide: 1320px;
+
+  /* Type scale */
+  --font-display: "Manrope", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --step-body: clamp(1rem, 0.96rem + 0.2vw, 1.1rem);
+  --step-lead: clamp(1.08rem, 1rem + 0.35vw, 1.28rem);
+  --step-h3: clamp(1.15rem, 1.1rem + 0.2vw, 1.35rem);
+  --step-h2: clamp(2rem, 1.6rem + 1.8vw, 3.1rem);
+  --step-h1: clamp(2.6rem, 1.9rem + 3.2vw, 4.6rem);
+  --step-display: clamp(3rem, 2rem + 4.6vw, 6rem);
+
+  /* Motion */
+  --ease-premium: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-soft: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast: 220ms;
+  --duration-base: 480ms;
+  --duration-slow: 900ms;
+
+  /* Legacy aliases kept so existing component/page CSS keeps working */
+  --bg: var(--ivory);
+  --text: var(--ink);
+  --muted: var(--ink-soft);
+  --primary: var(--teal-700);
+  --primary-dark: var(--teal-800);
+  --accent: var(--teal-300);
+  --shadow: var(--shadow-md);
 }
 
 * {
@@ -31,18 +101,35 @@ html {
 }
 
 main#top {
-  padding-top: 12px;
+  padding-top: 4px;
 }
 
 body {
   margin: 0;
   min-height: 100vh;
-  font-family: "Plus Jakarta Sans", sans-serif;
-  color: var(--text);
-  background:
-    radial-gradient(circle at top left, rgba(105, 213, 210, 0.18), transparent 28%),
-    radial-gradient(circle at top right, rgba(15, 155, 179, 0.12), transparent 30%),
-    linear-gradient(180deg, #f8fdff 0%, var(--bg) 100%);
+  font-family: var(--font-body);
+  font-size: var(--step-body);
+  color: var(--ink);
+  background: var(--ivory);
+  position: relative;
+}
+
+/* Extremely subtle grain: felt, not seen. Pure CSS, no image request. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.035;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 160px 160px;
+}
+
+.page-shell {
+  position: relative;
+  z-index: 1;
 }
 
 a {
@@ -52,7 +139,38 @@ a {
 
 button,
 input,
-select {
+select,
+textarea {
   font: inherit;
 }
 
+img {
+  max-width: 100%;
+  display: block;
+}
+
+::selection {
+  background: var(--teal-300);
+  color: var(--navy-900);
+}
+
+:focus-visible {
+  outline: 2px solid var(--teal-700);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
