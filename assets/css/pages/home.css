@@ -232,8 +232,10 @@
    Origin + Research — editorial, text-led
    ========================================================== */
 
+/* The hero already contributes bottom padding, so origin does not
+   also take the large top step — that compounded into a dead gap. */
 .ch-origin {
-  padding-top: var(--chapter-pad-lg);
+  padding-top: var(--chapter-pad);
 }
 
 .ch-origin .ch-title,

@@ -26,6 +26,60 @@
   max-width: calc(var(--col-wide) + var(--gutter) * 2);
 }
 
+/* Legacy document pages (about, founder) lay their sections out
+   directly in <main> rather than in .wrap, so the column lives here.
+   The story pages deliberately keep .page-shell full-width so their
+   dark chapters can run edge to edge. */
+.doc-page main {
+  width: 100%;
+  max-width: calc(var(--col-max) + var(--gutter) * 2);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.doc-page .section {
+  padding-block: var(--s-9);
+}
+
+.doc-page .section-heading {
+  margin-bottom: var(--s-6);
+}
+
+/* Legacy footers have no .wrap child, so they take the column here. */
+.doc-page .site-footer {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--s-6) var(--s-8);
+  width: 100%;
+  max-width: calc(var(--col-max) + var(--gutter) * 2);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.doc-page .site-footer .footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px 20px;
+}
+
+.doc-page .footer-disclaimer {
+  grid-column: 1 / -1;
+  max-width: 70ch;
+  padding-top: var(--s-5);
+  border-top: 1px solid var(--line-soft);
+}
+
+@media (max-width: 720px) {
+  .doc-page .site-footer {
+    grid-template-columns: 1fr;
+  }
+
+  .doc-page .site-footer .footer-links {
+    justify-content: flex-start;
+  }
+}
+
 .skip-link {
   position: absolute;
   top: -60px;
