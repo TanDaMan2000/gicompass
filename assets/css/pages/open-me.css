@@ -318,17 +318,35 @@ body.openme-page #pledge {
   box-shadow: 0 0 0 3px var(--teal-100);
 }
 
+/* The commitment is the one required interaction on the QR journey,
+   so the whole row is the hit area and the control itself stays
+   comfortably tappable rather than a 17px square. */
 .openme-checkbox {
   grid-template-columns: auto 1fr;
   align-items: start;
-  column-gap: 11px;
+  column-gap: 12px;
+  padding: 6px 0;
+  cursor: pointer;
 }
 
 .openme-checkbox input {
-  margin-top: 3px;
-  width: 17px;
-  height: 17px;
+  margin: 0;
+  width: 22px;
+  height: 22px;
+  flex: 0 0 auto;
   accent-color: var(--teal-800);
+  cursor: pointer;
+}
+
+.openme-checkbox span {
+  padding-top: 1px;
+}
+
+@media (pointer: coarse) {
+  .openme-checkbox input {
+    width: 26px;
+    height: 26px;
+  }
 }
 
 .openme-checkbox span,
