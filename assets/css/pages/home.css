@@ -1136,3 +1136,108 @@
     gap: var(--s-5);
   }
 }
+
+/* ==========================================================
+   Hero bearing — the hero's visual idea.
+   Scattered readings resolving onto a single line of direction:
+   the project's actual argument, drawn abstractly. Sits in the
+   right half so the hero is a composition, not a text block.
+   ========================================================== */
+
+.hero-bearing {
+  position: absolute;
+  top: 50%;
+  right: max(-6vw, -90px);
+  width: min(52vw, 620px);
+  height: auto;
+  transform: translateY(-52%);
+  pointer-events: none;
+  z-index: 0;
+  /* Settles as the hero leaves: the bearing is taken, then held. */
+  opacity: calc(1 - var(--scroll-y, 0) * 0.85);
+}
+
+.hero-bearing circle,
+.hero-bearing line,
+.hero-bearing path {
+  vector-effect: non-scaling-stroke;
+}
+
+.hb-rings circle {
+  fill: none;
+  stroke: rgba(15, 109, 136, 0.13);
+  stroke-width: 1;
+}
+
+.hb-ticks line {
+  stroke: rgba(15, 109, 136, 0.3);
+  stroke-width: 1;
+}
+
+.hb-readings circle {
+  fill: rgba(23, 33, 31, 0.26);
+}
+
+/* The path draws itself once, then stays. */
+.hb-path {
+  fill: none;
+  stroke: var(--teal-700);
+  stroke-width: 1.5;
+  opacity: 0.55;
+  stroke-dasharray: 460;
+  stroke-dashoffset: 460;
+  animation: bearing-draw 2000ms var(--ease-out) 420ms forwards;
+}
+
+@keyframes bearing-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.hb-fix circle {
+  fill: var(--teal-700);
+}
+
+.hb-fix-ring {
+  fill: none;
+  stroke: var(--teal-700);
+  stroke-width: 1;
+  opacity: 0.4;
+}
+
+.hb-fix {
+  opacity: 0;
+  animation: bearing-fix 700ms var(--ease-out) 2100ms forwards;
+}
+
+@keyframes bearing-fix {
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hb-path {
+    stroke-dashoffset: 0;
+    animation: none;
+  }
+
+  .hb-fix {
+    opacity: 1;
+    animation: none;
+  }
+}
+
+/* Below the split the bearing would sit behind the copy, so it
+   drops back to a quiet corner mark instead of competing. */
+@media (max-width: 900px) {
+  .hero-bearing {
+    top: auto;
+    bottom: -8%;
+    right: -28%;
+    width: 92vw;
+    transform: none;
+    opacity: 0.5;
+  }
+}

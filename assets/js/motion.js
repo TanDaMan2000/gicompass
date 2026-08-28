@@ -96,10 +96,21 @@
   const isPhone = window.matchMedia("(max-width: 720px)").matches;
   const runGl = glFrame && !reduced && !isPhone;
 
+  /* ---- Hero bearing: fades as the hero scrolls away ---- */
+  const hero = document.querySelector(".hero");
+
   let ticking = false;
 
   const update = () => {
     ticking = false;
+
+    if (hero) {
+      // 0 at rest, 1 once the hero has scrolled fully past.
+      const h = hero.offsetHeight || 1;
+      const y = Math.min(Math.max(window.scrollY / h, 0), 1);
+      document.documentElement.style.setProperty("--scroll-y", y.toFixed(3));
+    }
+
     if (!runGl) return;
 
     const vh = window.innerHeight;
@@ -125,7 +136,7 @@
     }
   };
 
-  if (runGl) {
+  if (runGl || hero) {
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", onScroll);
     update();
