@@ -1,7 +1,16 @@
+/* ==========================================================
+   Responsive rules for the legacy components still used by
+   about.html and founder.html.
+
+   Global chrome (header, nav, hero, grid, footer) is owned by
+   layout.css and the page stylesheets — nothing here may touch
+   it, or it will override the current design system.
+   ========================================================== */
+
 .reveal {
   opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 700ms ease, transform 700ms ease;
+  transform: translateY(22px);
+  transition: opacity 800ms var(--ease-out), transform 800ms var(--ease-out);
 }
 
 .reveal.visible {
@@ -10,7 +19,6 @@
 }
 
 @media (max-width: 1024px) {
-  .hero,
   .split-layout,
   .cta-panel,
   .contact-panel,
@@ -27,14 +35,6 @@
 
   .phone-mockup {
     margin: 0 auto;
-  }
-
-  .site-nav {
-    display: none !important;
-  }
-
-  .mobile-nav-toggle {
-    display: inline-flex;
   }
 
   .hero-visual {
@@ -61,7 +61,6 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .hero-laptop .laptop-screen,
   .laptop-screen {
     max-width: 100%;
   }
@@ -85,130 +84,21 @@
 }
 
 @media (max-width: 720px) {
-  html,
-  body {
-    overflow-x: hidden;
+  .about-hero,
+  .founder-hero {
+    gap: var(--s-7);
   }
 
-  .page-shell {
-    width: min(calc(100% - 28px), var(--container));
-  }
-
-  .site-header {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto auto;
-    align-items: center;
-    padding: 12px 14px;
-    gap: 10px;
-  }
-
-  .site-header.is-scrolled {
-    padding: 10px 14px;
-  }
-
-  .brand {
-    width: 100%;
-    min-width: 0;
-    gap: 10px;
-  }
-
-  .brand-text {
-    min-width: 0;
-    font-size: 0.85rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  .brand-mark {
-    width: 38px;
-    height: 38px;
-  }
-
-  .mobile-nav-toggle {
-    justify-self: end;
-  }
-
-  .site-header .nav-cta.button-small {
-    padding: 0 14px;
-    min-height: 40px;
-    font-size: 0.85rem;
-    white-space: nowrap;
-  }
-
-  .nav-cta-shrink {
-    display: none;
-  }
-
-  .section {
-    padding: 64px 0;
-  }
-
-  main#top {
-    padding-top: 10px;
+  .about-hero h1,
+  .founder-hero h1 {
+    max-width: none;
   }
 
   .section-surface,
   .section-band,
   .cta-panel {
-    padding: 28px;
-    border-radius: 24px;
-  }
-
-  .hero-copy,
-  .hero-visual,
-  .about-hero .hero-copy,
-  .founder-hero .hero-copy {
-    padding-inline: 2px;
-  }
-
-  h1 {
-    font-size: 2.7rem;
-    line-height: 1.04;
-  }
-
-  .hero h1,
-  .about-hero h1 {
-    max-width: none;
-  }
-
-  h2 {
-    font-size: 2rem;
-  }
-
-  .hero {
-    padding-top: 56px;
-    gap: 28px;
-  }
-
-  .hero-text,
-  .section-lead {
-    font-size: 1rem;
-  }
-
-  .hero-points {
-    gap: 10px;
-  }
-
-  .brand-text {
-    font-size: 0.95rem;
-  }
-
-  .mobile-nav-panel {
-    width: 100%;
-    left: 0;
-    right: 0;
-    border-radius: 20px;
-  }
-
-  .mobile-nav-panel a {
-    font-size: 1.05rem;
-  }
-
-  .screen-card,
-  .cta-panel,
-  .site-footer {
-    grid-template-columns: 1fr;
+    padding: 26px;
+    border-radius: var(--radius-lg);
   }
 
   .feature-grid,
@@ -224,13 +114,13 @@
     gap: 18px;
   }
 
-  .analysis-grid {
-    grid-template-columns: 1fr;
-  }
-
+  .analysis-grid,
   .app-chip-grid,
   .app-step-grid,
-  .app-summary-grid {
+  .app-summary-grid,
+  .laptop-sidebar,
+  .screen-card,
+  .cta-panel {
     grid-template-columns: 1fr;
   }
 
@@ -240,20 +130,12 @@
     align-items: flex-start;
   }
 
-  .laptop-sidebar {
-    grid-template-columns: 1fr;
-  }
-
   .timeline-label {
     margin-left: 0;
   }
 
   .screen-card {
     flex-basis: 100%;
-  }
-
-  .site-footer {
-    gap: 18px;
   }
 
   .section-surface > * + *,
@@ -267,7 +149,6 @@
     text-align: center;
     white-space: normal;
     overflow-wrap: anywhere;
-    word-break: break-word;
   }
 
   .contact-tags span {
@@ -275,24 +156,12 @@
     min-width: 0;
     text-align: center;
   }
-
-  .footer-links {
-    justify-content: flex-start;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-
   .reveal {
     opacity: 1;
     transform: none;
-    transition: none;
-  }
-
-  .button {
     transition: none;
   }
 }

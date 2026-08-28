@@ -17,47 +17,40 @@
     <link rel="icon" type="image/svg+xml" href="assets/brand/favicon.svg" />
     <link rel="shortcut icon" href="assets/brand/favicon.svg" />
     <link rel="stylesheet" href="assets/css/site.css" />
-    <noscript><style>.reveal{opacity:1!important;transform:none!important;}</style></noscript>
+    <noscript><style>.reveal,[data-rise]{opacity:1!important;transform:none!important}</style></noscript>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
+    <div class="atmosphere" aria-hidden="true"></div>
+
     <div class="page-shell">
       <header class="site-header">
-        <a class="brand" href="index.html" aria-label="GastroCompass home">
-          <span class="brand-mark" aria-hidden="true"><img src="assets/brand/logo.svg" alt="" /></span>
-          <span class="brand-text">GastroCompass</span>
-        </a>
-        <button
-          class="mobile-nav-toggle"
-          type="button"
-          aria-expanded="false"
-          aria-controls="mobile-nav"
-          aria-label="Open navigation menu"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        <nav class="site-nav" aria-label="Primary">
-          <a href="index.html#story">Story</a>
-          <div class="nav-dropdown">
-            <button class="nav-trigger" type="button">GastroLens</button>
-            <div class="nav-menu">
-              <a href="index.html#gastrolens">Explore GastroLens</a>
-              <a href="/gastrolens/">Launch the App</a>
-              <a href="about.html#workflow">How It Works</a>
-            </div>
-          </div>
-          <a href="open-me.html">OpenMe</a>
-          <a href="/research/gastrolens-nhanes-analysis.pdf" target="_blank" rel="noopener noreferrer">Research</a>
-          <a href="founder.html">About</a>
-        </nav>
-        <a class="button button-small button-primary nav-cta" href="open-me.html#pledge"><span class="nav-cta-shrink">Take the&nbsp;</span>Pledge</a>
+        <div class="wrap header-inner">
+          <a class="brand" href="index.html#top" aria-label="GastroCompass home">
+            <span class="brand-mark" aria-hidden="true"><img src="assets/brand/logo.svg" alt="" /></span>
+            <span class="brand-text">GastroCompass</span>
+          </a>
+          <nav class="site-nav" aria-label="Primary">
+            <a href="index.html#story">Story</a>
+            <a href="index.html#gastrolens">GastroLens</a>
+            <a href="open-me.html">OpenMe</a>
+            <a href="/research/gastrolens-nhanes-analysis.pdf" target="_blank" rel="noopener noreferrer">Research</a>
+            <a href="founder.html">About</a>
+          </nav>
+          <a class="button button-small button-primary nav-cta" href="open-me.html#pledge">Take the Pledge</a>
+          <button
+            class="mobile-nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="mobile-nav"
+            aria-label="Open navigation menu"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
         <div class="mobile-nav-panel" id="mobile-nav" hidden>
           <a href="index.html#story">Story</a>
-          <a href="index.html#gastrolens">Explore GastroLens</a>
-          <a href="/gastrolens/">Launch the App</a>
-          <a href="about.html#workflow">How It Works</a>
+          <a href="index.html#gastrolens">GastroLens</a>
           <a href="open-me.html">OpenMe</a>
           <a href="/research/gastrolens-nhanes-analysis.pdf" target="_blank" rel="noopener noreferrer">Research</a>
           <a href="founder.html">About</a>
@@ -302,8 +295,11 @@
       </footer>
     </div>
 
-    <script src="assets/js/reveal.js"></script>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="grain-fine" aria-hidden="true"></div>
+
     <script src="assets/js/site-navigation.js"></script>
+    <script src="assets/js/motion.js"></script>
     <script src="assets/js/product-preview.js"></script>
   </body>
 </html>

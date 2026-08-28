@@ -1,6 +1,29 @@
+/* ==========================================================
+   Shell, header, editorial grid, footer
+   ========================================================== */
+
 .page-shell {
-  width: min(calc(100% - 32px), var(--container));
-  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* ---- Editorial grid ------------------------------------
+   One recurring geometry. Content sits on a consistent left
+   edge; only deliberate breakouts leave it. */
+
+.wrap {
+  width: 100%;
+  max-width: calc(var(--col-max) + var(--gutter) * 2);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.wrap-text {
+  max-width: calc(var(--col-text) + var(--gutter) * 2);
+}
+
+.wrap-wide {
+  max-width: calc(var(--col-wide) + var(--gutter) * 2);
 }
 
 .skip-link {
@@ -13,161 +36,70 @@
   color: #fff;
   border-radius: var(--radius-sm);
   font-weight: 700;
-  transition: top var(--duration-fast) var(--ease-soft);
+  transition: top var(--d-fast) var(--ease-soft);
 }
 
 .skip-link:focus {
   top: 16px;
 }
 
-/* ---------- Header ---------- */
+/* ---- Header --------------------------------------------
+   Transparent and integrated while the hero is on screen;
+   becomes an opaque ivory surface with a hairline once the
+   page moves. Never a floating pill. */
 
 .site-header {
   position: sticky;
   top: 0;
-  z-index: 40;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  padding: 20px 4px;
+  z-index: 60;
   isolation: isolate;
-  background: rgba(250, 246, 238, 0.88);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid transparent;
-  transition: background var(--duration-fast) var(--ease-soft),
-    border-color var(--duration-fast) var(--ease-soft),
-    box-shadow var(--duration-fast) var(--ease-soft),
-    padding var(--duration-fast) var(--ease-soft);
+  transition: border-color var(--d-base) var(--ease-soft),
+    background-color var(--d-base) var(--ease-soft);
 }
 
-/* Opaque fallback behind the header at all times: if backdrop-filter is
-   unsupported or the browser paints it late mid-scroll, page content must
-   never become legible through the bar. */
 .site-header::before {
   content: "";
   position: absolute;
   inset: 0;
   z-index: -1;
   background: var(--ivory);
+  opacity: 0;
+  transition: opacity var(--d-base) var(--ease-soft);
+}
+
+.site-header.is-scrolled::before {
+  opacity: 1;
 }
 
 .site-header.is-scrolled {
-  padding: 14px 4px;
-  background: rgba(250, 246, 238, 0.97);
   border-bottom-color: var(--line);
-  box-shadow: var(--shadow-sm);
 }
 
-.mobile-nav-toggle {
-  display: none;
-  width: 44px;
-  height: 44px;
-  padding: 0;
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  background: var(--surface-strong);
-  color: var(--teal-800);
+.header-inner {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-  flex: 0 0 auto;
+  justify-content: space-between;
+  gap: var(--s-6);
+  height: 68px;
+  transition: height var(--d-base) var(--ease-soft);
 }
 
-.mobile-nav-toggle span {
-  width: 18px;
-  height: 2px;
-  border-radius: 999px;
-  background: currentColor;
-  transition: transform 180ms ease, opacity 180ms ease;
-}
-
-.mobile-nav-toggle.is-open span:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
-}
-
-.mobile-nav-toggle.is-open span:nth-child(2) {
-  opacity: 0;
-}
-
-.mobile-nav-toggle.is-open span:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
-}
-
-.mobile-nav-panel {
-  display: none;
-  position: absolute;
-  top: calc(100% + 8px);
-  left: 0;
-  right: 0;
-  z-index: 39;
-  padding: 10px;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-lg);
-  background: rgba(255, 253, 249, 0.98);
-  box-shadow: var(--shadow-lg);
-  backdrop-filter: blur(18px);
-}
-
-.mobile-nav-panel[hidden] {
-  display: none !important;
-}
-
-.mobile-nav-panel a {
-  display: block;
-  padding: 13px 12px;
-  border-radius: 12px;
-  color: var(--ink-soft);
-  font-weight: 600;
-}
-
-.mobile-nav-panel .mobile-nav-cta {
-  margin-top: 8px;
-  padding: 15px 18px;
-  border-radius: var(--radius-md);
-  background: var(--teal-800);
-  color: #ffffff;
-  font-weight: 800;
-  text-align: center;
-  box-shadow: var(--shadow-sm);
-}
-
-.mobile-nav-panel a:hover {
-  background: var(--teal-50);
-  color: var(--teal-800);
-}
-
-.mobile-nav-panel .mobile-nav-cta:hover {
-  background: var(--teal-900);
-  color: #ffffff;
-}
-
-.mobile-nav-panel.is-open {
-  display: grid;
-  gap: 4px;
+.site-header.is-scrolled .header-inner {
+  height: 60px;
 }
 
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  font-family: var(--font-display);
-  font-size: 1.02rem;
-  font-weight: 800;
-  letter-spacing: -0.01em;
+  gap: 10px;
   min-width: 0;
   color: var(--ink);
 }
 
 .brand-mark {
-  width: 38px;
-  height: 38px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  width: 26px;
+  height: 26px;
   flex: 0 0 auto;
   border-radius: 50%;
   overflow: hidden;
@@ -176,26 +108,66 @@
 .brand-mark img {
   width: 100%;
   height: 100%;
-  display: block;
+}
+
+.brand-text {
+  font-family: var(--font-display);
+  font-size: 0.98rem;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  white-space: nowrap;
 }
 
 .site-nav {
   display: flex;
   align-items: center;
-  gap: 26px;
+  gap: var(--s-6);
+  font-size: 0.92rem;
+  font-weight: 500;
   color: var(--ink-soft);
-  font-size: 0.95rem;
-  font-weight: 600;
+}
+
+.site-nav a,
+.nav-trigger {
+  position: relative;
+  padding-block: 4px;
+  transition: color var(--d-fast) var(--ease-soft);
+}
+
+/* Hairline that grows from the left — quieter than a pill or box. */
+.site-nav a::after,
+.nav-trigger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--d-base) var(--ease-out);
+}
+
+.site-nav a:hover,
+.nav-trigger:hover,
+.site-nav a[aria-current="page"] {
+  color: var(--ink);
+}
+
+.site-nav a:hover::after,
+.nav-trigger:hover::after,
+.site-nav a[aria-current="page"]::after {
+  transform: scaleX(1);
 }
 
 .nav-dropdown {
   position: relative;
-  padding-bottom: 18px;
-  margin-bottom: -18px;
+  padding-bottom: 16px;
+  margin-bottom: -16px;
 }
 
 .nav-trigger {
-  padding: 0;
   border: 0;
   background: transparent;
   color: inherit;
@@ -203,48 +175,33 @@
   cursor: pointer;
 }
 
-.nav-trigger::after {
-  content: "";
-  display: inline-block;
-  width: 6px;
-  height: 6px;
-  margin-left: 7px;
-  border-right: 1.6px solid currentColor;
-  border-bottom: 1.6px solid currentColor;
-  transform: rotate(45deg) translateY(-1px);
-}
-
 .nav-menu {
   position: absolute;
-  top: calc(100% + 6px);
-  left: 50%;
-  min-width: 210px;
+  top: calc(100% + 4px);
+  left: 0;
+  min-width: 200px;
   display: grid;
-  gap: 2px;
-  padding: 8px;
-  background: rgba(255, 253, 249, 0.98);
+  gap: 1px;
+  padding: 6px;
+  background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-md);
   box-shadow: var(--shadow-md);
   opacity: 0;
   pointer-events: none;
-  transform: translate(-50%, 8px);
-  transition: opacity 180ms var(--ease-soft), transform 180ms var(--ease-soft);
-}
-
-.nav-menu::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: -14px;
-  height: 14px;
+  transform: translateY(6px);
+  transition: opacity var(--d-fast) var(--ease-soft), transform var(--d-fast) var(--ease-soft);
 }
 
 .nav-menu a {
-  padding: 10px 12px;
-  border-radius: 10px;
+  padding: 9px 12px;
+  border-radius: var(--radius-sm);
   white-space: nowrap;
+  font-size: 0.9rem;
+}
+
+.nav-menu a::after {
+  display: none;
 }
 
 .nav-menu a:hover {
@@ -256,131 +213,205 @@
 .nav-dropdown:focus-within .nav-menu {
   opacity: 1;
   pointer-events: auto;
-  transform: translate(-50%, 0);
-}
-
-.site-nav a,
-.nav-trigger {
-  transition: color var(--duration-fast) var(--ease-soft);
-}
-
-.site-nav a:hover,
-.nav-trigger:hover,
-.footer-links a:hover {
-  color: var(--teal-800);
+  transform: translateY(0);
 }
 
 .nav-cta {
   flex: 0 0 auto;
 }
 
-/* ---------- Sections ---------- */
+/* ---- Mobile nav ---- */
 
-.section {
-  padding: var(--space-9) 0;
-  position: relative;
-}
-
-.hero {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  align-items: start;
-  gap: 44px;
-  padding-top: var(--space-8);
-}
-
-.hero-copy {
-  max-width: 39rem;
-  padding-top: 18px;
-}
-
-.status-chip-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.status-chip {
-  display: inline-flex;
-  align-items: center;
-  padding: 7px 12px;
-  border-radius: var(--radius-sm);
-  font-size: 0.74rem;
-  font-weight: 800;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
-.status-chip-live {
-  background: var(--surface-strong);
+.mobile-nav-toggle {
+  display: none;
+  width: 40px;
+  height: 40px;
+  padding: 0;
   border: 1px solid var(--line);
-  color: var(--teal-800);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--ink);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+  flex: 0 0 auto;
 }
 
-.status-chip-soon {
-  background: linear-gradient(135deg, var(--teal-800), var(--teal-700));
-  color: #ffffff;
-  box-shadow: var(--shadow-sm);
+.mobile-nav-toggle span {
+  width: 16px;
+  height: 1.5px;
+  background: currentColor;
+  transition: transform 200ms var(--ease-out), opacity 200ms var(--ease-out);
 }
 
-.status-chip-openme {
-  background: linear-gradient(135deg, var(--navy-900), var(--navy-800));
-  color: #ffffff;
-  box-shadow: var(--shadow-sm);
+.mobile-nav-toggle.is-open span:nth-child(1) {
+  transform: translateY(5.5px) rotate(45deg);
 }
 
-/* ---------- Footer ---------- */
+.mobile-nav-toggle.is-open span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-nav-toggle.is-open span:nth-child(3) {
+  transform: translateY(-5.5px) rotate(-45deg);
+}
+
+.mobile-nav-panel {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 59;
+  padding: var(--s-4) var(--gutter) var(--s-6);
+  background: var(--ivory);
+  border-bottom: 1px solid var(--line);
+  box-shadow: var(--shadow-md);
+}
+
+.mobile-nav-panel[hidden] {
+  display: none !important;
+}
+
+.mobile-nav-panel.is-open {
+  display: grid;
+  gap: 2px;
+}
+
+.mobile-nav-panel a {
+  padding: 13px 0;
+  border-bottom: 1px solid var(--line-soft);
+  color: var(--ink-soft);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.mobile-nav-panel .mobile-nav-cta {
+  margin-top: var(--s-4);
+  padding: 14px 20px;
+  border-bottom: 0;
+  border-radius: var(--radius-md);
+  background: var(--teal-800);
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-align: center;
+}
+
+/* ---- Footer --------------------------------------------- */
 
 .site-footer {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 28px;
-  padding: 40px 0 56px;
-  color: var(--ink-soft);
+  padding-block: var(--s-9) var(--s-8);
   border-top: 1px solid var(--line);
-  margin-top: var(--space-7);
+  color: var(--ink-soft);
+  font-size: var(--t-small);
 }
 
-.site-footer h3 {
-  font-size: 1.05rem;
-  color: var(--ink);
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: var(--s-8);
+  align-items: start;
 }
 
 .footer-brand {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 8px;
+  gap: 10px;
+  margin-bottom: var(--s-3);
+}
+
+.footer-brand h3 {
+  font-size: 1rem;
+  color: var(--ink);
 }
 
 .brand-mark-footer {
-  width: 34px;
-  height: 34px;
+  width: 24px;
+  height: 24px;
 }
 
 .footer-links {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: 8px 20px;
-  align-content: start;
+  display: grid;
+  gap: 10px;
+  justify-items: start;
 }
 
-.footer-credit {
-  grid-column: 1 / -1;
-  padding-top: 18px;
-  font-size: 0.95rem;
+.footer-links a {
+  transition: color var(--d-fast) var(--ease-soft);
 }
 
-.footer-credit a {
-  font-weight: 700;
+.footer-links a:hover {
   color: var(--teal-800);
 }
 
+.footer-base {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-4) var(--s-6);
+  justify-content: space-between;
+  margin-top: var(--s-8);
+  padding-top: var(--s-5);
+  border-top: 1px solid var(--line-soft);
+  color: var(--ink-ghost);
+  font-size: var(--t-micro);
+  line-height: 1.6;
+}
+
 .footer-disclaimer {
-  grid-column: 1 / -1;
-  padding-top: 16px;
-  border-top: 1px solid var(--line);
-  font-size: 0.88rem;
-  color: var(--ink-faint);
+  max-width: 62ch;
+}
+
+@media (max-width: 860px) {
+  .site-nav {
+    display: none !important;
+  }
+
+  .mobile-nav-toggle {
+    display: inline-flex;
+  }
+
+  .header-inner {
+    gap: var(--s-3);
+    height: 60px;
+  }
+
+  /* The wordmark must never be squeezed out by the CTA. */
+  .brand {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .brand-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .site-header .nav-cta {
+    min-height: 36px;
+    padding: 0 14px;
+    font-size: 0.82rem;
+    white-space: nowrap;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: var(--s-6);
+  }
+}
+
+@media (max-width: 400px) {
+  /* At the narrowest widths the CTA sheds its verb rather than
+     the brand losing its name. */
+  .site-header .nav-cta {
+    font-size: 0;
+    padding: 0 12px;
+  }
+
+  .site-header .nav-cta::after {
+    content: "Pledge";
+    font-size: 0.82rem;
+  }
 }

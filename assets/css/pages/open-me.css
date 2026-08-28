@@ -1,7 +1,7 @@
 /* ==========================================================
    Open Me — QR-first campaign page.
-   Same ivory + teal identity as the rest of GastroCompass;
-   understandable within ~10 seconds of landing.
+   Same design language as the homepage, tuned for action:
+   what it is, why it matters, what to do — fast.
    ========================================================== */
 
 body.openme-page {
@@ -11,118 +11,88 @@ body.openme-page {
 
 body.openme-page #screening,
 body.openme-page #pledge {
-  scroll-margin-top: 110px;
+  scroll-margin-top: 88px;
 }
 
 .openme-page [hidden] {
   display: none !important;
 }
 
-/* ---------- Hero: typographic, matching the homepage direction ---------- */
+/* ---- Hero ---------------------------------------------- */
 
-.openme-hero-typographic {
+.om-hero {
   position: relative;
-  width: min(calc(100% - 32px), var(--container-narrow));
-  margin: 0 auto;
-  padding-top: clamp(40px, 7vw, 84px);
-  padding-bottom: var(--space-7);
-  text-align: center;
+  padding-top: clamp(52px, 9vh, 104px);
+  padding-bottom: clamp(56px, 9vh, 104px);
   overflow: hidden;
 }
 
-.openme-hero-typographic::before {
-  content: "";
-  position: absolute;
-  inset: -14% -10% auto -10%;
-  height: 80%;
-  background: radial-gradient(ellipse 60% 55% at 50% 8%, rgba(105, 213, 210, 0.24), transparent 68%);
-  pointer-events: none;
-  z-index: 0;
-}
-
-.openme-hero-typographic > * {
+.om-hero-grid {
   position: relative;
   z-index: 1;
-}
-
-.openme-hero-typographic .eyebrow {
-  display: inline-flex;
-}
-
-.openme-hero-typographic h1 {
-  margin-top: var(--space-4);
-  max-width: 16ch;
-  margin-inline: auto;
-  font-size: clamp(2.3rem, 1.7rem + 2.9vw, 3.9rem);
-  line-height: 1.08;
-}
-
-.openme-hero-typographic .hero-text {
-  max-width: 46ch;
-  margin: 18px auto 0;
-  text-align: center;
-}
-
-.openme-hero-typographic .hero-actions {
-  justify-content: center;
-  margin-top: var(--space-6);
-}
-
-.openme-eyebrow {
-  background: var(--teal-50);
-  color: var(--teal-800);
-}
-
-/* ---------- What is Open Me: facts + example material ---------- */
-
-.openme-explainer {
   display: grid;
-  grid-template-columns: 1fr 0.55fr;
-  gap: var(--space-7);
-  align-items: start;
-}
-
-.openme-explainer .openme-quick-facts {
-  grid-template-columns: repeat(2, 1fr);
-  margin-top: 0;
-}
-
-.openme-material {
-  display: grid;
-  gap: 12px;
-  justify-items: center;
-  text-align: center;
-}
-
-.openme-material-caption {
-  color: var(--ink-faint);
-  font-size: 0.8rem;
-  font-weight: 600;
-}
-
-/* ---------- Virtual card ---------- */
-
-.openme-hero-visual {
-  display: grid;
-  gap: 16px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.72fr);
+  gap: clamp(36px, 6vw, 88px);
   align-items: center;
+}
+
+.om-hero h1 {
+  max-width: 12ch;
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 1.8rem + 3vw, 4.2rem);
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  font-weight: 700;
+}
+
+.om-hero-sub {
+  max-width: 46ch;
+  margin-top: var(--s-6);
+  color: var(--ink-soft);
+  font-size: var(--t-lead);
+  line-height: 1.66;
+}
+
+.om-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s-5) var(--s-6);
+  margin-top: var(--s-7);
+}
+
+/* The example material, treated as a printed object. */
+.om-hero-material {
+  display: grid;
   justify-items: center;
-  width: min(280px, 100%);
+  gap: var(--s-4);
+}
+
+.om-material-note {
+  margin: 0;
+  color: var(--ink-ghost);
+  font-size: var(--t-micro);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.om-card-experience {
+  width: min(300px, 100%);
 }
 
 .openme-virtual-card {
   position: relative;
   display: grid;
-  gap: 14px;
+  gap: var(--s-4);
   justify-items: center;
 }
 
 .openme-virtual-card-stage {
   position: relative;
-  width: min(100%, 320px);
+  width: 100%;
   aspect-ratio: 4 / 3.02;
-  min-height: 0;
-  perspective: 3200px;
+  perspective: 3000px;
   perspective-origin: center 16%;
 }
 
@@ -131,49 +101,48 @@ body.openme-page #pledge {
   top: 0;
   left: 0;
   width: 100%;
-  border-radius: 16px;
+  border-radius: 3px;
   overflow: hidden;
-  background: #ffffff;
-  box-shadow: var(--shadow-lg);
-  transition: transform 1100ms var(--ease-premium), opacity 500ms ease, box-shadow 500ms ease;
+  background: #fff;
+  box-shadow:
+    0 1px 1px rgba(12, 30, 28, 0.08),
+    0 16px 32px rgba(12, 30, 28, 0.14),
+    0 30px 56px rgba(12, 30, 28, 0.08);
+  transition: transform 1100ms var(--ease-out), box-shadow 600ms ease;
   backface-visibility: hidden;
   transform-style: preserve-3d;
-  will-change: transform;
 }
 
 .openme-virtual-card-panel img {
-  display: block;
   width: 100%;
-  height: auto;
+  display: block;
 }
 
 .openme-virtual-card-base {
   z-index: 1;
   transform: scale(0.99);
-  box-shadow: var(--shadow-md);
 }
 
 .openme-virtual-card-front {
   z-index: 2;
   transform-origin: center top;
-  transform: rotateX(0deg) translateY(0);
 }
 
 .openme-virtual-card-front::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(0, 0, 0, 0.2));
-  transition: opacity 500ms ease;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.18));
+  transition: opacity 600ms ease;
 }
 
 .openme-virtual-card[data-open="true"] .openme-virtual-card-front {
-  transform: rotateX(148deg) translateY(-8px);
-  box-shadow: var(--shadow-sm);
+  transform: rotateX(146deg) translateY(-7px);
+  box-shadow: 0 2px 8px rgba(12, 30, 28, 0.1);
 }
 
 .openme-virtual-card[data-open="true"] .openme-virtual-card-front::after {
-  opacity: 0.28;
+  opacity: 0.3;
 }
 
 .openme-virtual-card-hitbox {
@@ -183,15 +152,14 @@ body.openme-page #pledge {
   border: 0;
   background: transparent;
   cursor: pointer;
-  border-radius: 16px;
+  border-radius: 4px;
 }
 
 .openme-virtual-card-instruction {
   margin: 0;
-  color: var(--ink-soft);
-  font-weight: 600;
+  color: var(--ink-faint);
+  font-size: var(--t-small);
   text-align: center;
-  font-size: 0.92rem;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -205,229 +173,161 @@ body.openme-page #pledge {
   }
 }
 
-/* ---------- Compact explanation / how-it-works row ---------- */
+/* ---- Why it matters ------------------------------------- */
 
-.openme-quick-facts {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 22px;
-  margin-top: var(--space-6);
+.om-why-chapter {
+  background: var(--ivory-warm);
 }
 
-.openme-quick-fact {
-  display: grid;
-  grid-template-columns: 30px 1fr;
-  gap: 12px;
-}
-
-.openme-quick-fact-index {
-  font-family: var(--font-display);
-  font-weight: 800;
-  color: var(--teal-500);
-}
-
-.openme-quick-fact h3 {
-  font-size: 1rem;
-}
-
-.openme-quick-fact p {
-  margin-top: 4px;
-  color: var(--ink-soft);
-  font-size: 0.95rem;
-}
-
-/* ---------- Why screening matters ---------- */
-
-.openme-why {
+.om-facts {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px 32px;
-  margin-top: var(--space-6);
+  gap: var(--s-6) clamp(28px, 4vw, 56px);
+  margin-top: var(--s-7);
 }
 
-.openme-why-item {
-  padding: 20px 0;
+.om-fact {
+  padding-top: var(--s-4);
   border-top: 1px solid var(--line);
 }
 
-.openme-why-item h3 {
-  font-size: 1.05rem;
-}
-
-.openme-why-item p {
-  margin-top: 6px;
-  color: var(--ink-soft);
-}
-
-/* ---------- Screening info ---------- */
-
-.openme-scan-note {
-  margin: 0 0 var(--space-5);
+.om-fact h3 {
+  margin: 0 0 6px;
+  font-size: 1.02rem;
   font-weight: 700;
-  color: var(--teal-700);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-size: 0.78rem;
+  letter-spacing: -0.01em;
 }
 
-.screening-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-  align-items: stretch;
-}
-
-.screening-card {
-  padding: 22px;
-  border-radius: var(--radius-lg);
-  background: var(--surface);
-  border: 1px solid var(--line);
-  box-shadow: var(--shadow-sm);
-}
-
-.openme-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  align-items: center;
-  justify-content: flex-start;
-  margin-top: var(--space-6);
-}
-
-.openme-cta-block {
-  display: grid;
-  gap: 10px;
-  justify-items: start;
-  margin-top: var(--space-6);
-  padding-top: var(--space-6);
-  border-top: 1px solid var(--line);
-}
-
-.openme-disclaimer {
+.om-fact p {
   margin: 0;
-  font-size: 0.85rem;
   color: var(--ink-faint);
+  font-size: var(--t-small);
+  line-height: 1.6;
 }
 
-/* ---------- Pledge ---------- */
+.om-note {
+  margin-top: var(--s-7);
+  color: var(--ink-ghost);
+  font-size: var(--t-small);
+}
 
-.openme-pledge-section {
-  background: var(--teal-800);
+/* ---- Pledge: the destination ---------------------------- */
+
+.om-pledge {
+  background: var(--teal-900);
   color: #fff;
+  padding-block: clamp(72px, 10vw, 128px);
+  overflow: hidden;
 }
 
-.openme-pledge-section .section-heading h2,
-.openme-pledge-section .eyebrow {
-  color: #fff;
+.om-pledge::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(56% 50% at 20% 0%, rgba(105, 213, 210, 0.2), transparent 72%),
+    radial-gradient(50% 46% at 88% 100%, rgba(15, 142, 167, 0.28), transparent 70%);
+  pointer-events: none;
 }
 
-.openme-pledge-section .eyebrow {
-  background: rgba(255, 255, 255, 0.14);
-}
-
-.openme-pledge-section .section-lead {
-  color: rgba(255, 255, 255, 0.82);
-}
-
-.openme-pledge-card {
-  padding: 8px;
+.om-pledge-grid {
+  position: relative;
+  z-index: 1;
   display: grid;
-  grid-template-columns: minmax(260px, 0.85fr) minmax(0, 1.15fr);
-  gap: 32px;
-  align-items: start;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1fr);
+  gap: clamp(36px, 5vw, 76px);
+  align-items: center;
 }
 
-.openme-pledge-intro,
-.openme-pledge-flow {
-  display: grid;
-  gap: 18px;
+.om-pledge .ch-num {
+  color: var(--teal-300);
 }
 
-.openme-pledge-intro {
-  align-content: start;
-  color: rgba(255, 255, 255, 0.88);
-}
-
-.openme-pledge-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.openme-pledge-section .button-primary {
-  background: #ffffff;
-  color: var(--teal-800);
-}
-
-.openme-pledge-section .button-primary:hover {
-  background: var(--teal-100);
-}
-
-.openme-pledge-section .button-secondary {
+.om-pledge h2 {
+  max-width: 12ch;
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 1.5rem + 2.2vw, 3.2rem);
+  line-height: 1.06;
+  letter-spacing: -0.03em;
+  font-weight: 700;
   color: #fff;
-  border-color: rgba(255, 255, 255, 0.35);
-  background: transparent;
 }
 
-.openme-pledge-section .button-secondary:hover {
-  background: rgba(255, 255, 255, 0.1);
+.om-pledge-sub {
+  max-width: 40ch;
+  margin-top: var(--s-5);
+  color: rgba(255, 255, 255, 0.72);
+  font-size: var(--t-lead);
+  line-height: 1.62;
 }
 
 .openme-pledge-count {
-  margin: 0;
-  color: rgba(255, 255, 255, 0.92);
+  margin: var(--s-6) 0 0;
+  color: var(--teal-300);
+  font-family: var(--font-display);
   font-weight: 700;
-  font-size: 1rem;
-  line-height: 1.5;
+  font-size: 0.95rem;
 }
 
-.openme-pledge-form,
-.openme-pledge-confirmation {
-  display: grid;
-  gap: 18px;
-  padding: 30px;
-  border-radius: var(--radius-xl);
+.om-pledge-alt {
+  margin-top: var(--s-5);
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.92rem;
+}
+
+.om-pledge-alt:hover {
+  color: #fff;
+}
+
+/* A calm, light surface for the form: the one place on this
+   page that should feel like a considered, trustworthy object. */
+.om-pledge-panel {
+  padding: clamp(24px, 3vw, 36px);
+  border-radius: var(--radius-lg);
   background: var(--surface);
   box-shadow: var(--shadow-lg);
 }
 
-.openme-pledge-confirmation {
-  align-content: start;
+.openme-pledge-form {
+  display: grid;
+  gap: var(--s-5);
 }
 
 .openme-pledge-form label {
   display: grid;
-  gap: 8px;
+  gap: 7px;
   color: var(--ink-soft);
+  font-size: var(--t-small);
   font-weight: 600;
 }
 
 .openme-pledge-form input[type="text"] {
-  min-height: 54px;
-  padding: 0 16px;
+  min-height: 48px;
+  padding: 0 14px;
   color: var(--ink);
   background: var(--surface-strong);
   border: 1px solid var(--line-strong);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-sm);
   outline: none;
-  transition: border-color var(--duration-fast) var(--ease-soft), box-shadow var(--duration-fast) var(--ease-soft);
+  transition: border-color var(--d-fast) var(--ease-soft), box-shadow var(--d-fast) var(--ease-soft);
 }
 
 .openme-pledge-form input[type="text"]:focus {
   border-color: var(--teal-700);
-  box-shadow: 0 0 0 4px var(--teal-100);
+  box-shadow: 0 0 0 3px var(--teal-100);
 }
 
 .openme-checkbox {
   grid-template-columns: auto 1fr;
   align-items: start;
-  column-gap: 12px;
+  column-gap: 11px;
 }
 
 .openme-checkbox input {
-  margin-top: 4px;
-  width: 18px;
-  height: 18px;
+  margin-top: 3px;
+  width: 17px;
+  height: 17px;
   accent-color: var(--teal-800);
 }
 
@@ -435,123 +335,131 @@ body.openme-page #pledge {
 .openme-pledge-thanks,
 .openme-share-message {
   color: var(--ink-soft);
+  font-weight: 500;
 }
 
-.openme-pledge-form .button-primary {
-  background: var(--teal-800);
-  color: #fff;
+.openme-pledge-form .button {
+  margin-top: var(--s-2);
 }
 
-.openme-pledge-form .button-primary:hover {
-  background: var(--teal-900);
-}
-
-.openme-pledge-confirmation .button-secondary {
-  color: var(--teal-800);
-  background: var(--teal-50);
-  border-color: var(--line);
-}
-
-.openme-pledge-confirmation .button-secondary:hover {
-  background: var(--teal-100);
+.openme-pledge-confirmation {
+  display: grid;
+  gap: var(--s-5);
+  justify-items: start;
 }
 
 .openme-pledge-thanks {
   margin: 0;
-  line-height: 1.7;
+  line-height: 1.65;
 }
 
 .openme-share-message {
-  min-height: 24px;
+  min-height: 20px;
   margin: 0;
-  font-weight: 600;
+  font-size: var(--t-small);
 }
 
-/* ---------- Partners / materials ---------- */
+/* ---- What to do next ------------------------------------ */
 
-.openme-partner-note {
-  margin: 20px 0 0;
-  text-align: center;
-  color: var(--ink-soft);
+.om-next-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(24px, 3vw, 44px);
+  margin-top: var(--s-7);
 }
 
-@media (max-width: 980px) {
-  .openme-hero {
+.om-next-item {
+  padding-top: var(--s-4);
+  border-top: 1px solid var(--line);
+}
+
+.om-next-item h3 {
+  margin: 0 0 6px;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.om-next-item p {
+  margin: 0;
+  color: var(--ink-faint);
+  font-size: var(--t-small);
+  line-height: 1.6;
+}
+
+/* ---- Partners ------------------------------------------- */
+
+.om-partners {
+  background: var(--ivory-warm);
+}
+
+.om-partner-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(24px, 3vw, 44px);
+  margin-top: var(--s-7);
+}
+
+.om-partner-item {
+  padding-top: var(--s-4);
+  border-top: 1px solid var(--line);
+}
+
+.om-partner-item h3 {
+  margin: 0 0 6px;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.om-partner-item p {
+  margin: 0;
+  color: var(--ink-faint);
+  font-size: var(--t-small);
+  line-height: 1.6;
+}
+
+/* ---- Responsive ----------------------------------------- */
+
+@media (max-width: 900px) {
+  .om-hero-grid {
     grid-template-columns: 1fr;
+    gap: var(--s-8);
   }
 
-  .openme-hero-visual {
-    width: min(400px, 100%);
-    margin-left: auto;
-    margin-right: auto;
+  .om-hero-material {
     order: -1;
+    justify-items: start;
   }
 
-  .openme-quick-facts {
-    grid-template-columns: repeat(2, 1fr);
+  .om-hero h1,
+  .om-pledge h2 {
+    max-width: none;
   }
 
-  .openme-explainer {
+  .om-pledge-grid {
     grid-template-columns: 1fr;
+    gap: var(--s-7);
   }
 
-  .openme-material {
-    width: min(280px, 100%);
-    margin-inline: auto;
-  }
-
-  .openme-why {
+  .om-next-grid,
+  .om-partner-list {
     grid-template-columns: 1fr;
-  }
-
-  .screening-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .openme-pledge-card {
-    grid-template-columns: 1fr;
-  }
-
-  .openme-pledge-actions {
-    flex-direction: column;
-    align-items: stretch;
+    gap: var(--s-5);
   }
 }
 
-@media (max-width: 480px) {
-  .openme-quick-facts,
-  .openme-explainer .openme-quick-facts {
+@media (max-width: 560px) {
+  .om-facts {
     grid-template-columns: 1fr;
   }
-}
 
-@media (max-width: 720px) {
-  .openme-hero {
-    padding-top: 44px;
-  }
-
-  .openme-pledge-form,
-  .openme-pledge-confirmation {
-    padding: 22px;
-  }
-
-  .openme-virtual-card-stage {
-    width: min(100%, 280px);
-    aspect-ratio: 4 / 3;
-  }
-
-  .openme-virtual-card[data-open="true"] .openme-virtual-card-front {
-    transform: rotateX(142deg) translateY(-5px);
-  }
-
-  .openme-links .button,
-  .openme-cta-block .button,
-  .openme-pledge-actions .button,
-  .openme-preview-actions .button,
-  .openme-pledge-form .button,
-  .openme-pledge-confirmation .button {
+  .om-hero-actions .button {
     width: 100%;
     justify-content: center;
-    text-align: center;
+  }
+
+  .om-card-experience {
+    width: min(260px, 100%);
   }
 }

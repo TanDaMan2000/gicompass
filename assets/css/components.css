@@ -91,51 +91,100 @@ p {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 50px;
-  padding: 0 24px;
-  border: 0;
+  min-height: 46px;
+  padding: 0 22px;
+  border: 1px solid transparent;
   border-radius: var(--radius-md);
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 0.96rem;
+  font-size: 0.93rem;
   letter-spacing: -0.005em;
-  transition: transform var(--duration-fast) var(--ease-soft),
-    box-shadow var(--duration-fast) var(--ease-soft),
-    background var(--duration-fast) var(--ease-soft),
-    border-color var(--duration-fast) var(--ease-soft);
+  transition: background-color var(--d-fast) var(--ease-soft),
+    border-color var(--d-fast) var(--ease-soft),
+    color var(--d-fast) var(--ease-soft);
   cursor: pointer;
-}
-
-.button:hover {
-  transform: translateY(-1px);
 }
 
 .button-primary {
   color: #ffffff;
   background: var(--teal-800);
-  box-shadow: var(--shadow-sm);
 }
 
 .button-primary:hover {
   background: var(--teal-900);
-  box-shadow: var(--shadow-md);
 }
 
 .button-secondary {
-  color: var(--teal-800);
+  color: var(--ink);
   background: transparent;
-  border: 1px solid var(--line-strong, rgba(29, 42, 44, 0.18));
+  border-color: var(--line-strong);
 }
 
 .button-secondary:hover {
-  background: var(--teal-50);
-  border-color: var(--teal-700);
+  border-color: var(--ink);
 }
 
 .button-small {
-  min-height: 42px;
-  padding: 0 18px;
-  font-size: 0.9rem;
+  min-height: 40px;
+  padding: 0 16px;
+  font-size: 0.88rem;
+}
+
+/* Footer signup — deliberately small. It supports the ending,
+   it does not conclude the page. */
+.signup {
+  margin-top: var(--s-7);
+  max-width: 520px;
+}
+
+.signup-label {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--ink-faint);
+  font-family: var(--font-display);
+  font-size: var(--t-micro);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.signup-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.signup-row input,
+.signup-row select {
+  flex: 1 1 120px;
+  min-width: 0;
+  min-height: 40px;
+  padding: 0 12px;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  font-size: 0.88rem;
+  outline: none;
+  transition: border-color var(--d-fast) var(--ease-soft);
+}
+
+.signup-row input:focus,
+.signup-row select:focus {
+  border-color: var(--teal-700);
+}
+
+.signup-row .button {
+  flex: 0 0 auto;
+}
+
+.signup .form-message:empty {
+  display: none;
+}
+
+.signup .form-message {
+  margin-top: 8px;
+  font-size: 0.84rem;
 }
 
 .hero-points {
