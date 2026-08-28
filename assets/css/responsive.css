@@ -136,6 +136,10 @@
     white-space: nowrap;
   }
 
+  .nav-cta-shrink {
+    display: none;
+  }
+
   .section {
     padding: 64px 0;
   }
