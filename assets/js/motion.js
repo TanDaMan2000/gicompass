@@ -38,15 +38,22 @@
     );
     risers.forEach((el) => io.observe(el));
 
-    // Safety net: on any scroll, reveal anything already inside or
-    // above the viewport. The observer normally gets there first;
-    // this guarantees content is never left blank if it doesn't.
+    // Safety net: reveal anything the reader has already reached.
+    // The observer normally gets there first, but its callbacks can
+    // be missed during a fast flick, so this guarantees content is
+    // never left blank behind an effect that did not fire.
+    //
+    // The test is against the deepest point reached, not the current
+    // one: once something has been scrolled past it stays revealed,
+    // even if the reader jumps back to the top before the sweep runs.
     let sweeping = false;
+    let deepest = 0;
     const sweep = () => {
       sweeping = false;
-      const limit = window.innerHeight * 1.05;
+      const seen = deepest + window.innerHeight * 1.05;
+      const scrollY = window.scrollY;
       for (let i = risers.length - 1; i >= 0; i--) {
-        if (risers[i].getBoundingClientRect().top < limit) {
+        if (risers[i].getBoundingClientRect().top + scrollY < seen) {
           show(risers[i]);
           risers.splice(i, 1);
         }
@@ -54,6 +61,9 @@
       if (!risers.length) window.removeEventListener("scroll", onSweep);
     };
     const onSweep = () => {
+      // Recorded on the event itself, so a jump down and back up
+      // inside a single frame still counts as having been there.
+      if (window.scrollY > deepest) deepest = window.scrollY;
       if (!sweeping) {
         sweeping = true;
         window.requestAnimationFrame(sweep);
