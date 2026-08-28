@@ -6,7 +6,7 @@
     <title>Open Me by GastroCompass</title>
     <meta
       name="description"
-      content="Open Me is a GastroCompass campaign that places folded reminder cards inside takeout bags to encourage colorectal cancer screening conversations. Learn the basics and take the pledge."
+      content="Open Me is a GastroCompass screening-awareness campaign that brings colorectal cancer screening reminders into everyday spaces. Learn the basics and take the pledge."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -58,57 +58,17 @@
 
       <main id="main">
         <!-- HERO: understand this page within 10 seconds -->
-        <section class="hero section openme-hero" id="top">
-          <div class="hero-copy reveal">
-            <div class="status-chip-row">
-              <span class="status-chip status-chip-openme">A GastroCompass screening campaign</span>
-            </div>
-            <h1>Open the bag.<br />Open the conversation.</h1>
-            <p class="hero-text">
-              Open Me places a short reminder card inside local takeout orders. It exists for one
-              reason: to get more people talking to their doctor about colorectal cancer screening.
-            </p>
-            <p class="openme-proof">Starting with local restaurant partners, one order at a time.</p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="#pledge">Take the Pledge</a>
-              <a class="button button-secondary" href="#screening">Why Screening Matters</a>
-            </div>
-          </div>
-          <div class="hero-visual reveal">
-            <div class="openme-hero-visual" data-card-experience>
-              <div
-                class="openme-virtual-card"
-                id="virtual-openme-card"
-                data-card-shell
-                data-open="false"
-              >
-                <button
-                  class="openme-virtual-card-hitbox"
-                  type="button"
-                  data-card-toggle
-                  aria-expanded="false"
-                  aria-controls="virtual-openme-card"
-                  aria-label="Open the virtual Open Me card"
-                ></button>
-                <div class="openme-virtual-card-stage" aria-hidden="true">
-                  <div class="openme-virtual-card-panel openme-virtual-card-base">
-                    <img src="assets/images/open-me/card-inside.png" alt="" />
-                  </div>
-                  <div class="openme-virtual-card-panel openme-virtual-card-front">
-                    <img src="assets/images/open-me/card-front.png" alt="Front cover of the Open Me card" />
-                  </div>
-                </div>
-                <p class="openme-virtual-card-instruction" data-card-instruction>
-                  Click the card to open it.
-                </p>
-              </div>
-              <div class="openme-hero-caption">A virtual version of the real card. Click it to open the inside message.</div>
-              <div class="openme-preview-actions">
-                <a class="button button-secondary" href="assets/downloads/open-me-card.pdf" target="_blank" rel="noopener noreferrer">
-                  Download Print File
-                </a>
-              </div>
-            </div>
+        <section class="openme-hero-typographic" id="top">
+          <span class="eyebrow openme-eyebrow reveal">A GastroCompass screening campaign</span>
+          <h1 class="reveal">Start the conversation.</h1>
+          <p class="hero-text reveal">
+            Open Me puts simple colorectal cancer screening reminders in places people already
+            visit, then gives them a clear next step: learn, pledge, and talk to a healthcare
+            professional.
+          </p>
+          <div class="hero-actions reveal">
+            <a class="button button-primary" href="#pledge">Take the Pledge</a>
+            <a class="button button-secondary" href="#screening">Why Screening Matters</a>
           </div>
         </section>
 
@@ -116,36 +76,73 @@
         <section id="how-it-works" class="section openme-section">
           <div class="section-heading left compact reveal">
             <span class="eyebrow openme-eyebrow">What is Open Me?</span>
-            <h2>A small card with one job: start a conversation.</h2>
+            <h2>Screening reminders, wherever people already are.</h2>
           </div>
-          <div class="openme-quick-facts reveal">
-            <div class="openme-quick-fact">
-              <span class="openme-quick-fact-index">01</span>
-              <div>
-                <h3>Place</h3>
-                <p>A local restaurant slips a folded card into a takeout order.</p>
+          <div class="openme-explainer reveal">
+            <div class="openme-quick-facts">
+              <div class="openme-quick-fact">
+                <span class="openme-quick-fact-index">01</span>
+                <div>
+                  <h3>Reach</h3>
+                  <p>Printed materials — cards, flyers, posters — appear in everyday community spaces.</p>
+                </div>
+              </div>
+              <div class="openme-quick-fact">
+                <span class="openme-quick-fact-index">02</span>
+                <div>
+                  <h3>Inform</h3>
+                  <p>A short, direct message: who screening is for, and why it matters.</p>
+                </div>
+              </div>
+              <div class="openme-quick-fact">
+                <span class="openme-quick-fact-index">03</span>
+                <div>
+                  <h3>Connect</h3>
+                  <p>A QR code leads to screening basics and the pledge.</p>
+                </div>
+              </div>
+              <div class="openme-quick-fact">
+                <span class="openme-quick-fact-index">04</span>
+                <div>
+                  <h3>Act</h3>
+                  <p>The goal is one next step: talking with a doctor.</p>
+                </div>
               </div>
             </div>
-            <div class="openme-quick-fact">
-              <span class="openme-quick-fact-index">02</span>
-              <div>
-                <h3>Open</h3>
-                <p>The customer opens the card at home and sees a clear screening prompt.</p>
+
+            <div class="openme-material">
+              <div class="openme-hero-visual" data-card-experience>
+                <div
+                  class="openme-virtual-card"
+                  id="virtual-openme-card"
+                  data-card-shell
+                  data-open="false"
+                >
+                  <button
+                    class="openme-virtual-card-hitbox"
+                    type="button"
+                    data-card-toggle
+                    aria-expanded="false"
+                    aria-controls="virtual-openme-card"
+                    aria-label="Preview the example Open Me card"
+                  ></button>
+                  <div class="openme-virtual-card-stage" aria-hidden="true">
+                    <div class="openme-virtual-card-panel openme-virtual-card-base">
+                      <img src="assets/images/open-me/card-inside.png" alt="" />
+                    </div>
+                    <div class="openme-virtual-card-panel openme-virtual-card-front">
+                      <img src="assets/images/open-me/card-front.png" alt="A printed Open Me card, one example of the campaign's outreach materials" />
+                    </div>
+                  </div>
+                  <p class="openme-virtual-card-instruction" data-card-instruction>
+                    Click to preview.
+                  </p>
+                </div>
               </div>
-            </div>
-            <div class="openme-quick-fact">
-              <span class="openme-quick-fact-index">03</span>
-              <div>
-                <h3>Scan</h3>
-                <p>The QR code leads straight to screening basics and the pledge.</p>
-              </div>
-            </div>
-            <div class="openme-quick-fact">
-              <span class="openme-quick-fact-index">04</span>
-              <div>
-                <h3>Act</h3>
-                <p>The goal is one next step: ask a doctor about screening.</p>
-              </div>
+              <p class="openme-material-caption">Example outreach material</p>
+              <a class="quiet-link" href="assets/downloads/open-me-card.pdf" target="_blank" rel="noopener noreferrer">
+                Download print file →
+              </a>
             </div>
           </div>
         </section>
@@ -251,7 +248,7 @@
             <span class="eyebrow openme-eyebrow">Screening info</span>
             <h2>Get the basics in one place</h2>
           </div>
-          <p class="openme-scan-note">Scanned an Open Me card? Start here.</p>
+          <p class="openme-scan-note">Scanned an Open Me code? Start here.</p>
           <div class="screening-grid reveal">
             <article class="screening-card">
               <h3>Who should ask about screening?</h3>
@@ -303,11 +300,11 @@
         <!-- CAMPAIGN / MATERIALS / PARTNERS -->
         <section id="partners" class="section section-band openme-section">
           <div class="section-heading reveal">
-            <span class="eyebrow openme-eyebrow">For restaurant partners</span>
+            <span class="eyebrow openme-eyebrow">For community partners</span>
             <h2>A low-lift way to support community health</h2>
             <p class="section-lead">
-              Toolkit materials, printable card files, and rollout guidance are being organized
-              through GastroCompass.
+              Toolkit materials, printable files, and rollout guidance are being organized through
+              GastroCompass for restaurants, community spaces, and other local partners.
             </p>
           </div>
           <div class="feature-grid openme-partners reveal">

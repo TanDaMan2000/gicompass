@@ -30,9 +30,11 @@
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  padding: 18px 6px;
-  margin: 0 auto;
-  background: transparent;
+  padding: 20px 4px;
+  isolation: isolate;
+  background: rgba(250, 246, 238, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid transparent;
   transition: background var(--duration-fast) var(--ease-soft),
     border-color var(--duration-fast) var(--ease-soft),
@@ -40,15 +42,21 @@
     padding var(--duration-fast) var(--ease-soft);
 }
 
+/* Opaque fallback behind the header at all times: if backdrop-filter is
+   unsupported or the browser paints it late mid-scroll, page content must
+   never become legible through the bar. */
+.site-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--ivory);
+}
+
 .site-header.is-scrolled {
-  padding: 12px 20px;
-  margin: 12px auto 0;
-  background: rgba(250, 246, 238, 0.78);
-  border: 1px solid rgba(29, 42, 44, 0.08);
-  border-bottom-color: transparent;
-  border-radius: var(--radius-pill);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+  padding: 14px 4px;
+  background: rgba(250, 246, 238, 0.97);
+  border-bottom-color: var(--line);
   box-shadow: var(--shadow-sm);
 }
 
@@ -92,13 +100,13 @@
 .mobile-nav-panel {
   display: none;
   position: absolute;
-  top: calc(100% + 10px);
+  top: calc(100% + 8px);
   left: 0;
   right: 0;
   z-index: 39;
-  padding: 12px;
+  padding: 10px;
   border: 1px solid var(--line);
-  border-radius: 22px;
+  border-radius: var(--radius-lg);
   background: rgba(255, 253, 249, 0.98);
   box-shadow: var(--shadow-lg);
   backdrop-filter: blur(18px);
@@ -119,7 +127,7 @@
 .mobile-nav-panel .mobile-nav-cta {
   margin-top: 8px;
   padding: 15px 18px;
-  border-radius: 999px;
+  border-radius: var(--radius-md);
   background: var(--teal-800);
   color: #ffffff;
   font-weight: 800;
@@ -216,7 +224,7 @@
   padding: 8px;
   background: rgba(255, 253, 249, 0.98);
   border: 1px solid var(--line);
-  border-radius: 16px;
+  border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
   opacity: 0;
   pointer-events: none;
@@ -295,11 +303,12 @@
 .status-chip {
   display: inline-flex;
   align-items: center;
-  padding: 8px 14px;
-  border-radius: 999px;
-  font-size: 0.78rem;
+  padding: 7px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.74rem;
   font-weight: 800;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .status-chip-live {

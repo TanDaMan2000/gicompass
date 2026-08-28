@@ -14,14 +14,14 @@ document.querySelectorAll("[data-card-experience]").forEach((experience) => {
       toggle.setAttribute("aria-expanded", String(isOpen));
       toggle.setAttribute(
         "aria-label",
-        isOpen ? "Close the virtual Open Me card" : "Open the virtual Open Me card"
+        isOpen ? "Close the example material preview" : "Preview the example material"
       );
     });
 
     if (instruction) {
       instruction.textContent = isOpen
-        ? "Click again to fold the card closed."
-        : "Click to open the folded card.";
+        ? "Click to close the preview."
+        : "Click to preview.";
     }
   };
 

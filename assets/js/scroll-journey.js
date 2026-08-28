@@ -1,27 +1,47 @@
 (() => {
   const chapters = Array.from(document.querySelectorAll("[data-chapter]"));
   const rail = document.querySelector("[data-journey-rail]");
+  const railTrack = document.querySelector("[data-journey-track]");
   const railFill = document.querySelector("[data-journey-fill]");
-  const railMarker = document.querySelector("[data-journey-marker]");
   const railLabel = document.querySelector("[data-journey-label]");
   const progressFill = document.querySelector("[data-journey-progress-fill]");
+  const root = document.documentElement;
 
   if (!chapters.length) {
     return;
   }
 
+  let nodes = [];
   let activeChapter = "";
 
-  const setLabel = (name) => {
-    if (!railLabel || !name || name === activeChapter) {
+  const buildNodes = () => {
+    if (!railTrack) {
       return;
     }
-    activeChapter = name;
-    railLabel.textContent = name;
+    railTrack.querySelectorAll(".journey-rail-node").forEach((n) => n.remove());
+    nodes = chapters.map((chapter) => {
+      const node = document.createElement("span");
+      node.className = "journey-rail-node";
+      node.dataset.chapter = chapter.dataset.chapter || "";
+      railTrack.appendChild(node);
+      return node;
+    });
+  };
+
+  buildNodes();
+
+  const setLabel = (name) => {
+    if (!railLabel || !name) {
+      return;
+    }
+    if (name !== activeChapter) {
+      activeChapter = name;
+      railLabel.textContent = name;
+    }
     railLabel.classList.add("is-active");
   };
 
-  if (rail && railFill && railMarker) {
+  if (rail) {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -49,16 +69,26 @@
     const scrolled = Math.min(Math.max(window.scrollY + window.innerHeight * 0.5 - start, 0), total);
     const progress = Math.min(Math.max(scrolled / total, 0), 1);
 
-    if (railFill && railMarker) {
+    if (railFill) {
       railFill.style.height = `${progress * 100}%`;
-      railMarker.style.top = `${progress * 100}%`;
     }
+
+    const totalNodes = Math.max(chapters.length - 1, 1);
+    nodes.forEach((node, index) => {
+      const nodeFraction = index / totalNodes;
+      node.style.top = `${nodeFraction * 100}%`;
+      const isPassed = progress >= nodeFraction - 0.02;
+      node.classList.toggle("is-passed", isPassed);
+      node.classList.toggle("is-active", chapters[index].dataset.chapter === activeChapter);
+    });
 
     if (progressFill) {
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
       const pageProgress = docHeight > 0 ? Math.min(window.scrollY / docHeight, 1) : 0;
       progressFill.style.width = `${pageProgress * 100}%`;
     }
+
+    root.style.setProperty("--scroll-progress", progress.toFixed(4));
   };
 
   const onScroll = () => {
@@ -69,6 +99,9 @@
   };
 
   window.addEventListener("scroll", onScroll, { passive: true });
-  window.addEventListener("resize", onScroll);
+  window.addEventListener("resize", () => {
+    buildNodes();
+    onScroll();
+  });
   updatePositions();
 })();

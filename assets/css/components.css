@@ -3,7 +3,7 @@
   align-items: center;
   gap: 8px;
   padding: 8px 14px;
-  border-radius: 999px;
+  border-radius: var(--radius-sm);
   background: var(--teal-50);
   color: var(--teal-800);
   font-size: 0.78rem;
@@ -94,7 +94,7 @@ p {
   min-height: 50px;
   padding: 0 24px;
   border: 0;
-  border-radius: 999px;
+  border-radius: var(--radius-md);
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 0.96rem;
@@ -561,7 +561,7 @@ p {
   display: inline-flex;
   margin-top: 24px;
   padding: 14px 18px;
-  border-radius: 999px;
+  border-radius: var(--radius-sm);
   background: rgba(15, 155, 179, 0.1);
   color: var(--primary-dark);
   font-weight: 600;
@@ -620,7 +620,7 @@ p {
 
 .partner-tags span {
   padding: 10px 14px;
-  border-radius: 999px;
+  border-radius: var(--radius-sm);
   background: rgba(15, 155, 179, 0.08);
   color: var(--primary-dark);
   font-weight: 700;

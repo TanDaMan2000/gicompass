@@ -68,16 +68,14 @@
       <main id="main" class="story-main">
         <!-- HERO -->
         <section class="story-hero" id="top">
+          <img class="story-hero-mark" src="assets/brand/logo.svg" alt="" aria-hidden="true" />
           <div class="story-hero-inner">
-            <div class="status-chip-row">
-              <span class="status-chip status-chip-live">GastroLens: live first version</span>
-              <span class="status-chip status-chip-live">Open Me: community screening campaign</span>
-            </div>
+            <span class="story-hero-kicker reveal">GastroCompass</span>
             <h1 class="reveal">Building better ways to understand and act on GI health.</h1>
             <p class="hero-text reveal">
-              GastroCompass is a research-driven initiative made of two connected parts: GastroLens,
-              a non-diagnostic tool for organizing colorectal cancer symptom patterns, and Open Me,
-              a community campaign that turns screening awareness into real conversations.
+              A research-driven initiative made of two connected parts: GastroLens, a non-diagnostic
+              tool for organizing colorectal cancer symptom patterns, and Open Me, a community
+              campaign that turns screening awareness into real conversations.
             </p>
             <div class="story-hero-actions reveal">
               <a class="quiet-link quiet-link-primary" href="#story">Explore the story ↓</a>
@@ -96,7 +94,6 @@
         <!-- 01 ORIGIN -->
         <section class="chapter origin-chapter" id="story" data-chapter="Origin">
           <div class="chapter-inner">
-            <span class="origin-mark" aria-hidden="true"><img src="assets/brand/logo.svg" alt="" /></span>
             <span class="chapter-index">01 — Origin</span>
             <h2 class="chapter-title-lg reveal">It started with a question.</h2>
             <div class="origin-body reveal">
@@ -158,127 +155,39 @@
         <!-- 03 GASTROLENS -->
         <section class="chapter pillar-chapter gastrolens-chapter" id="gastrolens" data-chapter="GastroLens">
           <div class="chapter-inner">
-            <div class="pillar-head">
-              <div class="reveal">
-                <span class="pillar-tag">03 — GastroLens</span>
-                <h2 class="reveal">A research-mode tool for symptom patterns, not a diagnosis.</h2>
-                <p class="chapter-lead">
-                  GastroLens is a live first-version tool that helps people organize persistent
-                  colorectal cancer warning signs, such as rectal bleeding, bowel changes, and their
-                  duration, alongside risk context like age and family history. It turns scattered
-                  symptom history into one clear, structured summary.
-                </p>
-              </div>
-              <p class="pillar-note reveal">
-                GastroLens is informational and non-diagnostic. It is not clinically validated and is
-                built to support an earlier conversation with a physician, not replace one.
+            <div class="pillar-head reveal">
+              <span class="pillar-tag">03 — GastroLens</span>
+              <h2>A research-mode tool for symptom patterns, not a diagnosis.</h2>
+              <p class="chapter-lead">
+                GastroLens is a live first-version tool that helps people organize persistent
+                colorectal cancer warning signs, such as rectal bleeding, bowel changes, and their
+                duration, alongside risk context like age and family history. It turns scattered
+                symptom history into one clear, structured summary.
               </p>
             </div>
 
             <div class="pillar-visual reveal">
-              <div class="laptop-mockup" data-interactive-dashboard>
-                <div class="laptop-screen">
-                  <div class="laptop-topbar">
-                    <span class="window-dots"></span>
-                    <span class="window-dots"></span>
-                    <span class="window-dots"></span>
-                    <span class="laptop-title">GastroLens App</span>
-                    <span class="laptop-status">Version 1 live</span>
-                  </div>
-                  <div class="laptop-layout">
-                    <aside class="laptop-sidebar">
-                      <button class="sidebar-label active" type="button" data-dashboard-tab="demo">Demo</button>
-                      <button class="sidebar-label" type="button" data-dashboard-tab="intake">Intake</button>
-                      <button class="sidebar-label" type="button" data-dashboard-tab="summary">Summary</button>
-                    </aside>
-                    <div class="laptop-main">
-                      <div class="dashboard-view active" data-dashboard-panel="demo">
-                        <div class="laptop-row">
-                          <section class="workspace-card">
-                            <span class="comparison-label">Live app surface</span>
-                            <h3>Start with a sample scenario</h3>
-                            <div class="app-chip-grid">
-                              <span>Minimal demo</span>
-                              <span>Persistent bleeding</span>
-                              <span>High-cluster demo</span>
-                            </div>
-                          </section>
-                          <section class="workspace-card ai-card">
-                            <span class="comparison-label">Safety framing</span>
-                            <h3>Research mode, not diagnosis</h3>
-                            <div class="ai-pill-row">
-                              <span>Informational only</span>
-                              <span>Non-diagnostic</span>
-                              <span>Clinician follow-up encouraged</span>
-                            </div>
-                          </section>
-                        </div>
-                      </div>
-
-                      <div class="dashboard-view" data-dashboard-panel="intake">
-                        <div class="laptop-row">
-                          <section class="workspace-card">
-                            <span class="comparison-label">Step 1 of 4</span>
-                            <h3>Core symptoms</h3>
-                            <div class="app-question-list app-question-list-compact">
-                              <div class="app-question-row">
-                                <strong>Rectal bleeding</strong>
-                                <span class="app-question-state is-active">Persistent</span>
-                              </div>
-                              <div class="app-question-row">
-                                <strong>Bowel change</strong>
-                                <span class="app-question-state is-active">Significant</span>
-                              </div>
-                              <div class="app-question-row">
-                                <strong>Duration</strong>
-                                <span class="app-question-state is-active">6+ weeks</span>
-                              </div>
-                            </div>
-                          </section>
-                          <section class="workspace-card">
-                            <span class="comparison-label">4-step flow</span>
-                            <h3>Move from symptoms to summary</h3>
-                            <div class="app-progress-bar"><span></span></div>
-                          </section>
-                        </div>
-                      </div>
-
-                      <div class="dashboard-view" data-dashboard-panel="summary">
-                        <div class="laptop-row">
-                          <section class="workspace-card">
-                            <span class="comparison-label">Research summary</span>
-                            <div class="app-result-header">
-                              <h3>Moderate flag</h3>
-                              <span class="app-risk-badge">Total score 8</span>
-                            </div>
-                            <div class="dashboard-stat-list">
-                              <span>Pattern lens: persistent bleeding</span>
-                              <span>Driver: duration + bowel change</span>
-                            </div>
-                          </section>
-                          <section class="workspace-card ai-card">
-                            <span class="comparison-label">Safety-first output</span>
-                            <h3>Built for escalation support</h3>
-                            <div class="ai-pill-row">
-                              <span>Pattern explanation</span>
-                              <span>Safety note</span>
-                              <span>Care conversation</span>
-                            </div>
-                          </section>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+              <div class="product-frame">
+                <div class="product-frame-bar">
+                  <span class="product-frame-dot"></span>
+                  <span class="product-frame-dot"></span>
+                  <span class="product-frame-dot"></span>
+                  <span class="product-frame-url">gastrocompass.org/gastrolens</span>
                 </div>
-                <div class="laptop-base"></div>
+                <div class="product-frame-media">
+                  <img src="assets/images/gastrolens/real-interface.jpg" alt="The real GastroLens interface: intake progress, demo scenarios, and safety framing" loading="lazy" />
+                </div>
               </div>
+              <p class="pillar-safety-strip">
+                <strong>Safety framing</strong>
+                Informational and non-diagnostic. Not clinically validated. Built to support an
+                earlier conversation with a physician, not replace one.
+              </p>
             </div>
 
             <div class="pillar-foot reveal">
               <div class="pillar-safety">
-                <span>Non-diagnostic</span>
-                <span>Research-mode only</span>
-                <span>Not clinically validated</span>
+                <span>Live first version</span>
               </div>
               <a class="quiet-link quiet-link-primary" href="/gastrolens/">Explore GastroLens →</a>
             </div>
@@ -286,7 +195,7 @@
         </section>
 
         <!-- 04 REALIZATION -->
-        <section class="chapter pivot-chapter" id="realization" data-chapter="Realization">
+        <section class="chapter pivot-chapter full-bleed" id="realization" data-chapter="Realization">
           <div class="pivot-inner">
             <span class="chapter-index">04 — The Realization</span>
             <p class="pivot-statement">
@@ -298,66 +207,70 @@
               that limitation obvious: the harder problem wasn't the technology, it was awareness. That
               realization is what led to Open Me.
             </p>
+            <div class="pivot-thread" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </div>
           </div>
         </section>
 
         <!-- 05 OPENME -->
-        <section class="chapter pillar-chapter openme-chapter" id="openme" data-chapter="OpenMe">
+        <section class="chapter pillar-chapter openme-chapter full-bleed" id="openme" data-chapter="OpenMe">
           <div class="chapter-inner">
-            <div class="pillar-head">
-              <div class="reveal">
-                <span class="pillar-tag">05 — Open Me</span>
-                <h2>Awareness, off the screen and into everyday moments.</h2>
-                <p class="chapter-lead">
-                  Open Me is a community screening-awareness campaign. Folded cards go into local
-                  takeout orders, each one built around a single message: most adults at average risk
-                  should start colorectal cancer screening at 45, and it often causes no early
-                  symptoms at all.
-                </p>
-              </div>
+            <div class="pillar-head reveal">
+              <span class="pillar-tag">05 — Open Me</span>
+              <h2>Awareness, off the screen and into everyday moments.</h2>
+              <p class="chapter-lead">
+                Open Me is a community screening-awareness campaign. Simple colorectal cancer
+                screening reminders show up in everyday spaces people already visit, and connect them
+                to clear information, the Open Me pledge, and a reason to talk with a healthcare
+                professional.
+              </p>
             </div>
 
             <div class="pillar-media reveal">
-              <div class="openme-card-frame">
-                <img class="card-back" src="assets/images/open-me/card-inside.png" alt="" aria-hidden="true" />
-                <img class="card-front" src="assets/images/open-me/card-front.png" alt="The folded Open Me card, printed with the GastroCompass mark" />
-              </div>
               <div class="pillar-facts">
                 <div class="pillar-fact">
                   <span class="pillar-fact-index">01</span>
                   <div>
-                    <h3>Place</h3>
-                    <p>A local restaurant partner slips a folded card into a takeout order.</p>
+                    <h3>Reach</h3>
+                    <p>Printed materials — cards, flyers, posters — appear in places people already spend time.</p>
                   </div>
                 </div>
                 <div class="pillar-fact">
                   <span class="pillar-fact-index">02</span>
                   <div>
-                    <h3>Open</h3>
-                    <p>The customer opens it at home and sees a direct, respectful screening prompt.</p>
+                    <h3>Inform</h3>
+                    <p>A short, direct message: who screening is for, and why it matters.</p>
                   </div>
                 </div>
                 <div class="pillar-fact">
                   <span class="pillar-fact-index">03</span>
                   <div>
-                    <h3>Scan</h3>
-                    <p>A QR code leads to screening basics and a simple doctor-talk pledge.</p>
+                    <h3>Connect</h3>
+                    <p>A QR code leads to screening basics and the Open Me pledge.</p>
                   </div>
                 </div>
                 <div class="pillar-fact">
                   <span class="pillar-fact-index">04</span>
                   <div>
                     <h3>Act</h3>
-                    <p>The goal is one next step: asking a doctor about screening.</p>
+                    <p>The goal is one next step: talking with a doctor.</p>
                   </div>
                 </div>
+              </div>
+
+              <div class="openme-material">
+                <div class="openme-card-frame">
+                  <img class="card-back" src="assets/images/open-me/card-inside.png" alt="" aria-hidden="true" />
+                  <img class="card-front" src="assets/images/open-me/card-front.png" alt="A printed Open Me card, one example of the campaign's outreach materials" />
+                </div>
+                <p class="openme-material-caption">Example outreach material</p>
               </div>
             </div>
 
             <div class="pillar-foot reveal">
               <div class="pillar-safety">
                 <span>Community-facing outreach</span>
-                <span>Restaurant partnerships</span>
               </div>
               <a class="quiet-link quiet-link-primary" href="open-me.html">Explore OpenMe →</a>
             </div>
@@ -365,7 +278,7 @@
         </section>
 
         <!-- 06 PLEDGE -->
-        <section class="chapter pledge-chapter" id="pledge-cta" data-chapter="Pledge">
+        <section class="chapter pledge-chapter full-bleed" id="pledge-cta" data-chapter="Action">
           <div class="pledge-chapter-inner">
             <span class="chapter-index">06 — Take Action</span>
             <h2 class="reveal">Turn awareness into a conversation with your doctor.</h2>
@@ -390,47 +303,18 @@
                 <ul class="evidence-list">
                   <li><strong>Research foundation.</strong> A completed paper, an NHANES-grounded feasibility analysis, and three empirical analyses behind the concept.</li>
                   <li><strong>GastroLens, live.</strong> A first-version, non-diagnostic symptom-pattern tool, launched from this site.</li>
-                  <li><strong>Open Me cards, designed and printed.</strong> Folded takeout cards built for local restaurant distribution and QR-linked outreach.</li>
+                  <li><strong>Open Me materials, designed.</strong> Printed outreach materials built for community distribution and QR-linked pledge tracking.</li>
                   <li><strong>A working pledge.</strong> A real doctor-talk commitment, collected through Open Me, connected to a live database.</li>
                 </ul>
               </div>
               <div class="reveal">
                 <p class="impact-column-title">What's next</p>
                 <ul class="evidence-list">
-                  <li><strong>More restaurant partners.</strong> Expanding where Open Me cards reach people, one neighborhood at a time.</li>
+                  <li><strong>Wider distribution.</strong> Placing Open Me materials in more community spaces.</li>
                   <li><strong>Continued GastroLens development.</strong> Refining the symptom-first logic while keeping it explicitly non-diagnostic.</li>
                   <li><strong>Imaging, as future work.</strong> An imaging layer stays on the roadmap until it can be trained and validated on clinically meaningful data.</li>
                   <li><strong>More research.</strong> Ongoing analysis to keep the project's claims grounded in evidence, not marketing.</li>
                 </ul>
-              </div>
-            </div>
-
-            <div class="impact-updates reveal">
-              <div>
-                <p class="impact-column-title">Get GastroLens updates</p>
-                <form class="waitlist-form" id="waitlist-form">
-                  <label>
-                    <span>First name</span>
-                    <input type="text" name="firstName" placeholder="Alex" required />
-                  </label>
-                  <label>
-                    <span>Email</span>
-                    <input type="email" name="email" placeholder="alex@email.com" required />
-                  </label>
-                  <label>
-                    <span>I am a...</span>
-                    <select name="role">
-                      <option value="">Optional</option>
-                      <option value="patient">Patient</option>
-                      <option value="parent">Parent</option>
-                      <option value="student">Student</option>
-                      <option value="clinician">Clinician</option>
-                      <option value="researcher">Researcher</option>
-                    </select>
-                  </label>
-                  <button class="button button-primary" type="submit">Get Updates</button>
-                  <p class="form-message" id="form-message" aria-live="polite"></p>
-                </form>
               </div>
             </div>
           </div>
@@ -443,6 +327,32 @@
       </main>
 
       <footer class="site-footer">
+        <div class="footer-signup">
+          <span class="footer-signup-label">Get GastroLens updates</span>
+          <form class="waitlist-form" id="waitlist-form">
+            <label>
+              <span>First name</span>
+              <input type="text" name="firstName" placeholder="First name" required />
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" placeholder="Email" required />
+            </label>
+            <label>
+              <span>I am a...</span>
+              <select name="role">
+                <option value="">I am a...</option>
+                <option value="patient">Patient</option>
+                <option value="parent">Parent</option>
+                <option value="student">Student</option>
+                <option value="clinician">Clinician</option>
+                <option value="researcher">Researcher</option>
+              </select>
+            </label>
+            <button class="button button-primary" type="submit">Get Updates</button>
+            <p class="form-message" id="form-message" aria-live="polite"></p>
+          </form>
+        </div>
         <div>
           <div class="footer-brand">
             <span class="brand-mark brand-mark-footer" aria-hidden="true"><img src="assets/brand/logo.svg" alt="" /></span>
@@ -464,9 +374,8 @@
     </div>
 
     <div class="journey-rail" data-journey-rail aria-hidden="true">
-      <div class="journey-rail-track">
+      <div class="journey-rail-track" data-journey-track>
         <span class="journey-rail-fill" data-journey-fill></span>
-        <span class="journey-rail-marker" data-journey-marker></span>
       </div>
       <span class="journey-rail-label" data-journey-label></span>
     </div>
