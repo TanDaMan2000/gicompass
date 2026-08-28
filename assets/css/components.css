@@ -22,7 +22,7 @@ h3 {
 
 h1 {
   margin-top: 18px;
-  font-size: var(--step-h1);
+  font-size: var(--t-h1);
   line-height: 1.03;
   letter-spacing: -0.03em;
   font-weight: 700;
@@ -34,14 +34,14 @@ h1 {
 }
 
 h2 {
-  font-size: var(--step-h2);
+  font-size: var(--t-h2);
   line-height: 1.08;
   letter-spacing: -0.025em;
   font-weight: 700;
 }
 
 h3 {
-  font-size: var(--step-h3);
+  font-size: var(--t-h3);
   font-weight: 700;
 }
 
@@ -112,6 +112,11 @@ p {
 
 .button-primary:hover {
   background: var(--teal-900);
+}
+
+/* A real press, not a bounce. */
+.button:active {
+  transform: translateY(1px);
 }
 
 .button-secondary {

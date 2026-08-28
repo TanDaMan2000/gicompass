@@ -581,6 +581,21 @@
   min-height: 380px;
 }
 
+/* Arc motif again — here it reads as the surface the material
+   was set down on. */
+.om-objects::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 108%;
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 1px solid rgba(15, 109, 136, 0.12);
+  pointer-events: none;
+}
+
 .om-paper {
   position: absolute;
   border-radius: 3px;
@@ -590,7 +605,7 @@
     0 1px 1px rgba(12, 30, 28, 0.07),
     0 18px 34px rgba(12, 30, 28, 0.13),
     0 34px 60px rgba(12, 30, 28, 0.08);
-  transition: transform var(--d-slow) var(--ease-out);
+  transition: transform 1200ms var(--ease-out), opacity 900ms var(--ease-out);
 }
 
 .om-paper img {
@@ -598,6 +613,9 @@
   display: block;
 }
 
+/* Settle into place: the sheets come to rest rather than fading
+   in flat. Pre-settle state is only applied once JS confirms it
+   can run, so no-JS never leaves them mid-air. */
 .om-paper-back {
   width: 60%;
   transform: rotate(-8deg) translate(-24%, 6%);
@@ -610,6 +628,17 @@
   z-index: 1;
 }
 
+.js-motion .om-objects:not(.is-settled) .om-paper-back {
+  transform: rotate(-15deg) translate(-24%, 12%);
+  opacity: 0;
+}
+
+.js-motion .om-objects:not(.is-settled) .om-paper-front {
+  transform: rotate(11deg) translate(16%, 4%);
+  opacity: 0;
+}
+
+/* A small physical response to the pointer, not a hover trick. */
 .om-objects:hover .om-paper-back {
   transform: rotate(-10deg) translate(-27%, 5%);
 }

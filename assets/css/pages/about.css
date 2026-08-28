@@ -119,7 +119,7 @@
 .visual-list li {
   padding: 12px 14px;
   border-radius: 14px;
-  background: var(--surface-soft);
+  background: var(--ivory-warm);
 }
 
 .timeline-card {
@@ -832,3 +832,143 @@
   box-shadow: 0 12px 18px rgba(22, 30, 26, 0.12);
 }
 
+
+/* ==========================================================
+   Modernization layer
+   The markup below predates the current design system. Rather
+   than rebuild it, these rules flatten the old rounded-card
+   components into the editorial language used site-wide:
+   hairlines instead of panels, no decorative shadows, restrained
+   radii. Appended last so it wins at equal specificity.
+   ========================================================== */
+
+.doc-page .comparison-card,
+.doc-page .workflow-panel,
+.doc-page .system-node,
+.doc-page .about-system-card,
+.doc-page .quote-card,
+.doc-page .timeline-card,
+.doc-page .flag-card,
+.doc-page .analysis-grid span,
+.doc-page .visual-list li {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.doc-page .comparison-card,
+.doc-page .workflow-panel,
+.doc-page .system-node {
+  padding: var(--s-5) 0 var(--s-6);
+  border-top: 1px solid var(--line);
+}
+
+.doc-page .about-system-card {
+  display: grid;
+  gap: 0;
+  padding: 0;
+}
+
+.doc-page .system-arrow {
+  display: none;
+}
+
+.doc-page .system-node.emphasized {
+  background: transparent;
+  color: inherit;
+}
+
+.doc-page .system-node.emphasized h3 {
+  color: var(--teal-800);
+}
+
+.doc-page .system-node.emphasized p,
+.doc-page .system-node.emphasized .system-kicker {
+  color: var(--ink-soft);
+}
+
+.doc-page .comparison-label,
+.doc-page .system-kicker,
+.doc-page .workflow-step {
+  display: block;
+  margin-bottom: 8px;
+  padding: 0;
+  background: none;
+  color: var(--teal-800);
+  font-family: var(--font-display);
+  font-size: var(--t-micro);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.doc-page .eyebrow {
+  padding: 0;
+  background: none;
+  color: var(--teal-800);
+  letter-spacing: 0.14em;
+}
+
+.doc-page .section-heading {
+  max-width: none;
+  text-align: left;
+}
+
+.doc-page .section-heading .section-lead {
+  margin-inline: 0;
+  text-align: left;
+}
+
+.doc-page .section-surface,
+.doc-page .section-band {
+  padding: var(--s-8) 0;
+  background: transparent;
+  border: 0;
+  border-top: 1px solid var(--line);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.doc-page .workflow-visual,
+.doc-page .comparison-grid,
+.doc-page .dual-view-grid {
+  gap: 0 clamp(28px, 4vw, 64px);
+}
+
+.doc-page .quote-card {
+  padding-left: var(--s-5);
+  border-left: 2px solid var(--teal-500);
+  color: var(--ink);
+}
+
+.doc-page .quote-card p {
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 1.02rem + 0.6vw, 1.5rem);
+  font-weight: 600;
+  line-height: 1.42;
+  color: var(--ink);
+}
+
+.doc-page .quote-card span {
+  color: var(--teal-800);
+  font-size: var(--t-micro);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.doc-page .analysis-grid span,
+.doc-page .visual-list li {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--line-soft);
+  color: var(--ink-soft);
+  font-size: var(--t-small);
+}
+
+.doc-page .trust-note {
+  padding: 0;
+  background: none;
+  border-radius: 0;
+  color: var(--ink-faint);
+  font-weight: 500;
+}

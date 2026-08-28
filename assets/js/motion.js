@@ -9,6 +9,10 @@
 (() => {
   const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  // Marks that JS motion is available, so CSS can safely define
+  // pre-animation states that would otherwise strand content.
+  if (!reduced) document.documentElement.classList.add("js-motion");
+
   /* ---- Content reveals ----
      [data-rise] is the current system; .reveal is the older one the
      secondary pages still use. Both are driven from here so no page
@@ -59,6 +63,31 @@
     window.addEventListener("load", onSweep);
   }
 
+  /* ---- OpenMe printed material: settle into place ---- */
+  const omObjects = document.querySelector(".om-objects");
+  if (omObjects) {
+    if (reduced || typeof IntersectionObserver === "undefined") {
+      omObjects.classList.add("is-settled");
+    } else {
+      const omIo = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              omObjects.classList.add("is-settled");
+              omIo.disconnect();
+            }
+          });
+        },
+        { rootMargin: "0px 0px -18% 0px", threshold: 0.2 }
+      );
+      omIo.observe(omObjects);
+      // Same guarantee as the content reveals: never stay hidden.
+      window.addEventListener("load", () => {
+        setTimeout(() => omObjects.classList.add("is-settled"), 2500);
+      });
+    }
+  }
+
   /* ---- GastroLens screen opening ----
      --open runs 0 → 1 across the approach to the frame, so the
      display finishes opening a little before it is centred and
@@ -75,10 +104,13 @@
 
     const vh = window.innerHeight;
     const rect = glFrame.getBoundingClientRect();
-    // 0 when the frame's top is a full viewport away, 1 once it has
-    // risen to roughly a third up the screen.
-    const start = vh * 0.95;
-    const end = vh * 0.3;
+    // Hold closed until the frame's top has crossed ~80% of the
+    // viewport — by then enough of it is on screen to be worth
+    // watching — and finish before it centres, so the reveal is
+    // seen rather than completed off-screen. Short travel keeps it
+    // legible to fast scrollers.
+    const start = vh * 0.8;
+    const end = vh * 0.34;
     const raw = (start - rect.top) / (start - end);
     const open = Math.min(Math.max(raw, 0), 1);
     // ease-out so the last few degrees settle gently

@@ -342,10 +342,46 @@ body.openme-page #pledge {
   margin-top: var(--s-2);
 }
 
+/* The confirmation replaces the form in place; it should arrive
+   settled and calm, not celebratory. */
 .openme-pledge-confirmation {
   display: grid;
   gap: var(--s-5);
   justify-items: start;
+  animation: pledge-confirm 700ms var(--ease-out) both;
+}
+
+.openme-pledge-confirmation::before {
+  content: "Pledge recorded";
+  color: var(--teal-800);
+  font-family: var(--font-display);
+  font-size: var(--t-micro);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+@keyframes pledge-confirm {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .openme-pledge-confirmation {
+    animation: none;
+  }
+}
+
+/* The live count is social proof, so it should update visibly but
+   without drama. */
+.openme-pledge-count {
+  transition: color var(--d-base) var(--ease-soft);
 }
 
 .openme-pledge-thanks {
