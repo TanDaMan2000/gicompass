@@ -481,8 +481,10 @@ body.openme-page #pledge {
     gap: var(--s-8);
   }
 
+  /* A QR visitor arrives cold: on one column the words come first,
+     so what this is reads in seconds, and the card follows as the
+     thing they are holding. */
   .om-hero-material {
-    order: -1;
     justify-items: start;
   }
 
