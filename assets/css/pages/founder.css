@@ -5,7 +5,9 @@
 
 .ab-hero {
   position: relative;
-  padding-top: clamp(44px, 7vh, 84px);
+  /* Enough clearance that the fix-point above the portrait is not
+     clipped by the sticky header at short viewport heights. */
+  padding-top: clamp(58px, 8vh, 96px);
   padding-bottom: clamp(48px, 7vh, 88px);
   overflow: hidden;
 }

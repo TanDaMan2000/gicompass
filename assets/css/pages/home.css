@@ -244,6 +244,13 @@
   font-size: clamp(2rem, 1.5rem + 2.1vw, 3.1rem);
 }
 
+/* The sequence and the evidence strip are compositions, not prose:
+   they take the full content column while the lead keeps its
+   reading measure. */
+.ch-research .ch-main {
+  max-width: none;
+}
+
 /* A pull-line that breaks the measure — gives the origin a
    deliberate editorial beat instead of three even paragraphs. */
 .pull-line {
@@ -1315,7 +1322,7 @@
   opacity: 0.55;
   stroke-dasharray: 460;
   stroke-dashoffset: 460;
-  animation: bearing-draw 2000ms var(--ease-out) 420ms forwards;
+  animation: bearing-draw 1500ms var(--ease-out) 300ms forwards;
 }
 
 @keyframes bearing-draw {
@@ -1337,7 +1344,7 @@
 
 .hb-fix {
   opacity: 0;
-  animation: bearing-fix 700ms var(--ease-out) 2100ms forwards;
+  animation: bearing-fix 620ms var(--ease-out) 1620ms forwards;
 }
 
 @keyframes bearing-fix {
