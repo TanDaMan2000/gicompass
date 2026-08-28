@@ -307,10 +307,99 @@
   padding-bottom: var(--chapter-pad-lg);
 }
 
+/* Statement left, specification right, on the same rail as every
+   other chapter. Filling the right column is the point: a title
+   alone left a dead half-screen above the product. */
+.gl-headgrid {
+  display: grid;
+  grid-template-columns: minmax(0, 170px) minmax(0, 1.06fr) minmax(0, 0.82fr);
+  gap: clamp(28px, 4vw, 64px) clamp(24px, 4vw, 64px);
+  align-items: start;
+}
+
+.gl-headgrid .ch-num {
+  margin-bottom: 0;
+}
+
 /* Wrapper widths use rem, never ch: a ch cap on a wrapper resolves
    against the body font-size and strangles any display type inside it. */
 .gl-head {
   max-width: 40rem;
+}
+
+.gl-head .ch-title {
+  max-width: 19ch;
+}
+
+.gl-head .ch-lead {
+  max-width: 34ch;
+  font-size: var(--t-body);
+}
+
+/* The specification: what goes in, what comes out, what it will
+   not do. The safety framing earns its place by sitting in the
+   same list as the capabilities, not in fine print below. */
+.gl-io {
+  display: grid;
+  gap: 0;
+  margin: 0.6em 0 0;
+}
+
+.gl-io > div {
+  padding: var(--s-5) 0;
+  border-top: 1px solid var(--line);
+}
+
+.gl-io > div:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.gl-io dt {
+  margin-bottom: 6px;
+  color: var(--teal-800);
+  font-family: var(--font-display);
+  font-size: var(--t-micro);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.gl-io > div:last-child dt {
+  color: var(--ink-faint);
+}
+
+.gl-io dd {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: var(--t-small);
+  line-height: 1.62;
+}
+
+@media (max-width: 1000px) {
+  .gl-headgrid {
+    grid-template-columns: minmax(0, 170px) minmax(0, 1fr);
+  }
+
+  .gl-io {
+    grid-column: 2;
+  }
+}
+
+@media (max-width: 900px) {
+  .gl-headgrid {
+    grid-template-columns: 1fr;
+    gap: var(--s-4);
+  }
+
+  .gl-headgrid .ch-num {
+    padding-top: 0;
+    margin-bottom: var(--s-4);
+  }
+
+  .gl-io {
+    grid-column: auto;
+    margin-top: var(--s-6);
+  }
 }
 
 /* The product gets more width than any prose on the page — this is
@@ -320,7 +409,7 @@
 }
 
 .gl-stage {
-  margin-top: var(--s-9);
+  margin-top: var(--s-8);
   perspective: 1900px;
   perspective-origin: 50% 34%;
 }
@@ -490,8 +579,10 @@
 /* The second half of the thought arrives as you keep scrolling,
    set against the first across the width of the room. */
 .rz-turn {
+  position: relative;
   max-width: 16ch;
   margin: clamp(28px, 4vw, 56px) 0 0 auto;
+  padding-top: clamp(22px, 3vw, 40px);
   color: var(--teal-300);
   font-family: var(--font-display);
   font-size: clamp(1.6rem, 1.1rem + 2.2vw, 3.1rem);
@@ -499,6 +590,19 @@
   letter-spacing: -0.03em;
   font-weight: 700;
   text-align: right;
+}
+
+/* A hairline sweeping in from under the first statement and
+   landing on the second — the two halves of the thought are one
+   thought, not two blocks stacked in a dark room. */
+.rz-turn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: min(230%, 720px);
+  height: 1px;
+  background: linear-gradient(to right, rgba(105, 213, 210, 0), rgba(105, 213, 210, 0.45));
 }
 
 .rz-sub {
@@ -519,17 +623,27 @@
   overflow: hidden;
 }
 
+/* The whole chapter is the composition: copy runs down the left,
+   the printed material holds the right for its full height. */
 .om-grid {
   display: grid;
-  grid-template-columns: 1fr 1.05fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.92fr);
   gap: clamp(40px, 6vw, 88px);
-  align-items: center;
-  margin-top: var(--s-8);
+  align-items: start;
+}
+
+.om-copy .ch-title {
+  max-width: 17ch;
+}
+
+.om-copy .ch-lead {
+  max-width: 40ch;
 }
 
 .om-steps {
   display: grid;
   gap: var(--s-6);
+  margin-top: var(--s-8);
   counter-reset: om;
 }
 
@@ -574,8 +688,12 @@
 /* Printed materials as real objects: paper weight, a settled
    shadow, a slight hand-placed angle. Deliberately unlike the
    flat digital precision of the GastroLens screen above. */
+/* Held in place while the four steps scroll past it: the printed
+   material stays on screen for the whole chapter instead of
+   leaving the right half empty above and below itself. */
 .om-objects {
-  position: relative;
+  position: sticky;
+  top: 15vh;
   display: grid;
   place-items: center;
   min-height: 460px;
@@ -677,7 +795,7 @@
 .ch-pledge {
   background: var(--teal-900);
   color: #fff;
-  padding-block: clamp(100px, 14vw, 170px);
+  padding-block: clamp(88px, 11vw, 138px);
   overflow: hidden;
 }
 
@@ -716,14 +834,16 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.22);
 }
 
+/* The pledge words are the point of the chapter, so they are set
+   at real size — not as a caption beside a larger headline. */
 .pledge-quote p {
   margin: 0;
   color: #fff;
   font-family: var(--font-display);
-  font-size: clamp(1.15rem, 0.95rem + 0.9vw, 1.6rem);
+  font-size: clamp(1.3rem, 1rem + 1.25vw, 2.05rem);
   font-weight: 600;
-  line-height: 1.42;
-  letter-spacing: -0.018em;
+  line-height: 1.32;
+  letter-spacing: -0.024em;
   text-wrap: balance;
 }
 
@@ -954,6 +1074,8 @@
   }
 
   .om-objects {
+    position: relative;
+    top: auto;
     min-height: 320px;
     order: -1;
   }
@@ -1004,6 +1126,13 @@
   .rz-turn {
     text-align: left;
     margin-left: 0;
+  }
+
+  .rz-turn::before {
+    left: 0;
+    right: auto;
+    width: 100%;
+    background: linear-gradient(to right, rgba(105, 213, 210, 0.45), rgba(105, 213, 210, 0));
   }
 
   .gl-stage {
