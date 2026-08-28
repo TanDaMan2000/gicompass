@@ -206,6 +206,14 @@ img {
   display: block;
 }
 
+/* Images carrying width/height attributes (good — they reserve layout
+   space) get a presentational height that makes both dimensions
+   definite, which silently disables any aspect-ratio set in CSS.
+   Normalising height here keeps CSS in control of the crop. */
+img[width][height] {
+  height: auto;
+}
+
 ::selection {
   background: var(--teal-300);
   color: var(--navy-900);
@@ -230,4 +238,50 @@ img {
     transition-duration: 0.001ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* ==========================================================
+   MOTIF — the recurring graphic language.
+   GastroCompass is about orientation: finding direction when
+   the signal is unclear. That reads across the site as arcs,
+   a thin travelling path, and small fix-points, never as a
+   literal compass drawing.
+   ========================================================== */
+
+/* A hairline arc. Scale/rotate per placement. */
+.arc {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid var(--motif-line, rgba(15, 109, 136, 0.13));
+  pointer-events: none;
+}
+
+.arc-quarter {
+  border-color: transparent;
+  border-top-color: var(--motif-line, rgba(15, 109, 136, 0.16));
+  border-right-color: var(--motif-line, rgba(15, 109, 136, 0.16));
+}
+
+/* A fix-point: where a reading is taken. */
+.fix {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--teal-500);
+  pointer-events: none;
+}
+
+.fix::after {
+  content: "";
+  position: absolute;
+  inset: -7px;
+  border-radius: 50%;
+  border: 1px solid var(--teal-500);
+  opacity: 0.34;
+}
+
+/* On dark chapters the motif inverts rather than disappearing. */
+.on-dark {
+  --motif-line: rgba(105, 213, 210, 0.22);
 }

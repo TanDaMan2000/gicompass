@@ -521,7 +521,7 @@
 
 .om-grid {
   display: grid;
-  grid-template-columns: 1fr 0.92fr;
+  grid-template-columns: 1fr 1.05fr;
   gap: clamp(40px, 6vw, 88px);
   align-items: center;
   margin-top: var(--s-8);
@@ -578,7 +578,7 @@
   position: relative;
   display: grid;
   place-items: center;
-  min-height: 380px;
+  min-height: 460px;
 }
 
 /* Arc motif again — here it reads as the surface the material
@@ -617,13 +617,13 @@
    in flat. Pre-settle state is only applied once JS confirms it
    can run, so no-JS never leaves them mid-air. */
 .om-paper-back {
-  width: 60%;
+  width: 66%;
   transform: rotate(-8deg) translate(-24%, 6%);
   filter: saturate(0.96) brightness(0.99);
 }
 
 .om-paper-front {
-  width: 64%;
+  width: 72%;
   transform: rotate(4deg) translate(16%, -4%);
   z-index: 1;
 }
@@ -1043,5 +1043,96 @@
   .founder-credit .link-arrow {
     margin-left: 0;
     width: 100%;
+  }
+}
+
+/* ==========================================================
+   Origin — the question, set as the focal point of the screen.
+   Oversized editorial type that breaks the text column, so the
+   chapter reads as a pause rather than another paragraph.
+   ========================================================== */
+
+.ch-origin {
+  overflow: hidden;
+}
+
+.origin-arc {
+  top: -30%;
+  left: -22%;
+  width: min(70vw, 860px);
+  aspect-ratio: 1;
+}
+
+.ch-origin .wrap {
+  position: relative;
+  z-index: 1;
+}
+
+.statement {
+  margin: clamp(40px, 6vw, 84px) 0 clamp(44px, 6vw, 88px);
+  padding: 0;
+}
+
+.statement p {
+  max-width: 16ch;
+  margin: 0 0 0 auto;
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 1.4rem + 3.6vw, 4.6rem);
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+  font-weight: 700;
+  text-align: right;
+  text-wrap: balance;
+}
+
+.statement em {
+  display: block;
+  font-style: normal;
+  color: var(--teal-700);
+}
+
+/* ==========================================================
+   Research — the evidence, stated as figures rather than only
+   described in prose. Every number here is a real artifact.
+   ========================================================== */
+
+.evidence-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(20px, 3vw, 44px);
+  margin-top: var(--s-8);
+  padding-top: var(--s-6);
+  border-top: 1px solid var(--line);
+}
+
+.evidence-strip-item b {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--teal-800);
+  font-family: var(--font-display);
+  font-size: clamp(1.7rem, 1.3rem + 1.7vw, 2.6rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.evidence-strip-item span {
+  display: block;
+  max-width: 24ch;
+  color: var(--ink-faint);
+  font-size: var(--t-small);
+  line-height: 1.5;
+}
+
+@media (max-width: 760px) {
+  .statement p {
+    max-width: none;
+    margin-left: 0;
+    text-align: left;
+  }
+
+  .evidence-strip {
+    grid-template-columns: 1fr;
+    gap: var(--s-5);
   }
 }
